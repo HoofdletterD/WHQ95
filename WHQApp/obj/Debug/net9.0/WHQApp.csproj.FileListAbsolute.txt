@@ -1,0 +1,14 @@
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\bin\Debug\net9.0\WHQApp.exe
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\bin\Debug\net9.0\WHQApp.deps.json
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\bin\Debug\net9.0\WHQApp.runtimeconfig.json
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\bin\Debug\net9.0\WHQApp.dll
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\bin\Debug\net9.0\WHQApp.pdb
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.AssemblyInfoInputs.cache
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.AssemblyInfo.cs
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.csproj.CoreCompileInputs.cache
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.dll
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\refint\WHQApp.dll
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.pdb
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\WHQApp.genruntimeconfig.cache
+C:\Users\u04dbr\source\repos\WHQApp\WHQApp\obj\Debug\net9.0\ref\WHQApp.dll

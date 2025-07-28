@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHQApp", "WHQApp\WHQApp.csproj", "{41FB552D-DEED-4B44-8707-CA06810C089F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41FB552D-DEED-4B44-8707-CA06810C089F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FB552D-DEED-4B44-8707-CA06810C089F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FB552D-DEED-4B44-8707-CA06810C089F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FB552D-DEED-4B44-8707-CA06810C089F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C867664C-642A-4931-A717-6BE26108B9CA}
+	EndGlobalSection
+EndGlobal
