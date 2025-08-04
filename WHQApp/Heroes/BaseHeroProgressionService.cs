@@ -1,8 +1,8 @@
-﻿using WHQApp.Helpers;
-using WHQApp.Logic;
-using WHQApp.Models;
+﻿using WHQCore.Helpers;
+using WHQCore.Logic;
+using WHQCore.Models;
 
-namespace WHQApp.Heroes;
+namespace WHQCreator.Heroes;
 
 public abstract class BaseHeroProgressionService : IHeroProgression
 {

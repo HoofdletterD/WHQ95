@@ -1,7 +1,7 @@
-﻿using WHQApp.Models;
-using WHQApp.Skills;
+﻿using WHQCore.Models;
+using WHQCore.Skills;
 
-namespace WHQApp.Heroes.Barbarian;
+namespace WHQCreator.Heroes.Barbarian;
 
 public class BarbarianProgressionService : BaseHeroProgressionService
 {

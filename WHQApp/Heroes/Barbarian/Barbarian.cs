@@ -1,9 +1,9 @@
-﻿using WHQApp.Equipment;
-using WHQApp.Logic;
-using WHQApp.Models;
-using WHQApp.Skills;
+﻿using WHQCore.Equipment;
+using WHQCore.Logic;
+using WHQCore.Models;
+using WHQCore.Skills;
 
-namespace WHQApp.Heroes.Barbarian;
+namespace WHQCreator.Heroes.Barbarian;
 
 public class Barbarian : HeroBase
 {

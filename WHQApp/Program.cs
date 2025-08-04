@@ -1,8 +1,8 @@
-﻿using WHQApp.Helpers;
-using WHQApp.HeroManagement;
-using WHQApp.Models;
+﻿using WHQCore.Helpers;
+using WHQCore.Models;
+using WHQCreator.HeroManagement;
 
-namespace WHQApp;
+namespace WHQCreator;
 
 internal class Program
 {
@@ -134,6 +134,6 @@ internal class Program
             var key = Console.ReadKey(true);
             if (key.Key == ConsoleKey.Escape)
                 break;
-        }
-    }
+        
+}    }
 }

@@ -1,6 +1,6 @@
-﻿using WHQApp.Models;
+﻿using WHQCore.Models;
 
-namespace WHQApp.Heroes;
+namespace WHQCreator.Heroes;
 
 public abstract class HeroBase(string name, string type) : IHero
 {

@@ -1,8 +1,8 @@
-﻿using WHQApp.Heroes;
-using WHQApp.Heroes.Barbarian;
-using WHQApp.Models;
+﻿using WHQCore.Models;
+using WHQCreator.Heroes;
+using WHQCreator.Heroes.Barbarian;
 
-namespace WHQApp.HeroManagement;
+namespace WHQCreator.HeroManagement;
 
 public static class HeroRegistry
 {
