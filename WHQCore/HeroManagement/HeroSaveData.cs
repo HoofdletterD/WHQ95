@@ -1,4 +1,6 @@
-﻿namespace WHQCore.HeroManagement;
+﻿using WHQCore.Models;
+
+namespace WHQCore.HeroManagement;
 public class HeroSaveData
 {
     public string Name { get; set; }
@@ -22,7 +24,9 @@ public class HeroSaveData
 
     public List<string> Spells { get; set; } = [];
     public List<string> Equipment { get; set; } = [];
-    public List<string> MagicItems { get; set; } = [];
+    public List<MagicItemData> MagicItems { get; set; } = [];
+    public List<MagicItemData> MagicWeaponsAndArmor { get; set; } = [];
+    public List<MagicItemData> ObjectiveRoomTreasure { get; set; } = [];
     public List<string> SpecialRules { get; set; } = [];
 }
 

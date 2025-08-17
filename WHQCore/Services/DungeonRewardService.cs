@@ -9,116 +9,198 @@ namespace WHQCore.Services
 {
     public static class DungeonRewardService
     {
-        public static void AwardRandomTreasure(IHero hero, TreasureType treasureType)
+        private static readonly Random _rng = new();
+
+        /// <summary>
+        /// Rulebook D6 flow when a Treasure card would be drawn in the dungeon:
+        /// 1 = Gold (mini-game)
+        /// 2-3 = Take a Treasure card (placeholder here)
+        /// 4-5 = Weapons & Armour sub-table (D66)
+        /// 6 = Magic Items sub-table (D66)
+        /// </summary>
+        public static void AwardDungeonTreasure(IHero hero)
         {
-            var items = treasureType switch
+            Console.WriteLine("\n--- Dungeon Treasure Roll (D6) ---");
+            var d6 = DiceRoller.RollD6();
+            Console.WriteLine($"You rolled: {d6}");
+
+            switch (d6)
             {
-                TreasureType.DungeonTreasureMagicItems =>
-                    TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicItemLibrary))
-                        .Where(i => i.TreasureType.Contains(TreasureType.DungeonTreasureMagicItems)),
+                case 1:
+                    Console.WriteLine("Result 1 — Gold!");
+                    AwardGoldMiniGame(hero);
+                    break;
 
-                TreasureType.DungeonTreasureMagicWeaponsAndArmor =>
-                    TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicWeaponsAndArmorLibrary))
-                        .Where(i => i.TreasureType.Contains(TreasureType.DungeonTreasureMagicWeaponsAndArmor)),
+                case 2:
+                case 3:
+                    Console.WriteLine("Result 2–3 — Take a Treasure card as normal.");
+                    AwardTreasureCardPlaceholder(hero);
+                    break;
 
-                TreasureType.ObjectiveRoomTreasure =>
-                    TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(ObjectiveRoomTreasureLibrary))
-                        .Where(i => i.TreasureType.Contains(TreasureType.ObjectiveRoomTreasure)),
+                case 4:
+                case 5:
+                    Console.WriteLine("Result 4–5 — Roll on the Weapons & Armour sub-table (D66).");
+                    AwardFromD66Table(hero, TreasureType.DungeonTreasureMagicWeaponsAndArmor);
+                    break;
 
-                _ => Enumerable.Empty<MagicItemData>()
-            };
-
-            var item = items.OrderBy(_ => Guid.NewGuid()).FirstOrDefault();
-            if (item != null)
-            {
-                hero.Character.MagicItems.Add(item);
-                Console.WriteLine($"You found a treasure: {item.Name}");
-            }
-            else
-            {
-                Console.WriteLine($"No items found for treasure type: {treasureType}");
+                case 6:
+                    Console.WriteLine("Result 6 — Roll on the Magic Items sub-table (D66).");
+                    AwardFromD66Table(hero, TreasureType.DungeonTreasureMagicItems);
+                    break;
             }
         }
 
+        /// <summary>
+        /// Draws a random treasure item from a specific library for the given TreasureType.
+        /// (Kept for direct-roll utilities and any other callers you may already have.)
+        /// </summary>
+        public static void AwardRandomTreasure(IHero hero, TreasureType treasureType)
+        {
+            Type libraryType;
+            switch (treasureType)
+            {
+                case TreasureType.DungeonTreasureMagicItems:
+                    libraryType = typeof(MagicItemLibrary);
+                    break;
+
+                case TreasureType.DungeonTreasureMagicWeaponsAndArmor:
+                    libraryType = typeof(MagicWeaponsAndArmorLibrary);
+                    break;
+
+                case TreasureType.ObjectiveRoomTreasure:
+                    libraryType = typeof(ObjectiveRoomTreasureLibrary);
+                    break;
+
+                default:
+                    Console.WriteLine($"No handler for treasure type: {treasureType}");
+                    return;
+            }
+
+            var items = TreasureLibraryHelper
+                .GetAllItemsFromLibrary(libraryType)
+                .Where(i => i.TreasureType.Contains(treasureType))
+                .ToList();
+
+            if (items.Count == 0)
+            {
+                Console.WriteLine($"No items found for treasure type: {treasureType}");
+                return;
+            }
+
+            var item = items[_rng.Next(items.Count)];
+            hero.Character.MagicItems.Add(item);
+            Console.WriteLine($"You found a treasure: {item.Name}");
+        }
+
+        /// <summary>
+        /// Rolls D66 and selects from the requested D66 table/library.
+        /// Falls back to random from matching items if that exact D66 entry is not present.
+        /// </summary>
         public static void AwardFromD66Table(IHero hero, TreasureType tableType)
         {
-            var result = DiceRoller.RollD66();
+            var rawRoll = DiceRoller.RollD66();
+            var d66 = rawRoll.ToString();
 
-            var item = tableType switch
+            MagicItemData? item = tableType switch
             {
                 TreasureType.DungeonTreasureMagicWeaponsAndArmor =>
-                    TreasureLibraryHelper.GetByD66(typeof(MagicWeaponsAndArmorLibrary), result),
+                    TreasureLibraryHelper.GetByD66(typeof(MagicWeaponsAndArmorLibrary), d66),
 
                 TreasureType.DungeonTreasureMagicItems =>
-                    TreasureLibraryHelper.GetByD66(typeof(MagicItemLibrary), result),
+                    TreasureLibraryHelper.GetByD66(typeof(MagicItemLibrary), d66),
 
                 TreasureType.ObjectiveRoomTreasure =>
-                    TreasureLibraryHelper.GetByD66(typeof(ObjectiveRoomTreasureLibrary), result),
+                    TreasureLibraryHelper.GetByD66(typeof(ObjectiveRoomTreasureLibrary), d66),
 
                 _ => null
             };
 
+            if (item == null)
+            {
+                // Fallback: pick a random matching item from the target library
+                Console.WriteLine($"No exact D66 entry '{d66}' found in {tableType}. Choosing a random matching item...");
+                Type fallbackLib = tableType switch
+                {
+                    TreasureType.DungeonTreasureMagicWeaponsAndArmor => typeof(MagicWeaponsAndArmorLibrary),
+                    TreasureType.DungeonTreasureMagicItems => typeof(MagicItemLibrary),
+                    TreasureType.ObjectiveRoomTreasure => typeof(ObjectiveRoomTreasureLibrary),
+                    _ => null!
+                };
+
+                if (fallbackLib != null)
+                {
+                    var candidates = TreasureLibraryHelper
+                        .GetAllItemsFromLibrary(fallbackLib)
+                        .Where(i => i.TreasureType.Contains(tableType))
+                        .ToList();
+
+                    if (candidates.Count > 0)
+                        item = candidates[_rng.Next(candidates.Count)];
+                }
+            }
+
             if (item != null)
             {
                 hero.Character.MagicItems.Add(item);
-                Console.WriteLine($"You found: {item.Name} (D66: {result})");
+                Console.WriteLine($"You found: {item.Name} (D66: {d66})");
             }
             else
             {
-                Console.WriteLine($"No item found in {tableType} table for D66 roll {result}");
+                Console.WriteLine($"No items available for table: {tableType} (D66: {d66})");
             }
         }
-    }
 
-    public static class GoldRewardService
-    {
+        // Placeholder so you compile cleanly until you implement your Treasure Card deck.
+        private static void AwardTreasureCardPlaceholder(IHero hero)
+        {
+            Console.WriteLine("Treasure Card deck is not implemented yet. (No card awarded.)");
+            // Hook here later, e.g.: TreasureCardService.Draw(hero);
+        }
+
+
         /// <summary>
-        /// Runs the gold mini-game: 
-        /// Roll as many D6 as you like, total ×10 = gold.
-        /// But if any die is 1, hero gains nothing.
+        /// Awards gold based on the Dungeon Treasure Gold mini-game.
         /// </summary>
+        /// <param name="hero">The hero receiving gold.</param>
         public static void AwardGoldMiniGame(IHero hero)
         {
-            Console.WriteLine("\n--- Gold Reward Mini-Game ---");
-            Console.WriteLine("You may roll as many D6 as you like.");
-            Console.WriteLine("⚠ If ANY die rolls a 1, you find nothing!");
+            Console.WriteLine($"{hero.Character.Name}, how many dice would you like to roll? (Enter a number > 0)");
 
-            int total = 0;
-            bool rolledOne = false;
-
+            int diceCount;
             while (true)
             {
-                Console.Write("Roll another D6? (Y/N): ");
-                var input = Console.ReadLine()?.Trim().ToUpper();
-
-                if (input != "Y") break;
-
-                int roll = DiceRoller.RollD6();
-                Console.WriteLine($"You rolled: {roll}");
-
-                if (roll == 1)
-                {
-                    rolledOne = true;
+                var input = Console.ReadLine();
+                if (int.TryParse(input, out diceCount) && diceCount > 0)
                     break;
-                }
 
-                total += roll;
+                Console.WriteLine("Invalid input. Please enter a positive number.");
             }
+
+            var rolls = new List<int>();
+            bool rolledOne = false;
+
+            for (int i = 0; i < diceCount; i++)
+            {
+                int roll = _rng.Next(1, 7);
+                rolls.Add(roll);
+                if (roll == 1)
+                    rolledOne = true;
+            }
+
+            Console.WriteLine($"You rolled: {string.Join(", ", rolls)}");
 
             if (rolledOne)
             {
-                Console.WriteLine("Bad luck! A roll of 1 means you found nothing.");
+                Console.WriteLine($"{hero.Character.Name} rolled a 1! No gold found.");
+                return;
             }
-            else if (total > 0)
-            {
-                int goldFound = total * 10;
-                hero.Character.Gold += goldFound;
-                Console.WriteLine($"You found {goldFound} gold! Total gold: {hero.Character.Gold}");
-            }
-            else
-            {
-                Console.WriteLine("You decided not to roll any dice.");
-            }
+
+            int total = rolls.Sum() * 10;
+            hero.Character.Gold += total;
+
+            Console.WriteLine($"{hero.Character.Name} finds {total} gold! (Total gold: {hero.Character.Gold})");
         }
+
+
     }
 }
