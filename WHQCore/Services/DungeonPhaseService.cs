@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
 using WHQCore.Helpers;
 using WHQCore.HeroManagement;
+using WHQCore.Libraries;
+using WHQCore.Libraries.MagicItems;
 using WHQCore.Models;
 using WHQCore.Models.Enums;
 
@@ -21,6 +24,7 @@ namespace WHQCore.Services
                 Console.WriteLine("3. Roll on Objective Room D66 Table");
                 Console.WriteLine("4. Show Hero Stats");
                 Console.WriteLine("5. Return to Hero Options");
+                Console.WriteLine("6. Search for / Add a Treasure Card manually");
 
                 Console.Write("\nEnter your choice: ");
                 var input = Console.ReadLine()?.Trim();
@@ -58,6 +62,10 @@ namespace WHQCore.Services
                     case "5":
                         return;
 
+                    case "6":
+                        AddTreasureManually(heroBase);
+                        break;
+
                     default:
                         Console.WriteLine("Invalid choice. Press any key to try again...");
                         Console.ReadKey();
@@ -84,5 +92,69 @@ namespace WHQCore.Services
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
+
+        private static void AddTreasureManually(IHero heroBase)
+        {
+            var hero = heroBase.Character;
+
+            Console.WriteLine("\nSearch for a treasure to add:");
+            Console.Write("Enter item name (or part of it): ");
+            var searchTerm = Console.ReadLine()?.Trim();
+
+            var allItems = TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicItemLibrary))
+                            .Concat(TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicWeaponsAndArmorLibrary)))
+                            .Concat(TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(ObjectiveRoomTreasureLibrary)))
+                            .Where(i => i.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+            if (allItems.Count == 0)
+            {
+                Console.WriteLine("No items found matching your search.");
+            }
+            else
+            {
+                for (int i = 0; i < allItems.Count; i++)
+                    Console.WriteLine($"{i + 1}. {allItems[i].Name}");
+
+                Console.Write("\nSelect an item to view details (number): ");
+                var selInput = Console.ReadLine();
+                if (int.TryParse(selInput, out int selIndex) && selIndex >= 1 && selIndex <= allItems.Count)
+                {
+                    var selectedItem = allItems[selIndex - 1];
+
+                    // Show full details
+                    Console.WriteLine("\n--- Item Details ---");
+                    Console.WriteLine($"Name: {selectedItem.Name}");
+                    Console.WriteLine($"{selectedItem.Flavor}");
+                    Console.WriteLine($"Rules: {selectedItem.Rules}");
+                    Console.WriteLine($"Applicable Warriors: {string.Join(", ", selectedItem.Warriors)}");
+                    Console.WriteLine($"Cost (Sell): {selectedItem.CostSell}");
+                    if (selectedItem.StatModifiers.Any())
+                        Console.WriteLine($"Stat Modifiers: {string.Join(", ", selectedItem.StatModifiers.Select(kv => $"{kv.Key} +{kv.Value}"))}");
+                    Console.WriteLine("--------------------");
+
+                    Console.Write("\nDo you want to add this item to your hero? (y/n): ");
+                    var confirm = Console.ReadLine()?.Trim().ToLower();
+                    if (confirm == "y")
+                    {
+                        hero.MagicItems.Add(selectedItem);
+                        Console.WriteLine($"{selectedItem.Name} added to {hero.Name}.");
+                        HeroSaveManager.SaveHero(heroBase);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Item not added.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection.");
+                }
+            }
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+
     }
 }

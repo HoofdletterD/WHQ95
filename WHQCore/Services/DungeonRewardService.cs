@@ -56,30 +56,17 @@ namespace WHQCore.Services
         /// </summary>
         public static void AwardRandomTreasure(IHero hero, TreasureType treasureType)
         {
-            Type libraryType;
-            switch (treasureType)
+            Type libraryType = treasureType switch
             {
-                case TreasureType.DungeonTreasureMagicItems:
-                    libraryType = typeof(MagicItemLibrary);
-                    break;
+                TreasureType.DungeonTreasureMagicItems => typeof(MagicItemLibrary),
+                TreasureType.DungeonTreasureMagicWeaponsAndArmor => typeof(MagicWeaponsAndArmorLibrary),
+                TreasureType.ObjectiveRoomTreasure => typeof(ObjectiveRoomTreasureLibrary),
+                _ => throw new ArgumentOutOfRangeException()
+            };
 
-                case TreasureType.DungeonTreasureMagicWeaponsAndArmor:
-                    libraryType = typeof(MagicWeaponsAndArmorLibrary);
-                    break;
-
-                case TreasureType.ObjectiveRoomTreasure:
-                    libraryType = typeof(ObjectiveRoomTreasureLibrary);
-                    break;
-
-                default:
-                    Console.WriteLine($"No handler for treasure type: {treasureType}");
-                    return;
-            }
-
-            var items = TreasureLibraryHelper
-                .GetAllItemsFromLibrary(libraryType)
-                .Where(i => i.TreasureType.Contains(treasureType))
-                .ToList();
+            var items = TreasureLibraryHelper.GetAllItemsFromLibrary(libraryType)
+                                             .Where(i => i.TreasureType.Contains(treasureType))
+                                             .ToList();
 
             if (items.Count == 0)
             {
@@ -90,6 +77,7 @@ namespace WHQCore.Services
             var item = items[_rng.Next(items.Count)];
             hero.Character.MagicItems.Add(item);
             Console.WriteLine($"You found a treasure: {item.Name}");
+            ShowItemDetails(item);  // <-- Show details immediately
         }
 
         /// <summary>
@@ -117,7 +105,6 @@ namespace WHQCore.Services
 
             if (item == null)
             {
-                // Fallback: pick a random matching item from the target library
                 Console.WriteLine($"No exact D66 entry '{d66}' found in {tableType}. Choosing a random matching item...");
                 Type fallbackLib = tableType switch
                 {
@@ -143,6 +130,7 @@ namespace WHQCore.Services
             {
                 hero.Character.MagicItems.Add(item);
                 Console.WriteLine($"You found: {item.Name} (D66: {d66})");
+                ShowItemDetails(item);  // <-- Show details immediately
             }
             else
             {
@@ -201,6 +189,17 @@ namespace WHQCore.Services
             Console.WriteLine($"{hero.Character.Name} finds {total} gold! (Total gold: {hero.Character.Gold})");
         }
 
-
+        private static void ShowItemDetails(MagicItemData item)
+        {
+            Console.WriteLine("\n--- Item Details ---");
+            Console.WriteLine($"Name: {item.Name}");
+            Console.WriteLine($"{item.Flavor}");
+            Console.WriteLine($"Rules: {item.Rules}");
+            Console.WriteLine($"Applicable Warriors: {string.Join(", ", item.Warriors)}");
+            Console.WriteLine($"Cost (Sell): {item.CostSell}");
+            if (item.StatModifiers.Any())
+                Console.WriteLine($"Stat Modifiers: {string.Join(", ", item.StatModifiers.Select(kv => $"{kv.Key} +{kv.Value}"))}");
+            Console.WriteLine("--------------------");
+        }
     }
 }
