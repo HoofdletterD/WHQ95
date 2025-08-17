@@ -1,5 +1,5 @@
 ﻿using WHQCore.Helpers;
-using WHQCore.Libraries.Spells;
+using WHQCore.Heroes.Wizard.Spells;
 using WHQCore.Logic;
 using WHQCore.Models;
 

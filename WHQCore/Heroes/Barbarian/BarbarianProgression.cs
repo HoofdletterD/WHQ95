@@ -1,5 +1,6 @@
 ﻿using WHQCore.Models;
 
+
 namespace WHQCore.Heroes.Barbarian;
 
 public class BarbarianLevelProgression : ILevelProgression

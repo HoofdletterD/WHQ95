@@ -1,4 +1,4 @@
-﻿using WHQCore.Libraries.Spells;
+﻿using WHQCore.Heroes.Wizard.Spells;
 using WHQCore.Models;
 using WHQCore.Models.Enums;
 

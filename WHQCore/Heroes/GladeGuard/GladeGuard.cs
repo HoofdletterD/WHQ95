@@ -1,6 +1,5 @@
 ﻿using WHQCore.Libraries.Equipment;
 using WHQCore.Libraries.MagicItems;
-using WHQCore.Libraries.Skills;
 using WHQCore.Logic;
 using WHQCore.Models;
 using WHQCore.Models.Enums;

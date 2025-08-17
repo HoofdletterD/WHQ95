@@ -1,5 +1,4 @@
 ﻿using WHQCore.Helpers;
-using WHQCore.Libraries.Skills;
 using WHQCore.Models;
 
 namespace WHQCore.Heroes.Barbarian;
