@@ -2,34 +2,57 @@
 
 namespace WHQCore.Models;
 
-public class MagicItemData(
-    string name,
-    string flavor,
-    string rules,
-    string treasureTableDiceResult,
-    IEnumerable<RuleUsage> ruleUsages,
-    IEnumerable<HeroCode> warriors,
-    IEnumerable<TreasureType> treasureType,
-    IEnumerable<MagicItemType> magicItemType,
-    int costSell,
-    string imagePath,
-    Dictionary<string, int>? statModifiers = null)
+public class MagicItemData
 {
-    public string TreasureTableDiceResult = treasureTableDiceResult;
-    public string Name { get; } = name;
-    public string Flavor { get; } = flavor;
-    public string Rules { get; } = rules;
-    public HashSet<RuleUsage> RuleUsages { get; } = [.. ruleUsages];
+    // Required for JSON deserialization
+    public MagicItemData()
+    {
+        RuleUsages = new HashSet<RuleUsage>();
+        Warriors = new HashSet<HeroCode>();
+        TreasureType = new HashSet<TreasureType>();
+        MagicItemType = new HashSet<MagicItemType>();
+        StatModifiers = new Dictionary<string, int>();
+    }
 
-    public HashSet<HeroCode> Warriors { get; } = [.. warriors];
-    public HashSet<TreasureType> TreasureType { get; } = [.. treasureType];
-    public HashSet<MagicItemType> MagicItemType { get; } = [.. magicItemType];
+    // Full constructor for manual creation
+    public MagicItemData(
+        string name,
+        string flavor,
+        string rules,
+        string treasureTableDiceResult,
+        IEnumerable<RuleUsage> ruleUsages,
+        IEnumerable<HeroCode> warriors,
+        IEnumerable<TreasureType> treasureType,
+        IEnumerable<MagicItemType> magicItemType,
+        int costSell,
+        string imagePath,
+        Dictionary<string, int>? statModifiers = null)
+    {
+        Name = name;
+        Flavor = flavor;
+        Rules = rules;
+        TreasureTableDiceResult = treasureTableDiceResult;
+        RuleUsages = new HashSet<RuleUsage>(ruleUsages);
+        Warriors = new HashSet<HeroCode>(warriors);
+        TreasureType = new HashSet<TreasureType>(treasureType);
+        MagicItemType = new HashSet<MagicItemType>(magicItemType);
+        CostSell = costSell;
+        ImagePath = imagePath;
+        StatModifiers = statModifiers ?? new Dictionary<string, int>();
+    }
 
-    public int CostSell { get; } = costSell;
+    public string Name { get; set; }
+    public string Flavor { get; set; }
+    public string Rules { get; set; }
+    public string TreasureTableDiceResult { get; set; }
+    public HashSet<RuleUsage> RuleUsages { get; set; }
+    public HashSet<HeroCode> Warriors { get; set; }
+    public HashSet<TreasureType> TreasureType { get; set; }
+    public HashSet<MagicItemType> MagicItemType { get; set; }
+    public int CostSell { get; set; }
+    public string ImagePath { get; set; }
+    public Dictionary<string, int> StatModifiers { get; set; }
 
-    public string ImagePath { get; } = imagePath;
-
-    public Dictionary<string, int> StatModifiers { get; } = statModifiers ?? new Dictionary<string, int>();
     public override string ToString()
     {
         var statMods = StatModifiers.Any()

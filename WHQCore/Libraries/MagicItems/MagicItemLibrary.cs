@@ -12,7 +12,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "10",
         ruleUsages: [RuleUsage.DiscardAfterUse],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/HandOfDeathScroll.png"
@@ -25,7 +25,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "11",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.W },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 150,
         imagePath: "images/equipment/DispelMagicScroll.png"
@@ -38,7 +38,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "12",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.W },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/EnergyJewel.png"
@@ -51,7 +51,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "13",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All }, // BDEW
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/AmuletOfFury.png"
@@ -64,7 +64,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "14",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.E }, // B and E
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
         imagePath: "images/equipment/ArrowOfSlaying.png"
@@ -77,7 +77,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "15",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.W },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 300,
         imagePath: "images/equipment/CrownOfNight.png"
@@ -90,7 +90,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "16",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.W },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 600,
         imagePath: "images/equipment/TalismanOfJet.png"
@@ -103,7 +103,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "21",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All }, // BDEW
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
         imagePath: "images/equipment/SpellRing.png"
@@ -116,7 +116,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "22",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.W },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 350,
         imagePath: "images/equipment/DestroyMagicScroll.png"
@@ -129,7 +129,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "23",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All }, // BDEW
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/CloakOfInvisibility.png"
@@ -142,7 +142,7 @@ public static class MagicItemLibrary
     treasureTableDiceResult: "24",
     ruleUsages: [RuleUsage.None],
     new List<HeroCode> { HeroCode.B, HeroCode.E, HeroCode.W }, // BEW
-    treasureType: [TreasureType.DifferentTreasure],
+    treasureType: [TreasureType.DungeonTreasureMagicItems],
     magicItemType: [MagicItemType.Item],
     costSell: 300,
     imagePath: "images/equipment/ArrowsOfPiercing.png"
@@ -155,7 +155,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "25",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/RingOfDadaan.png"
@@ -168,7 +168,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "26",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 400,
         imagePath: "images/equipment/BootsOfLeaping.png"
@@ -181,7 +181,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "31",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/BootsOfSwiftness.png"
@@ -194,7 +194,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "32",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 750,
         imagePath: "images/equipment/BootsOfFlight.png"
@@ -207,7 +207,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "33",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 250,
         imagePath: "images/equipment/BootsOfBattle.png"
@@ -220,7 +220,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "34",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 250,
         imagePath: "images/equipment/PotionOfFlight.png"
@@ -246,7 +246,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "36",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/PotionOfInvisibility.png"
@@ -259,7 +259,7 @@ public static class MagicItemLibrary
     treasureTableDiceResult: "41",
     ruleUsages: [RuleUsage.None],
     new List<HeroCode> { HeroCode.All },
-    treasureType: [TreasureType.DifferentTreasure],
+    treasureType: [TreasureType.DungeonTreasureMagicItems],
     magicItemType: [MagicItemType.Item],
     costSell: 100,
     imagePath: "images/equipment/PotionOfStrength.png"
@@ -272,7 +272,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "42",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
         imagePath: "images/equipment/PotionOfDisguise.png"
@@ -285,7 +285,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "43",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
         imagePath: "images/equipment/PotionOfWaterWalking.png"
@@ -298,7 +298,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "44",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
         imagePath: "images/equipment/PotionOfToughness.png"
@@ -311,7 +311,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "45",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 300,
         imagePath: "images/equipment/ProtectionRing.png"
@@ -324,7 +324,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "46",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/RingOfInvisibility.png"
@@ -337,7 +337,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "51",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
         imagePath: "images/equipment/RingOfPower.png"
@@ -350,7 +350,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "52",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
         imagePath: "images/equipment/ArkaiPowder.png"
@@ -363,7 +363,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "53",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
         imagePath: "images/equipment/CharmOfLearning.png"
@@ -376,7 +376,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "54",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/RingOfSureSeeing.png"
@@ -389,7 +389,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "55",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 700,
         imagePath: "images/equipment/GemsOfLife.png"
@@ -402,7 +402,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "56",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 350,
         imagePath: "images/equipment/BraceletOfTransformation.png"
@@ -415,7 +415,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "61",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
         imagePath: "images/equipment/Lifestone.png"
@@ -428,7 +428,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "62",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 350,
         imagePath: "images/equipment/BraceletOfAshain.png"
@@ -441,7 +441,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "63",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 400,
         imagePath: "images/equipment/CircletOfWrath.png"
@@ -454,7 +454,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "64",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
         imagePath: "images/equipment/BeltOfGagron.png"
@@ -467,7 +467,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "65",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/equipment/StoneOfTransmutation.png"
@@ -480,7 +480,7 @@ public static class MagicItemLibrary
         treasureTableDiceResult: "66",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.DifferentTreasure],
+        treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
         imagePath: "images/equipment/GauntletOfDamzhar.png"

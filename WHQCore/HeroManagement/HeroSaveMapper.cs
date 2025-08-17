@@ -1,9 +1,10 @@
 ﻿using WHQCore.Helpers;
 using WHQCore.Models;
-using WHQCore.Libraries.Equipment;
-using WHQCore.Libraries.MagicItems;
-using WHQCore.Libraries.SpecialRules;
 using WHQCore.Libraries;
+using WHQCore.Libraries.MagicItems;
+using WHQCore.Libraries.Equipment;
+using WHQCore.Libraries.SpecialRules;
+using System.Linq;
 
 namespace WHQCore.HeroManagement;
 
@@ -12,6 +13,7 @@ public static class HeroSaveMapper
     public static HeroSaveData ToSaveData(IHero hero)
     {
         var c = hero.Character;
+
         return new HeroSaveData
         {
             Name = c.Name,
@@ -30,28 +32,38 @@ public static class HeroSaveMapper
             Willpower = c.Willpower,
             EscapePinning = c.EscapePinning,
 
-            // Save skills with both Name and Value
-            Skills = c.Skills
-                .Select(s => new SkillSaveData { Name = s.Name, Value = s.Value })
-                .ToList(),
-
+            Skills = c.Skills.Select(s => new SkillSaveData { Name = s.Name, Value = s.Value }).ToList(),
             Spells = c.Spells.Select(s => s.SpellName).ToList(),
             Equipment = c.Equipment.Select(e => e.Name).ToList(),
-            MagicItems = c.MagicItems.Select(m => m.Name).ToList(),
+
+            // Save Magic Items by name per library
+            MagicItems = c.MagicItems
+                .Where(mi => TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicItemLibrary))
+                             .Any(lib => lib.Name == mi.Name))
+                .GroupBy(mi => mi.Name).Select(g => g.First()).ToList(),
+
+            MagicWeaponsAndArmor = c.MagicItems
+                .Where(mi => TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicWeaponsAndArmorLibrary))
+                             .Any(lib => lib.Name == mi.Name))
+                .GroupBy(mi => mi.Name).Select(g => g.First()).ToList(),
+
+            ObjectiveRoomTreasure = c.MagicItems
+                .Where(mi => TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(ObjectiveRoomTreasureLibrary))
+                             .Any(lib => lib.Name == mi.Name))
+                .GroupBy(mi => mi.Name).Select(g => g.First()).ToList(),
+
             SpecialRules = c.SpecialRules.Select(r => r.Name).ToList()
         };
     }
 
     public static IHero FromSaveData(HeroSaveData data)
     {
-        // Find hero definition
         var heroDef = HeroRegistry.Heroes
-            .FirstOrDefault(h => h.DisplayName.Equals(data.HeroType, StringComparison.OrdinalIgnoreCase));
+            .FirstOrDefault(h => h.DisplayName.Equals(data.HeroType, System.StringComparison.OrdinalIgnoreCase));
 
         if (heroDef == null)
             throw new InvalidOperationException($"Unknown hero type: {data.HeroType}");
 
-        // Create base hero
         IHero hero = heroDef.CreateBase(data.Name);
         var c = hero.Character;
 
@@ -70,14 +82,14 @@ public static class HeroSaveMapper
         c.Willpower = data.Willpower;
         c.EscapePinning = data.EscapePinning;
 
-        // --- Clear lists before restoring ---
+        // Clear lists before restoring
         c.Spells.Clear();
         c.Skills.Clear();
         c.Equipment.Clear();
         c.MagicItems.Clear();
         c.SpecialRules.Clear();
 
-        // Restore spells
+        // Restore Spells
         foreach (var spellName in data.Spells)
         {
             var spell = SpellSelectionHelper.GetSpellByName(spellName);
@@ -85,33 +97,24 @@ public static class HeroSaveMapper
                 c.Spells.Add(spell);
         }
 
-        // Restore skills (skip for Wizard)
-        if (!c.HeroType.Equals("Wizard", StringComparison.OrdinalIgnoreCase))
+        // Restore Skills (skip Wizard)
+        if (!c.HeroType.Equals("Wizard", System.StringComparison.OrdinalIgnoreCase))
         {
             foreach (var savedSkill in data.Skills)
             {
                 Skill? skill = null;
-
-                // Try value first
                 if (!string.IsNullOrWhiteSpace(savedSkill.Value))
-                {
                     skill = SkillLibraryHelper.GetSkillByValueForHero(c.HeroType, savedSkill.Value);
-                }
 
-                // Fallback to name
                 if (skill == null && !string.IsNullOrWhiteSpace(savedSkill.Name))
-                {
                     skill = SkillLibraryHelper.GetSkillByNameForHero(c.HeroType, savedSkill.Name);
-                }
 
                 if (skill != null)
-                {
                     c.Skills.Add(skill);
-                }
             }
         }
 
-        // Restore equipment
+        // Restore Equipment
         foreach (var eq in data.Equipment)
         {
             var item = EquipmentLibrary.GetEquipmentByName(eq);
@@ -119,62 +122,41 @@ public static class HeroSaveMapper
                 c.Equipment.Add(item);
         }
 
-        // Restore magic items
-        foreach (var mi in data.MagicItems)
+        // Restore MagicItemLibrary items
+        foreach (var item in data.MagicItems.GroupBy(mi => mi.Name).Select(g => g.First()))
         {
-            var magicItem = MagicItemLibrary.GetMagicItemByName(mi);
-            if (magicItem != null)
-                c.MagicItems.Add(magicItem);
+            var mi = TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicItemLibrary))
+                .FirstOrDefault(x => x.Name == item.Name);
+            if (mi != null)
+                c.MagicItems.Add(mi);
         }
 
-        // Restore magic weapons and armour
-        foreach (var mi in data.MagicItems)
+        // Restore MagicWeaponsAndArmorLibrary items
+        foreach (var item in data.MagicWeaponsAndArmor.GroupBy(mi => mi.Name).Select(g => g.First()))
         {
-            var MagicWeaponAndArmorItem = MagicWeaponsAndArmorLibrary.GetMagicWeaponsAndSwordsByName(mi);
-            if (MagicWeaponAndArmorItem != null)
-                c.MagicItems.Add(MagicWeaponAndArmorItem);
+            var mi = TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(MagicWeaponsAndArmorLibrary))
+                .FirstOrDefault(x => x.Name == item.Name);
+            if (mi != null)
+                c.MagicItems.Add(mi);
         }
 
-        // Restore objective room treasure
-        foreach (var mi in data.MagicItems)
+        // Restore ObjectiveRoomTreasureLibrary items
+        foreach (var item in data.ObjectiveRoomTreasure.GroupBy(mi => mi.Name).Select(g => g.First()))
         {
-            var ObjectiveRoomItem = ObjectiveRoomTreasureLibrary.GetObjectiveRoomTreasureByName(mi);
-            if (ObjectiveRoomItem != null)
-                c.MagicItems.Add(ObjectiveRoomItem);
+            var mi = TreasureLibraryHelper.GetAllItemsFromLibrary(typeof(ObjectiveRoomTreasureLibrary))
+                .FirstOrDefault(x => x.Name == item.Name);
+            if (mi != null)
+                c.MagicItems.Add(mi);
         }
 
-        // Restore special rules
-        foreach (var rule in data.SpecialRules)
+        // Restore SpecialRules
+        foreach (var ruleName in data.SpecialRules)
         {
-            var specialRule = SpecialRuleLibrary.GetSpecialRuleByName(rule);
+            var specialRule = SpecialRuleLibrary.GetSpecialRuleByName(ruleName);
             if (specialRule != null)
                 c.SpecialRules.Add(specialRule);
         }
 
         return hero;
     }
-
-    public static void TestSkillLoadingForAllHeroes(IHero hero, List<SkillSaveData> savedSkills)
-    {
-        var heroType = hero.Character.HeroType;
-
-        Console.WriteLine($"Testing skill restoration for {hero.Character.Name} ({heroType})...");
-
-        foreach (var savedSkill in savedSkills)
-        {
-            Skill? skill = null;
-
-            if (!string.IsNullOrWhiteSpace(savedSkill.Value))
-                skill = SkillLibraryHelper.GetSkillByValueForHero(heroType, savedSkill.Value);
-
-            if (skill == null && !string.IsNullOrWhiteSpace(savedSkill.Name))
-                skill = SkillLibraryHelper.GetSkillByNameForHero(heroType, savedSkill.Name);
-
-            if (skill != null)
-                Console.WriteLine($"Loaded skill: {skill.Name} ({skill.Value})");
-            else
-                Console.WriteLine($"Failed to load skill: Name='{savedSkill.Name}', Value='{savedSkill.Value}'");
-        }
-    }
-
 }
