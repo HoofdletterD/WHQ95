@@ -1,6 +1,6 @@
-﻿using WHQCore.Libraries.Equipment;
+﻿using WHQCore.Heroes.Wizard.Spells;
+using WHQCore.Libraries.Equipment;
 using WHQCore.Libraries.MagicItems;
-using WHQCore.Libraries.Spells;
 using WHQCore.Logic;
 using WHQCore.Models;
 using WHQCore.Models.Enums;
