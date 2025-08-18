@@ -25,7 +25,7 @@ namespace WHQCore.Services
                 Console.WriteLine("4. Show Hero Stats");
                 Console.WriteLine("5. Return to Hero Options");
                 Console.WriteLine("6. Search for / Add a Treasure Card manually");
-
+                Console.WriteLine("7. Manage Inventory");
                 Console.Write("\nEnter your choice: ");
                 var input = Console.ReadLine()?.Trim();
 
@@ -64,6 +64,11 @@ namespace WHQCore.Services
 
                     case "6":
                         AddTreasureManually(heroBase);
+                        break;
+
+                    case "7":
+                        HeroInventoryService.ManageInventoryMenu(heroBase);
+                        HeroSaveManager.SaveHero(heroBase);
                         break;
 
                     default:

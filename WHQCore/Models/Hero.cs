@@ -47,7 +47,8 @@ public class Hero(string name, string type)
     public int TotalToughness => Toughness + GetBonus("Toughness");
     public int TotalStrength => Strength + GetBonus("Strength");
     public int TotalAttacks => Attacks + GetBonus("Attacks");
-
+    public Dictionary<InventorySlot, IInventoryItem?> EquippedItems { get; set; } = new();
+    public List<IInventoryItem> Inventory { get; set; } = new();
     public List<string> SkillNotes { get; set; } = [];
 
     public Dictionary<string, string> GetRollDetails()

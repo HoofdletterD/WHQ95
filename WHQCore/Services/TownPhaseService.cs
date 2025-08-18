@@ -20,6 +20,7 @@ public static class TownPhaseService
             Console.WriteLine("4. Visit Special Location");
             Console.WriteLine("5. Show Hero Stats");
             Console.WriteLine("6. Leave Town");
+            Console.WriteLine("7. Manage Inventory");
             Console.Write("Choose an option: ");
             var input = Console.ReadLine();
 
@@ -43,6 +44,9 @@ public static class TownPhaseService
                 case "6":
                     Console.WriteLine("Leaving town...");
                     return;
+                case "7":
+                    //HeroInventoryService.DisplayInventory(hero);
+                    break;
                 default:
                     Console.WriteLine("Invalid choice. Try again.");
                     break;
