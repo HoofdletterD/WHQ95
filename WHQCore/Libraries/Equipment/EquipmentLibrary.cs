@@ -1,7 +1,5 @@
 ﻿using WHQCore.Models;
 using WHQCore.Models.Enums;
-using System;
-using System.Collections.Generic;
 
 namespace WHQCore.Libraries.Equipment;
 
@@ -16,7 +14,8 @@ public static class EquipmentLibrary
         costBuy: 0,
         costSell: 0,
         stock: 0,
-        imagePath: "images/equipment/Lantern.png"
+        imagePath: "images/equipment/Lantern.png",
+        inventorySlot: InventorySlot.Waist
     );
 
     public static EquipmentData DwarfGreatAxe => new(
@@ -28,7 +27,8 @@ public static class EquipmentLibrary
         costBuy: 0,
         costSell: 0,
         stock: 0,
-        imagePath: "images/equipment/DwarfGreatAxe.png"
+        imagePath: "images/equipment/DwarfGreatAxe.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData DwarfenChainmail => new(
@@ -44,7 +44,8 @@ public static class EquipmentLibrary
         statModifiers: new Dictionary<string, int>
         {
             { "Toughness", 1 }
-        }
+        },
+        inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData ElfBow => new(
@@ -56,7 +57,8 @@ public static class EquipmentLibrary
         costBuy: 0,
         costSell: 0,
         stock: 0,
-        imagePath: "images/equipment/ElfBow.png"
+        imagePath: "images/equipment/ElfBow.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData HealingPotion => new(
@@ -68,25 +70,9 @@ public static class EquipmentLibrary
         costBuy: 0,
         costSell: 0,
         stock: 0,
-        imagePath: "images/equipment/healingPotion.png"
+        imagePath: "images/equipment/healingPotion.png",
+        inventorySlot: InventorySlot.Pouch
     );
-
-    public static EquipmentData? GetEquipmentByName(string name)
-    {
-        var type = typeof(EquipmentLibrary);
-        var props = type.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-
-        foreach (var prop in props)
-        {
-            if (prop.PropertyType == typeof(EquipmentData))
-            {
-                var eq = (EquipmentData)prop.GetValue(null);
-                if (eq.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
-                    return eq;
-            }
-        }
-        return null;
-    }
 
     // Gunsmith items
     public static EquipmentData BraceOfPistols => new(
@@ -98,7 +84,8 @@ public static class EquipmentLibrary
         costBuy: 3000,
         costSell: 600,
         stock: 10,
-        imagePath: "images/equipment/BraceOfPistols.png"
+        imagePath: "images/equipment/BraceOfPistols.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData Musket => new(
@@ -110,7 +97,8 @@ public static class EquipmentLibrary
         costBuy: 2000,
         costSell: 700,
         stock: 11,
-        imagePath: "images/equipment/Musket.png"
+        imagePath: "images/equipment/Musket.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData Shot => new(
@@ -122,7 +110,8 @@ public static class EquipmentLibrary
         costBuy: 100,
         costSell: 0,
         stock: 4,
-        imagePath: "images/equipment/Shot.png"
+        imagePath: "images/equipment/Shot.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData Gunpowder => new(
@@ -134,7 +123,8 @@ public static class EquipmentLibrary
         costBuy: 100,
         costSell: 0,
         stock: 4,
-        imagePath: "images/equipment/Gunpowder.png"
+        imagePath: "images/equipment/Gunpowder.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     // General Store items
@@ -147,7 +137,8 @@ public static class EquipmentLibrary
         costBuy: 30,
         costSell: 5,
         stock: 5,
-        imagePath: "images/equipment/Rope.png"
+        imagePath: "images/equipment/Rope.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData Bandages => new(
@@ -159,7 +150,8 @@ public static class EquipmentLibrary
         costBuy: 50,
         costSell: 0,
         stock: 7,
-        imagePath: "images/equipment/Bandages.png"
+        imagePath: "images/equipment/Bandages.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData Provisions => new(
@@ -171,7 +163,8 @@ public static class EquipmentLibrary
         costBuy: 50,
         costSell: 0,
         stock: 5,
-        imagePath: "images/equipment/Provisions.png"
+        imagePath: "images/equipment/Provisions.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData DoorSpikes => new(
@@ -183,7 +176,8 @@ public static class EquipmentLibrary
         costBuy: 100,
         costSell: 10,
         stock: 7,
-        imagePath: "images/equipment/DoorSpikes.png"
+        imagePath: "images/equipment/DoorSpikes.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData CasksOfBeer => new(
@@ -195,7 +189,8 @@ public static class EquipmentLibrary
         costBuy: 50,
         costSell: 0,
         stock: 5,
-        imagePath: "images/equipment/CasksOfBeer.png"
+        imagePath: "images/equipment/CasksOfBeer.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData FineRobes => new(
@@ -207,7 +202,8 @@ public static class EquipmentLibrary
         costBuy: 50,
         costSell: 20,
         stock: 6,
-        imagePath: "images/equipment/FineRobes.png"
+        imagePath: "images/equipment/FineRobes.png",
+        inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData Boots => new(
@@ -219,7 +215,8 @@ public static class EquipmentLibrary
         costBuy: 20,
         costSell: 10,
         stock: 4,
-        imagePath: "images/equipment/Boots.png"
+        imagePath: "images/equipment/Boots.png",
+        inventorySlot: InventorySlot.Legs
     );
 
     public static EquipmentData TranceStone => new(
@@ -231,7 +228,8 @@ public static class EquipmentLibrary
         costBuy: 300,
         costSell: 75,
         stock: 7,
-        imagePath: "images/equipment/TranceStone.png"
+        imagePath: "images/equipment/TranceStone.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     // Weaponsmith items
@@ -244,7 +242,8 @@ public static class EquipmentLibrary
         costBuy: 75,
         costSell: 20,
         stock: 4,
-        imagePath: "images/equipment/Dagger.png"
+        imagePath: "images/equipment/Dagger.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Knife => new(
@@ -256,7 +255,8 @@ public static class EquipmentLibrary
         costBuy: 40,
         costSell: 5,
         stock: 2,
-        imagePath: "images/equipment/Knife.png"
+        imagePath: "images/equipment/Knife.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Sword => new(
@@ -268,7 +268,8 @@ public static class EquipmentLibrary
         costBuy: 200,
         costSell: 15,
         stock: 5,
-        imagePath: "images/equipment/Sword.png"
+        imagePath: "images/equipment/Sword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Longsword => new(
@@ -280,7 +281,8 @@ public static class EquipmentLibrary
         costBuy: 400,
         costSell: 20,
         stock: 7,
-        imagePath: "images/equipment/Longsword.png"
+        imagePath: "images/equipment/Longsword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData GreatSword => new(
@@ -292,7 +294,8 @@ public static class EquipmentLibrary
         costBuy: 700,
         costSell: 35,
         stock: 8,
-        imagePath: "images/equipment/GreatSword.png"
+        imagePath: "images/equipment/GreatSword.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData Broadsword => new(
@@ -304,7 +307,8 @@ public static class EquipmentLibrary
         costBuy: 500,
         costSell: 25,
         stock: 7,
-        imagePath: "images/equipment/Broadsword.png"
+        imagePath: "images/equipment/Broadsword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Axe => new(
@@ -316,7 +320,8 @@ public static class EquipmentLibrary
         costBuy: 150,
         costSell: 15,
         stock: 4,
-        imagePath: "images/equipment/Axe.png"
+        imagePath: "images/equipment/Axe.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData BattleAxe => new(
@@ -328,7 +333,8 @@ public static class EquipmentLibrary
         costBuy: 500,
         costSell: 35,
         stock: 8,
-        imagePath: "images/equipment/BattleAxe.png"
+        imagePath: "images/equipment/BattleAxe.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData ThrowingAxe => new(
@@ -340,7 +346,8 @@ public static class EquipmentLibrary
         costBuy: 300,
         costSell: 35,
         stock: 7,
-        imagePath: "images/equipment/ThrowingAxe.png"
+        imagePath: "images/equipment/ThrowingAxe.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Spear => new(
@@ -352,7 +359,8 @@ public static class EquipmentLibrary
         costBuy: 200,
         costSell: 20,
         stock: 8,
-        imagePath: "images/equipment/Spear.png"
+        imagePath: "images/equipment/Spear.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Mace => new(
@@ -364,7 +372,8 @@ public static class EquipmentLibrary
         costBuy: 250,
         costSell: 20,
         stock: 7,
-        imagePath: "images/equipment/Mace.png"
+        imagePath: "images/equipment/Mace.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Warhammer => new(
@@ -376,7 +385,8 @@ public static class EquipmentLibrary
         costBuy: 400,
         costSell: 100,
         stock: 10,
-        imagePath: "images/equipment/Warhammer.png"
+        imagePath: "images/equipment/Warhammer.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData ThrowingStarsBag => new(
@@ -388,7 +398,8 @@ public static class EquipmentLibrary
         costBuy: 100,
         costSell: 35,
         stock: 6,
-        imagePath: "images/equipment/ThrowingStarsBag.png"
+        imagePath: "images/equipment/ThrowingStarsBag.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static EquipmentData Flail => new(
@@ -400,7 +411,8 @@ public static class EquipmentLibrary
         costBuy: 250,
         costSell: 100,
         stock: 9,
-        imagePath: "images/equipment/Flail.png"
+        imagePath: "images/equipment/Flail.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData KnuckleDuster => new(
@@ -412,7 +424,8 @@ public static class EquipmentLibrary
         costBuy: 100,
         costSell: 25,
         stock: 8,
-        imagePath: "images/equipment/KnuckleDuster.png"
+        imagePath: "images/equipment/KnuckleDuster.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static EquipmentData Halberd => new(
@@ -424,7 +437,8 @@ public static class EquipmentLibrary
         costBuy: 250,
         costSell: 75,
         stock: 7,
-        imagePath: "images/equipment/Halberd.png"
+        imagePath: "images/equipment/Halberd.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     // Fletcher items
@@ -437,7 +451,8 @@ public static class EquipmentLibrary
         costBuy: 150,
         costSell: 20,
         stock: 5,
-        imagePath: "images/equipment/ShortBow.png"
+        imagePath: "images/equipment/ShortBow.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData Longbow => new(
@@ -449,7 +464,8 @@ public static class EquipmentLibrary
         costBuy: 300,
         costSell: 40,
         stock: 8,
-        imagePath: "images/equipment/Longbow.png"
+        imagePath: "images/equipment/Longbow.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData Arrows => new(
@@ -461,19 +477,21 @@ public static class EquipmentLibrary
         costBuy: 20,
         costSell: 0,
         stock: 3,
-        imagePath: "images/equipment/Arrows.png"
+        imagePath: "images/equipment/Arrows.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData FireArrows => new(
-        "Fire Arrows",
-        "If arrow hits target it may set it alight: roll 1D6, on a score of 4, 5 or 6 the target is set alight and takes an extra 1D6 Wounds, with no modifier for Toughness or armour, each turn until the damage roll comes up a natural 1 or 2 and the fire goes out, causing no more Wounds.",
+        "1D6 Fire Arrows",
+        "If arrow hits target it may set it alight: roll 1D6, on a score of 4, 5 or 6 the target is set alight and takes an extra 1D6 Wounds, with no modifier for Toughness or armour, each turn until the damage roll comes up a natural 1 or 2 and the fire goes out, causing no more Wounds. Contains 1D6 arrows.",
         new List<HeroCode> { HeroCode.D, HeroCode.W },
         new List<Trader> { Trader.Fletcher },
         new List<RuleUsage> { RuleUsage.RequiresAction },
         costBuy: 100,
         costSell: 0,
         stock: 8,
-        imagePath: "images/equipment/FireArrows.png"
+        imagePath: "images/equipment/FireArrows.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static EquipmentData Crossbow => new(
@@ -485,7 +503,8 @@ public static class EquipmentLibrary
         costBuy: 1000,
         costSell: 200,
         stock: 9,
-        imagePath: "images/equipment/Crossbow.png"
+        imagePath: "images/equipment/Crossbow.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static EquipmentData PistolCrossbow => new(
@@ -497,8 +516,22 @@ public static class EquipmentLibrary
         costBuy: 1500,
         costSell: 250,
         stock: 10,
-        imagePath: "images/equipment/PistolCrossbow.png"
+        imagePath: "images/equipment/PistolCrossbow.png",
+        inventorySlot: InventorySlot.MainHand
     );
+
+    public static EquipmentData SecondPistolCrossbow => new(
+    "Pistol Crossbow",
+    "Strength 3; 3 shots every other turn (takes one turn to reload); range 5 squares.",
+    new List<HeroCode> { HeroCode.D, HeroCode.E, HeroCode.W },
+    new List<Trader> { Trader.Fletcher },
+    new List<RuleUsage> { RuleUsage.RequiresAction },
+    costBuy: 1500,
+    costSell: 250,
+    stock: 11,
+    imagePath: "images/equipment/PistolCrossbow.png",
+    inventorySlot: InventorySlot.OffHand
+);
 
     public static EquipmentData Quarrels => new(
         "Quarrels",
@@ -509,7 +542,8 @@ public static class EquipmentLibrary
         costBuy: 30,
         costSell: 0,
         stock: 3,
-        imagePath: "images/equipment/Quarrels.png"
+        imagePath: "images/equipment/Quarrels.png",
+    inventorySlot: InventorySlot.Pouch
     );
 
 
@@ -523,7 +557,8 @@ public static class EquipmentLibrary
         costBuy: 40,
         costSell: 20,
         stock: 5,
-        imagePath: "images/equipment/LeatherArmour.png"
+        imagePath: "images/equipment/LeatherArmour.png",
+    inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData Furs => new(
@@ -535,7 +570,8 @@ public static class EquipmentLibrary
         costBuy: 300,
         costSell: 75,
         stock: 4,
-        imagePath: "images/equipment/Furs.png"
+        imagePath: "images/equipment/Furs.png",
+    inventorySlot: InventorySlot.Back
     );
 
     public static EquipmentData ChainmailArmour => new(
@@ -547,7 +583,8 @@ public static class EquipmentLibrary
         costBuy: 500,
         costSell: 150,
         stock: 5,
-        imagePath: "images/equipment/ChainmailArmour.png"
+        imagePath: "images/equipment/ChainmailArmour.png",
+    inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData LightArmour => new(
@@ -559,7 +596,8 @@ public static class EquipmentLibrary
         costBuy: 1000,
         costSell: 150,
         stock: 7,
-        imagePath: "images/equipment/LightArmour.png"
+        imagePath: "images/equipment/LightArmour.png",
+    inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData HeavyArmour => new(
@@ -571,7 +609,8 @@ public static class EquipmentLibrary
         costBuy: 4000,
         costSell: 1100,
         stock: 8,
-        imagePath: "images/equipment/HeavyArmour.png"
+        imagePath: "images/equipment/HeavyArmour.png",
+    inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData PlateArmour => new(
@@ -583,7 +622,8 @@ public static class EquipmentLibrary
         costBuy: 7000,
         costSell: 2500,
         stock: 10,
-        imagePath: "images/equipment/PlateArmour.png"
+        imagePath: "images/equipment/PlateArmour.png",
+    inventorySlot: InventorySlot.Torso
     );
 
     public static EquipmentData Shield => new(
@@ -595,7 +635,8 @@ public static class EquipmentLibrary
         costBuy: 300,
         costSell: 75,
         stock: 4,
-        imagePath: "images/equipment/Shield.png"
+        imagePath: "images/equipment/Shield.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static EquipmentData GreatShield => new(
@@ -607,7 +648,8 @@ public static class EquipmentLibrary
         costBuy: 550,
         costSell: 150,
         stock: 9,
-        imagePath: "images/equipment/GreatShield.png"
+        imagePath: "images/equipment/GreatShield.png",
+    inventorySlot: InventorySlot.OffHand
     );
 
     public static EquipmentData LeatherHelm => new(
@@ -619,7 +661,8 @@ public static class EquipmentLibrary
         costBuy: 100,
         costSell: 12,
         stock: 4,
-        imagePath: "images/equipment/LeatherHelm.png"
+        imagePath: "images/equipment/LeatherHelm.png",
+    inventorySlot: InventorySlot.Head
     );
 
     public static EquipmentData OpenHelmet => new(
@@ -631,7 +674,8 @@ public static class EquipmentLibrary
         costBuy: 500,
         costSell: 150,
         stock: 7,
-        imagePath: "images/equipment/OpenHelmet.png"
+        imagePath: "images/equipment/OpenHelmet.png",
+    inventorySlot: InventorySlot.Head
     );
 
     public static EquipmentData Warhelm => new(
@@ -643,7 +687,8 @@ public static class EquipmentLibrary
         costBuy: 1000,
         costSell: 350,
         stock: 9,
-        imagePath: "images/equipment/Warhelm.png"
+        imagePath: "images/equipment/Warhelm.png",
+    inventorySlot: InventorySlot.Head
     );
 
     public static List<EquipmentData> GetAllEquipment()
@@ -663,5 +708,21 @@ public static class EquipmentLibrary
         return list;
     }
 
+    public static EquipmentData? GetEquipmentByName(string name)
+    {
+        var type = typeof(EquipmentLibrary);
+        var props = type.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+
+        foreach (var prop in props)
+        {
+            if (prop.PropertyType == typeof(EquipmentData))
+            {
+                var eq = (EquipmentData)prop.GetValue(null);
+                if (eq.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                    return eq;
+            }
+        }
+        return null;
+    }
 
 }

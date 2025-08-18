@@ -13,10 +13,12 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 500,
-        imagePath: "images/equipment/Heartseeker.png"
+        imagePath: "images/equipment/Heartseeker.png",
+        inventorySlot: InventorySlot.MainHand
     );
+
 
     public static MagicItemData BerserkerSword => new(
         "Berserker Sword",
@@ -26,10 +28,11 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 250,
-        imagePath: "images/equipment/BerserkerSword.png"
-    );
+        imagePath: "images/equipment/BerserkerSword.png",
+        inventorySlot: InventorySlot.MainHand
+);
 
     public static MagicItemData BronzeSigilSword => new(
         "Bronze Sigil Sword",
@@ -39,9 +42,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 100,
-        imagePath: "images/equipment/BronzeSigilSword.png"
+        imagePath: "images/equipment/BronzeSigilSword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BootsOfQuargskin => new(
@@ -54,7 +58,8 @@ public static class MagicWeaponsAndArmorLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 0,
-        imagePath: "images/equipment/BootsOfQuargskin.png"
+        imagePath: "images/equipment/BootsOfQuargskin.png",
+        inventorySlot: InventorySlot.Legs
     );
 
     public static MagicItemData SwordOfEnsorcelledIron => new(
@@ -67,7 +72,8 @@ public static class MagicWeaponsAndArmorLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 150,
-        imagePath: "images/equipment/SwordOfEnsorcelledIron.png"
+        imagePath: "images/equipment/SwordOfEnsorcelledIron.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BitingBlade => new(
@@ -78,9 +84,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 150,
-        imagePath: "images/equipment/BitingBlade.png"
+        imagePath: "images/equipment/BitingBlade.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData SwordOfStone => new(
@@ -91,9 +98,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 500,
-        imagePath: "images/equipment/SwordOfStone.png"
+        imagePath: "images/equipment/SwordOfStone.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BladeOfLeapingCopper => new(
@@ -104,9 +112,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 300,
-        imagePath: "images/equipment/BladeOfLeapingCopper.png"
+        imagePath: "images/equipment/BladeOfLeapingCopper.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BladeOfCouronne => new(
@@ -117,9 +126,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 200,
-        imagePath: "images/equipment/BladeOfCouronne.png"
+        imagePath: "images/equipment/BladeOfCouronne.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData MagicSword => new(
@@ -130,9 +140,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 25,
-        imagePath: "images/equipment/MagicSword.png"
+        imagePath: "images/equipment/MagicSword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData RelicBlade => new(
@@ -143,9 +154,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 400,
-        imagePath: "images/equipment/RelicBlade.png"
+        imagePath: "images/equipment/RelicBlade.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BladeOfSlicing => new(
@@ -156,9 +168,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 300,
-        imagePath: "images/equipment/BladeOfSlicing.png"
+        imagePath: "images/equipment/BladeOfSlicing.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData DartingSteelBlades => new(
@@ -169,9 +182,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 350,
-        imagePath: "images/equipment/DartingSteelBlades.png"
+        imagePath: "images/equipment/DartingSteelBlades.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static MagicItemData MagicalQuiver => new(
@@ -184,9 +198,9 @@ public static class MagicWeaponsAndArmorLibrary
     treasureType: [TreasureType.DungeonTreasureMagicItems],
     magicItemType: [MagicItemType.Item],
     costSell: 25,
-    imagePath: "images/equipment/MagicalQuiver.png"
+    imagePath: "images/equipment/MagicalQuiver.png",
+    inventorySlot: InventorySlot.Back
 );
-
 
     public static MagicItemData BoneBlade => new(
     "Bone Blade",
@@ -196,9 +210,10 @@ public static class MagicWeaponsAndArmorLibrary
     ruleUsages: [RuleUsage.None],
     new List<HeroCode> { HeroCode.All },
     treasureType: [TreasureType.DungeonTreasureMagicItems],
-    magicItemType: [MagicItemType.Item],
+    magicItemType: [MagicItemType.Weapon],
     costSell: 400,
-    imagePath: "images/equipment/BoneBlade.png"
+    imagePath: "images/equipment/BoneBlade.png",
+    inventorySlot: InventorySlot.MainHand
 );
 
     public static MagicItemData EltharionsBow => new(
@@ -209,9 +224,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.E },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Bow],
         costSell: 200,
-        imagePath: "images/equipment/EltharionsBow.png"
+        imagePath: "images/equipment/EltharionsBow.png",
+    inventorySlot: InventorySlot.TwoHanded
     );
 
     public static MagicItemData SwordOfMight => new(
@@ -222,9 +238,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 150,
-        imagePath: "images/equipment/SwordOfMight.png"
+        imagePath: "images/equipment/SwordOfMight.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData CloakOfStealth => new(
@@ -237,7 +254,8 @@ public static class MagicWeaponsAndArmorLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
-        imagePath: "images/equipment/CloakOfStealth.png"
+        imagePath: "images/equipment/CloakOfStealth.png",
+        inventorySlot: InventorySlot.Back
     );
 
     public static MagicItemData ObsidianBlade => new(
@@ -248,9 +266,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 450,
-        imagePath: "images/equipment/ObsidianBlade.png"
+        imagePath: "images/equipment/ObsidianBlade.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData GiantSlayer => new(
@@ -261,9 +280,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 250,
-        imagePath: "images/equipment/GiantSlayer.png"
+        imagePath: "images/equipment/GiantSlayer.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static MagicItemData SwordOfResilience => new(
@@ -274,9 +294,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 200,
-        imagePath: "images/equipment/SwordOfResilience.png"
+        imagePath: "images/equipment/SwordOfResilience.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData HelmetOfFarseeing => new(
@@ -287,9 +308,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Helmet],
         costSell: 800,
-        imagePath: "images/equipment/HelmetOfFarseeing.png"
+        imagePath: "images/equipment/HelmetOfFarseeing.png",
+        inventorySlot: InventorySlot.Head
     );
 
     public static MagicItemData ParryingBlade => new(
@@ -302,7 +324,8 @@ public static class MagicWeaponsAndArmorLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 400,
-        imagePath: "images/equipment/ParryingBlade.png"
+        imagePath: "images/equipment/ParryingBlade.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData Deathsword => new(
@@ -313,9 +336,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 400,
-        imagePath: "images/equipment/Deathsword.png"
+        imagePath: "images/equipment/Deathsword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData Dragonhelm => new(
@@ -326,9 +350,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.E },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Helmet],
         costSell: 300,
-        imagePath: "images/equipment/Dragonhelm.png"
+        imagePath: "images/equipment/Dragonhelm.png",
+        inventorySlot: InventorySlot.Head
     );
 
     public static MagicItemData BladeOfSeaGold => new(
@@ -339,9 +364,10 @@ public static class MagicWeaponsAndArmorLibrary
     ruleUsages: [RuleUsage.None],
     new List<HeroCode> { HeroCode.All },
     treasureType: [TreasureType.DungeonTreasureMagicItems],
-    magicItemType: [MagicItemType.Item],
+    magicItemType: [MagicItemType.Weapon],
     costSell: 150,
-    imagePath: "images/equipment/BladeOfSeaGold.png"
+    imagePath: "images/equipment/BladeOfSeaGold.png",
+        inventorySlot: InventorySlot.MainHand
 );
 
     public static MagicItemData OgreSlayer => new(
@@ -352,9 +378,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Axe],
         costSell: 400,
-        imagePath: "images/equipment/OgreSlayer.png"
+        imagePath: "images/equipment/OgreSlayer.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BlessedSword => new(
@@ -365,9 +392,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Weapon],
         costSell: 300,
-        imagePath: "images/equipment/BlessedSword.png"
+        imagePath: "images/equipment/BlessedSword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData GreyArmourOfEshkalon => new(
@@ -378,9 +406,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Armour],
         costSell: 400,
-        imagePath: "images/equipment/GreyArmourOfEshkalon.png"
+        imagePath: "images/equipment/GreyArmourOfEshkalon.png",
+        inventorySlot: InventorySlot.Torso
     );
 
     public static MagicItemData ArmourOfFortune => new(
@@ -391,9 +420,10 @@ public static class MagicWeaponsAndArmorLibrary
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
-        magicItemType: [MagicItemType.Item],
+        magicItemType: [MagicItemType.Armour],
         costSell: 500,
-        imagePath: "images/equipment/ArmourOfFortune.png"
+        imagePath: "images/equipment/ArmourOfFortune.png",
+        inventorySlot: InventorySlot.Torso
     );
 
     public static MagicItemData UndeadBane => new(
@@ -406,7 +436,8 @@ public static class MagicWeaponsAndArmorLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/UndeadBane.png"
+        imagePath: "images/equipment/UndeadBane.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData? GetMagicWeaponsAndSwordsByName(string name)

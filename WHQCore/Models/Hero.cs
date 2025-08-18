@@ -65,4 +65,25 @@ public class Hero(string name, string type)
             .Where(eq => eq.StatModifiers.TryGetValue(statName, out _))
             .Sum(eq => eq.StatModifiers[statName]);
     }
+
+    public bool TryEquipItem(EquipmentData item)
+    {
+        foreach (var slot in item.Slot)
+        {
+            if (Equipment.Any(e => e.Slot.Contains(slot)))
+            {
+                // Slot already occupied
+                return false;
+            }
+        }
+
+        Equipment.Add(item);
+        return true;
+    }
+
+    public void UnequipItem(EquipmentData item)
+    {
+        Equipment.Remove(item);
+    }
+
 }

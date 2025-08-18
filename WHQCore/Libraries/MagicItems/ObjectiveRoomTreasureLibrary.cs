@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using WHQCore.Libraries.MagicItems;
+﻿using WHQCore.Libraries.MagicItems;
 using WHQCore.Models;
 using WHQCore.Models.Enums;
 
@@ -18,7 +16,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/ringofseeking.png"
+        imagePath: "images/objectiveroomtreasure/ringofseeking.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData ChaliceOfSorcery => new(
@@ -31,7 +30,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 700,
-        imagePath: "images/objectiveroomtreasure/chaliceofsorcery.png"
+        imagePath: "images/objectiveroomtreasure/chaliceofsorcery.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData EnchantedJadeAmulet => new(
@@ -44,7 +44,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 600,
-        imagePath: "images/objectiveroomtreasure/enchantedjadeamulet.png"
+        imagePath: "images/objectiveroomtreasure/enchantedjadeamulet.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData BookOfArcaneKnowledge => new(
@@ -57,7 +58,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/bookofarcaneknowledge.png"
+        imagePath: "images/objectiveroomtreasure/bookofarcaneknowledge.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData BroochOfPower => new(
@@ -70,7 +72,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/broochofpower.png"
+        imagePath: "images/objectiveroomtreasure/broochofpower.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData WandOfJade => new(
@@ -83,7 +86,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 600,
-        imagePath: "images/objectiveroomtreasure/wandofjade.png"
+        imagePath: "images/objectiveroomtreasure/wandofjade.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData Dawnstone => new(
@@ -96,7 +100,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/dawnstone.png"
+        imagePath: "images/objectiveroomtreasure/dawnstone.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData RuneOfDeath => new(
@@ -109,7 +114,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/runeofdeath.png"
+        imagePath: "images/objectiveroomtreasure/runeofdeath.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData CrownOfSorcery => new(
@@ -120,9 +126,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.Reusable },
         new List<HeroCode> { HeroCode.All },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Item },
+        magicItemType: new[] { MagicItemType.Helmet },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/crownofsorcery.png"
+        imagePath: "images/objectiveroomtreasure/crownofsorcery.png",
+        inventorySlot: InventorySlot.Head
     );
 
     public static MagicItemData TalismanOfObsidian => new(
@@ -135,7 +142,8 @@ public static class ObjectiveRoomTreasureLibrary
     treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
     magicItemType: new[] { MagicItemType.Item },
     costSell: 500,
-    imagePath: "images/objectiveroomtreasure/talismanofobsidian.png"
+    imagePath: "images/objectiveroomtreasure/talismanofobsidian.png",
+        inventorySlot: InventorySlot.Neck
 );
 
     public static MagicItemData TabletOfAdain => new(
@@ -148,7 +156,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/tabletofadain.png"
+        imagePath: "images/objectiveroomtreasure/tabletofadain.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData ArmourOfTaakan => new(
@@ -161,7 +170,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Armour },
         costSell: 1500,
-        imagePath: "images/objectiveroomtreasure/armouroftaakan.png"
+        imagePath: "images/objectiveroomtreasure/armouroftaakan.png",
+        inventorySlot: InventorySlot.Torso
     );
 
     public static MagicItemData WandOfDiabolum => new(
@@ -174,7 +184,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/wandofdiabolum.png"
+        imagePath: "images/objectiveroomtreasure/wandofdiabolum.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData RingOfCheshnakk => new(
@@ -187,7 +198,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/ringofcheshnakk.png"
+        imagePath: "images/objectiveroomtreasure/ringofcheshnakk.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData HammerOfSigmar => new(
@@ -200,7 +212,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 2000,
-        imagePath: "images/objectiveroomtreasure/hammerofsigmar.png"
+        imagePath: "images/objectiveroomtreasure/hammerofsigmar.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BladeOfLeapingGold => new(
@@ -213,7 +226,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/bladeofleapinggold.png"
+        imagePath: "images/objectiveroomtreasure/bladeofleapinggold.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData Frostblade => new(
@@ -226,7 +240,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 750,
-        imagePath: "images/objectiveroomtreasure/frostblade.png"
+        imagePath: "images/objectiveroomtreasure/frostblade.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData RendingSword => new(
@@ -239,7 +254,8 @@ public static class ObjectiveRoomTreasureLibrary
     treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
     magicItemType: new[] { MagicItemType.Weapon },
     costSell: 1200,
-    imagePath: "images/objectiveroomtreasure/rendingsword.png"
+    imagePath: "images/objectiveroomtreasure/rendingsword.png",
+        inventorySlot: InventorySlot.MainHand
 );
 
     public static MagicItemData SwordOfDestruction => new(
@@ -252,7 +268,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 750,
-        imagePath: "images/objectiveroomtreasure/swordofdestruction.png"
+        imagePath: "images/objectiveroomtreasure/swordofdestruction.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BaneSword => new(
@@ -265,7 +282,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/banesword.png"
+        imagePath: "images/objectiveroomtreasure/banesword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData DragonSword => new(
@@ -278,7 +296,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 1200,
-        imagePath: "images/objectiveroomtreasure/dragonsword.png"
+        imagePath: "images/objectiveroomtreasure/dragonsword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData HellfireSword => new(
@@ -291,7 +310,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 1500,
-        imagePath: "images/objectiveroomtreasure/hellfiresword.png"
+        imagePath: "images/objectiveroomtreasure/hellfiresword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData GromrilBlade => new(
@@ -302,9 +322,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.Reusable },
         new List<HeroCode> { HeroCode.B, HeroCode.D },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Weapon },
+        magicItemType: new[] { MagicItemType.Axe },
         costSell: 1200,
-        imagePath: "images/objectiveroomtreasure/gromrilblade.png"
+        imagePath: "images/objectiveroomtreasure/gromrilblade.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static MagicItemData HydraSword => new(
@@ -317,7 +338,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 850,
-        imagePath: "images/objectiveroomtreasure/hydrasword.png"
+        imagePath: "images/objectiveroomtreasure/hydrasword.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData SwordOfVengeance => new(
@@ -330,7 +352,8 @@ public static class ObjectiveRoomTreasureLibrary
     treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
     magicItemType: new[] { MagicItemType.Weapon },
     costSell: 1000,
-    imagePath: "images/objectiveroomtreasure/swordofvengeance.png"
+    imagePath: "images/objectiveroomtreasure/swordofvengeance.png",
+        inventorySlot: InventorySlot.MainHand
 );
 
     public static MagicItemData AxeOfSlaying => new(
@@ -341,9 +364,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.None },
         new List<HeroCode> { HeroCode.D },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Weapon },
+        magicItemType: new[] { MagicItemType.Axe },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/axeofslaying.png"
+        imagePath: "images/objectiveroomtreasure/axeofslaying.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData SwordOfHeroes => new(
@@ -356,7 +380,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 900,
-        imagePath: "images/objectiveroomtreasure/swordofheroes.png"
+        imagePath: "images/objectiveroomtreasure/swordofheroes.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BladeOfLeapingBronze => new(
@@ -369,7 +394,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Weapon },
         costSell: 450,
-        imagePath: "images/objectiveroomtreasure/bladeofleapingbronze.png"
+        imagePath: "images/objectiveroomtreasure/bladeofleapingbronze.png",
+        inventorySlot: InventorySlot.MainHand
     );
 
     public static MagicItemData BowOfLoren => new(
@@ -380,9 +406,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.Reusable },
         new List<HeroCode> { HeroCode.E },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Weapon },
+        magicItemType: new[] { MagicItemType.Bow },
         costSell: 2000,
-        imagePath: "images/objectiveroomtreasure/bofloren.png"
+        imagePath: "images/objectiveroomtreasure/bofloren.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static MagicItemData SurefireBow => new(
@@ -393,9 +420,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.Reusable },
         new List<HeroCode> { HeroCode.All },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Weapon },
+        magicItemType: new[] { MagicItemType.Bow },
         costSell: 900,
-        imagePath: "images/objectiveroomtreasure/surefirebow.png"
+        imagePath: "images/objectiveroomtreasure/surefirebow.png",
+        inventorySlot: InventorySlot.TwoHanded
     );
 
     public static MagicItemData EnchantedShield => new(
@@ -406,9 +434,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.Reusable },
         new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Armour },
+        magicItemType: new[] { MagicItemType.Shield },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/enchantedshield.png"
+        imagePath: "images/objectiveroomtreasure/enchantedshield.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData ArmourOfMeteoricIron => new(
@@ -421,7 +450,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Armour },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/armourofmeteoriciron.png"
+        imagePath: "images/objectiveroomtreasure/armourofmeteoriciron.png",
+        inventorySlot: InventorySlot.Torso
     );
 
     public static MagicItemData ShieldOfPtolos => new(
@@ -432,9 +462,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.None },
         new List<HeroCode> { HeroCode.B, HeroCode.D },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Armour },
+        magicItemType: new[] { MagicItemType.Shield },
         costSell: 250,
-        imagePath: "images/objectiveroomtreasure/shieldofptolos.png"
+        imagePath: "images/objectiveroomtreasure/shieldofptolos.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData ArmourOfDargan => new(
@@ -447,7 +478,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Armour },
         costSell: 1000,
-        imagePath: "images/objectiveroomtreasure/armourofdargan.png"
+        imagePath: "images/objectiveroomtreasure/armourofdargan.png",
+        inventorySlot: InventorySlot.Torso
     );
 
     public static MagicItemData SpelleaterRune => new(
@@ -460,7 +492,8 @@ public static class ObjectiveRoomTreasureLibrary
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
         magicItemType: new[] { MagicItemType.Item },
         costSell: 500,
-        imagePath: "images/objectiveroomtreasure/spelleaterrune.png"
+        imagePath: "images/objectiveroomtreasure/spelleaterrune.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData StaffOfCommand => new(
@@ -471,9 +504,10 @@ public static class ObjectiveRoomTreasureLibrary
         ruleUsages: new[] { RuleUsage.None },
         new List<HeroCode> { HeroCode.W },
         treasureType: new[] { TreasureType.DungeonTreasureMagicWeaponsAndArmor },
-        magicItemType: new[] { MagicItemType.Weapon },
+        magicItemType: new[] { MagicItemType.Item },
         costSell: 900,
-        imagePath: "images/objectiveroomtreasure/staffofcommand.png"
+        imagePath: "images/objectiveroomtreasure/staffofcommand.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
 

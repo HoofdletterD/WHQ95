@@ -15,7 +15,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/HandOfDeathScroll.png"
+        imagePath: "images/equipment/HandOfDeathScroll.png",
+        inventorySlot: InventorySlot.OffHand
     );
 
     public static MagicItemData DispelMagicScroll => new(
@@ -28,7 +29,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 150,
-        imagePath: "images/equipment/DispelMagicScroll.png"
+        imagePath: "images/equipment/DispelMagicScroll.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData EnergyJewel => new(
@@ -41,7 +43,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/EnergyJewel.png"
+        imagePath: "images/equipment/EnergyJewel.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData AmuletOfFury => new(
@@ -54,7 +57,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/AmuletOfFury.png"
+        imagePath: "images/equipment/AmuletOfFury.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData ArrowOfSlaying => new(
@@ -67,7 +71,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
-        imagePath: "images/equipment/ArrowOfSlaying.png"
+        imagePath: "images/equipment/ArrowOfSlaying.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData CrownOfNight => new(
@@ -80,7 +85,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 300,
-        imagePath: "images/equipment/CrownOfNight.png"
+        imagePath: "images/equipment/CrownOfNight.png",
+        inventorySlot: InventorySlot.Head
     );
 
     public static MagicItemData TalismanOfJet => new(
@@ -93,7 +99,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 600,
-        imagePath: "images/equipment/TalismanOfJet.png"
+        imagePath: "images/equipment/TalismanOfJet.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData SpellRing => new(
@@ -106,7 +113,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
-        imagePath: "images/equipment/SpellRing.png"
+        imagePath: "images/equipment/SpellRing.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData DestroyMagicScroll => new(
@@ -119,7 +127,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 350,
-        imagePath: "images/equipment/DestroyMagicScroll.png"
+        imagePath: "images/equipment/DestroyMagicScroll.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData CloakOfInvisibility => new(
@@ -132,7 +141,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/CloakOfInvisibility.png"
+        imagePath: "images/equipment/CloakOfInvisibility.png",
+        inventorySlot: InventorySlot.Back
     );
 
     public static MagicItemData ArrowsOfPiercing => new(
@@ -145,7 +155,8 @@ public static class MagicItemLibrary
     treasureType: [TreasureType.DungeonTreasureMagicItems],
     magicItemType: [MagicItemType.Item],
     costSell: 300,
-    imagePath: "images/equipment/ArrowsOfPiercing.png"
+    imagePath: "images/equipment/ArrowsOfPiercing.png",
+        inventorySlot: InventorySlot.Pouch
 );
 
     public static MagicItemData RingOfDadaan => new(
@@ -158,7 +169,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/RingOfDadaan.png"
+        imagePath: "images/equipment/RingOfDadaan.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData BootsOfLeaping => new(
@@ -171,7 +183,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 400,
-        imagePath: "images/equipment/BootsOfLeaping.png"
+        imagePath: "images/equipment/BootsOfLeaping.png",
+        inventorySlot: InventorySlot.Legs
     );
 
     public static MagicItemData BootsOfSwiftness => new(
@@ -184,7 +197,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/BootsOfSwiftness.png"
+        imagePath: "images/equipment/BootsOfSwiftness.png",
+        inventorySlot: InventorySlot.Legs
     );
 
     public static MagicItemData BootsOfFlight => new(
@@ -197,7 +211,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 750,
-        imagePath: "images/equipment/BootsOfFlight.png"
+        imagePath: "images/equipment/BootsOfFlight.png",
+        inventorySlot: InventorySlot.Legs
     );
 
     public static MagicItemData BootsOfBattle => new(
@@ -210,7 +225,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 250,
-        imagePath: "images/equipment/BootsOfBattle.png"
+        imagePath: "images/equipment/BootsOfBattle.png",
+        inventorySlot: InventorySlot.Legs
     );
 
     public static MagicItemData PotionOfFlight => new(
@@ -223,7 +239,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 250,
-        imagePath: "images/equipment/PotionOfFlight.png"
+        imagePath: "images/equipment/PotionOfFlight.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData PotionOfHealing => new(
@@ -236,7 +253,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/PotionOfHealing.png"
+        imagePath: "images/equipment/PotionOfHealing.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData PotionOfInvisibility => new(
@@ -249,7 +267,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/PotionOfInvisibility.png"
+        imagePath: "images/equipment/PotionOfInvisibility.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData PotionOfStrength => new(
@@ -262,7 +281,8 @@ public static class MagicItemLibrary
     treasureType: [TreasureType.DungeonTreasureMagicItems],
     magicItemType: [MagicItemType.Item],
     costSell: 100,
-    imagePath: "images/equipment/PotionOfStrength.png"
+    imagePath: "images/equipment/PotionOfStrength.png",
+        inventorySlot: InventorySlot.Pouch
 );
 
     public static MagicItemData PotionOfDisguise => new(
@@ -275,7 +295,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
-        imagePath: "images/equipment/PotionOfDisguise.png"
+        imagePath: "images/equipment/PotionOfDisguise.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData PotionOfWaterWalking => new(
@@ -288,7 +309,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
-        imagePath: "images/equipment/PotionOfWaterWalking.png"
+        imagePath: "images/equipment/PotionOfWaterWalking.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData PotionOfToughness => new(
@@ -301,7 +323,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
-        imagePath: "images/equipment/PotionOfToughness.png"
+        imagePath: "images/equipment/PotionOfToughness.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData ProtectionRing => new(
@@ -314,7 +337,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 300,
-        imagePath: "images/equipment/ProtectionRing.png"
+        imagePath: "images/equipment/ProtectionRing.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData RingOfInvisibility => new(
@@ -327,7 +351,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/RingOfInvisibility.png"
+        imagePath: "images/equipment/RingOfInvisibility.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData RingOfPower => new(
@@ -340,7 +365,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
-        imagePath: "images/equipment/RingOfPower.png"
+        imagePath: "images/equipment/RingOfPower.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData ArkaiPowder => new(
@@ -353,7 +379,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
-        imagePath: "images/equipment/ArkaiPowder.png"
+        imagePath: "images/equipment/ArkaiPowder.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData CharmOfLearning => new(
@@ -366,7 +393,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 100,
-        imagePath: "images/equipment/CharmOfLearning.png"
+        imagePath: "images/equipment/CharmOfLearning.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData RingOfSureSeeing => new(
@@ -379,20 +407,22 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/RingOfSureSeeing.png"
+        imagePath: "images/equipment/RingOfSureSeeing.png",
+        inventorySlot: InventorySlot.Fingers
     );
 
     public static MagicItemData GemsOfLife => new(
         "Gems of Life",
         "These small gems sparkle with a strange, otherworldly energy.",
-        "These gems come as a pair. If the wearer is killed, their body shrinks into a pinprick of light contained within the gem. Use once, then discard.",
+        "These gems come as a pair. One should be worn while the other is kept in a safe place away from the dungeon. If the wearer is killed, shortly after his death his body starts to dwindle in size until it is a pinprick of light contained within the gem. The only things left behind are items of mundane equipment, such as bandages, the lantern or a rope. If the other Warriors survive the rest of the dungeon and bring the two gems back together, their magical power recalls the dead Warrior, alive and well. Just as he was before the adventure started. Use once, then discard.",
         treasureTableDiceResult: "55",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 700,
-        imagePath: "images/equipment/GemsOfLife.png"
+        imagePath: "images/equipment/GemsOfLife.png",
+        inventorySlot: InventorySlot.Pouch
     );
 
     public static MagicItemData BraceletOfTransformation => new(
@@ -405,7 +435,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 350,
-        imagePath: "images/equipment/BraceletOfTransformation.png"
+        imagePath: "images/equipment/BraceletOfTransformation.png",
+        inventorySlot: InventorySlot.Hands
     );
 
     public static MagicItemData Lifestone => new(
@@ -418,7 +449,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
-        imagePath: "images/equipment/Lifestone.png"
+        imagePath: "images/equipment/Lifestone.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData BraceletOfAshain => new(
@@ -431,7 +463,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 350,
-        imagePath: "images/equipment/BraceletOfAshain.png"
+        imagePath: "images/equipment/BraceletOfAshain.png",
+        inventorySlot: InventorySlot.Hands
     );
 
     public static MagicItemData CircletOfWrath => new(
@@ -444,7 +477,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 400,
-        imagePath: "images/equipment/CircletOfWrath.png"
+        imagePath: "images/equipment/CircletOfWrath.png",
+        inventorySlot: InventorySlot.Head
     );
 
     public static MagicItemData BeltOfGagron => new(
@@ -457,7 +491,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
-        imagePath: "images/equipment/BeltOfGagron.png"
+        imagePath: "images/equipment/BeltOfGagron.png",
+        inventorySlot: InventorySlot.Waist
     );
 
     public static MagicItemData StoneOfTransmutation => new(
@@ -470,7 +505,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
-        imagePath: "images/equipment/StoneOfTransmutation.png"
+        imagePath: "images/equipment/StoneOfTransmutation.png",
+        inventorySlot: InventorySlot.Neck
     );
 
     public static MagicItemData GauntletOfDamzhar => new(
@@ -483,7 +519,8 @@ public static class MagicItemLibrary
         treasureType: [TreasureType.DungeonTreasureMagicItems],
         magicItemType: [MagicItemType.Item],
         costSell: 500,
-        imagePath: "images/equipment/GauntletOfDamzhar.png"
+        imagePath: "images/equipment/GauntletOfDamzhar.png",
+        inventorySlot: InventorySlot.Hands
     );
 
     public static MagicItemData? GetMagicItemByName(string name)
