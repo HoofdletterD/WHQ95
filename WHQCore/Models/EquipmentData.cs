@@ -1,104 +1,93 @@
 ﻿using WHQCore.Models.Enums;
 using WHQCore.Services;
 
-namespace WHQCore.Models
+namespace WHQCore.Models;
+
+public class EquipmentData : IInventoryItem
 {
-    public class EquipmentData : IInventoryItem
+    // Parameterless ctor for JSON deserialization
+    public EquipmentData()
     {
-        // Parameterless ctor for JSON deserialization
-        public EquipmentData()
-        {
-            Warriors = new HashSet<HeroCode>();
-            Trader = new HashSet<Trader>();
-            RuleUsages = new HashSet<RuleUsage>();
-            StatModifiers = new Dictionary<string, int>();
-            InventorySlots = new HashSet<InventorySlot>();
-        }
+        Warriors = new HashSet<HeroCode>();
+        Trader = new HashSet<Trader>();
+        RuleUsages = new HashSet<RuleUsage>();
+        StatModifiers = new Dictionary<string, int>();
+        InventorySlots = new HashSet<InventorySlot>();
+    }
 
-        // Full constructor (plural inventorySlots)
-        public EquipmentData(
-            string name,
-            string rules,
-            IEnumerable<HeroCode> warriors,
-            IEnumerable<Trader> trader,
-            IEnumerable<RuleUsage> ruleUsages,
-            int costBuy,
-            int costSell,
-            int stock,
-            string imagePath,
-            IEnumerable<InventorySlot> inventorySlot,
-            Dictionary<string, int>? statModifiers = null)
-        {
-            Name = name;
-            Rules = rules;
-            Warriors = new HashSet<HeroCode>(warriors);
-            Trader = new HashSet<Trader>(trader);
-            RuleUsages = new HashSet<RuleUsage>(ruleUsages);
-            CostBuy = costBuy;
-            CostSell = costSell;
-            Stock = stock;
-            ImagePath = imagePath;
-            StatModifiers = statModifiers ?? new Dictionary<string, int>();
-            InventorySlots = new HashSet<InventorySlot>(inventorySlot);
-        }
+    // Full constructor
+    public EquipmentData(
+        string name,
+        string rules,
+        IEnumerable<HeroCode> warriors,
+        IEnumerable<Trader> trader,
+        IEnumerable<RuleUsage> ruleUsages,
+        int costBuy,
+        int costSell,
+        int stock,
+        string imagePath,
+        IEnumerable<InventorySlot> inventorySlot,
+        Dictionary<string, int>? statModifiers = null)
+    {
+        Name = name;
+        Rules = rules;
+        Warriors = new HashSet<HeroCode>(warriors);
+        Trader = new HashSet<Trader>(trader);
+        RuleUsages = new HashSet<RuleUsage>(ruleUsages);
+        CostBuy = costBuy;
+        CostSell = costSell;
+        Stock = stock;
+        ImagePath = imagePath;
+        InventorySlots = new HashSet<InventorySlot>(inventorySlot);
+        StatModifiers = statModifiers ?? new Dictionary<string, int>();
+    }
 
-        // Convenience overload: single inventory slot (named inventorySlots to match existing call-sites)
-        public EquipmentData(
-            string name,
-            string rules,
-            IEnumerable<HeroCode> warriors,
-            IEnumerable<Trader> trader,
-            IEnumerable<RuleUsage> ruleUsages,
-            int costBuy,
-            int costSell,
-            int stock,
-            string imagePath,
-            InventorySlot inventorySlot,
-            Dictionary<string, int>? statModifiers = null)
-            : this(
-                  name,
-                  rules,
-                  warriors,
-                  trader,
-                  ruleUsages,
-                  costBuy,
-                  costSell,
-                  stock,
-                  imagePath,
-                  new[] { inventorySlot },
-                  statModifiers)
-        { }
+    // Convenience overload: single inventory slot
+    public EquipmentData(
+        string name,
+        string rules,
+        IEnumerable<HeroCode> warriors,
+        IEnumerable<Trader> trader,
+        IEnumerable<RuleUsage> ruleUsages,
+        int costBuy,
+        int costSell,
+        int stock,
+        string imagePath,
+        InventorySlot inventorySlot,
+        Dictionary<string, int>? statModifiers = null)
+        : this(name, rules, warriors, trader, ruleUsages, costBuy, costSell, stock, imagePath, new[] { inventorySlot }, statModifiers)
+    { }
 
-        // Properties
-        public string Name { get; set; } = string.Empty;
-        public string Rules { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public string Rules { get; set; } = string.Empty;
 
-        public HashSet<HeroCode> Warriors { get; set; }
-        public HashSet<Trader> Trader { get; set; }
-        public HashSet<RuleUsage> RuleUsages { get; set; }
+    public HashSet<HeroCode> Warriors { get; set; }
+    public HashSet<Trader> Trader { get; set; }
+    public HashSet<RuleUsage> RuleUsages { get; set; }
 
-        public int CostBuy { get; set; }
-        public int CostSell { get; set; }
-        public int Stock { get; set; }
+    public int CostBuy { get; set; }
+    public int CostSell { get; set; }
+    public int Stock { get; set; }
 
-        public string ImagePath { get; set; } = string.Empty;
+    public string ImagePath { get; set; } = string.Empty;
 
-        public Dictionary<string, int> StatModifiers { get; set; }
+    public Dictionary<string, int> StatModifiers { get; set; }
 
-        // Inventory slots that this equipment occupies (can be multiple)
-        public HashSet<InventorySlot> InventorySlots { get; set; }
+    // Inventory slots that this equipment occupies
+    public HashSet<InventorySlot> InventorySlots { get; set; }
 
-        public string Description => throw new NotImplementedException();
+    // Implementation for IInventoryItem
+    public HashSet<InventorySlot> Slot => InventorySlots;
 
-        public HashSet<InventorySlot> Slot => throw new NotImplementedException();
+    // Description now returns a safe string
+    public string Description => Rules;
 
-        public override string ToString()
-        {
-            var statMods = StatModifiers != null && StatModifiers.Any()
-                ? " (" + string.Join(", ", StatModifiers.Select(kv => $"{kv.Key} +{kv.Value}")) + ")"
-                : "";
+    public override string ToString()
+    {
+        var statMods = StatModifiers != null && StatModifiers.Any()
+            ? " (" + string.Join(", ", StatModifiers.Select(kv => $"{kv.Key} +{kv.Value}")) + ")"
+            : "";
 
-            return $"{Name}{statMods}";
-        }
+        return $"{Name}{statMods}";
     }
 }

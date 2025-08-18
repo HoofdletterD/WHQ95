@@ -360,7 +360,7 @@ public static class MagicWeaponsAndArmorLibrary
     "Blade of Sea Gold",
     "Forged from gold taken from the depths of the sea when the world was young, this blade is covered in runes so ancient and worn that they can no longer be read.",
     "While your Warrior is using this sword each attack he makes ignores the first point of his opponent's armour.",
-    treasureTableDiceResult: "53-54",
+    treasureTableDiceResult: "53",
     ruleUsages: [RuleUsage.None],
     new List<HeroCode> { HeroCode.All },
     treasureType: [TreasureType.DungeonTreasureMagicItems],
@@ -370,11 +370,26 @@ public static class MagicWeaponsAndArmorLibrary
         inventorySlot: InventorySlot.MainHand
 );
 
+    public static MagicItemData BladeOfLeapingSeaGold => new(
+"Blade of Leaping Sea Gold",
+"Forged from gold taken from the depths of the sea when the world was young, this blade is covered in runes so ancient and worn that they can no longer be read.",
+"While your Warrior is using this sword each attack he makes ignores the first point of his opponent's armour.",
+treasureTableDiceResult: "54",
+ruleUsages: [RuleUsage.None],
+new List<HeroCode> { HeroCode.All },
+treasureType: [TreasureType.DungeonTreasureMagicItems],
+magicItemType: [MagicItemType.Weapon],
+costSell: 150,
+imagePath: "images/equipment/BladeOfSeaGold.png",
+    inventorySlot: InventorySlot.MainHand
+);
+
+
     public static MagicItemData OgreSlayer => new(
         "Ogre Slayer",
         "This brutal, broad-bladed axe is a powerful weapon, almost certainly of Dwarf origin.",
         "While using this axe your Warrior gets +2 Strength (+3 if he is a Dwarf).",
-        treasureTableDiceResult: "55-56",
+        treasureTableDiceResult: "55",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
@@ -383,6 +398,20 @@ public static class MagicWeaponsAndArmorLibrary
         imagePath: "images/equipment/OgreSlayer.png",
         inventorySlot: InventorySlot.MainHand
     );
+
+    public static MagicItemData OgreSlayerAxe => new(
+    "Ogre Slayer Axe",
+    "This brutal, broad-bladed axe is a powerful weapon, almost certainly of Dwarf origin.",
+    "While using this axe your Warrior gets +2 Strength (+3 if he is a Dwarf).",
+    treasureTableDiceResult: "56",
+    ruleUsages: [RuleUsage.None],
+    new List<HeroCode> { HeroCode.B, HeroCode.D },
+    treasureType: [TreasureType.DungeonTreasureMagicItems],
+    magicItemType: [MagicItemType.Axe],
+    costSell: 400,
+    imagePath: "images/equipment/OgreSlayer.png",
+    inventorySlot: InventorySlot.MainHand
+);
 
     public static MagicItemData BlessedSword => new(
         "Blessed Sword",
@@ -397,6 +426,7 @@ public static class MagicWeaponsAndArmorLibrary
         imagePath: "images/equipment/BlessedSword.png",
         inventorySlot: InventorySlot.MainHand
     );
+
 
     public static MagicItemData GreyArmourOfEshkalon => new(
         "Grey Armour of Eshkalon",
@@ -416,7 +446,7 @@ public static class MagicWeaponsAndArmorLibrary
         "Armour of Fortune",
         "This armour's gleaming metal plates magically reflect all the battles in which it has been worn in a rainbow array of never-ending carnage and war.",
         "The armour absorbs and stores damage. Once worn it cannot be removed for the rest of the adventure. It can absorb 30 Wounds, after which it explodes, taking the Warrior down to zero wounds (unless a potion or spell intervenes).",
-        treasureTableDiceResult: "63-64",
+        treasureTableDiceResult: "63",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
@@ -426,11 +456,25 @@ public static class MagicWeaponsAndArmorLibrary
         inventorySlot: InventorySlot.Torso
     );
 
+    public static MagicItemData ArmourOfFortunes => new(
+    "Armour of Fortunes",
+    "This armour's gleaming metal plates magically reflect all the battles in which it has been worn in a rainbow array of never-ending carnage and war.",
+    "The armour absorbs and stores damage. Once worn it cannot be removed for the rest of the adventure. It can absorb 30 Wounds, after which it explodes, taking the Warrior down to zero wounds (unless a potion or spell intervenes).",
+    treasureTableDiceResult: "64",
+    ruleUsages: [RuleUsage.None],
+    new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
+    treasureType: [TreasureType.DungeonTreasureMagicItems],
+    magicItemType: [MagicItemType.Armour],
+    costSell: 500,
+    imagePath: "images/equipment/ArmourOfFortune.png",
+    inventorySlot: InventorySlot.Torso
+);
+
     public static MagicItemData UndeadBane => new(
         "Undead Bane",
         "This sword was forged in the time of Nagash, the Liche-king, and is a powerful weapon against his undead hordes.",
         "While your Warrior is using this sword each Attack he makes against undead Monsters causes an extra 1D6 Wounds.",
-        treasureTableDiceResult: "65-66",
+        treasureTableDiceResult: "65",
         ruleUsages: [RuleUsage.None],
         new List<HeroCode> { HeroCode.All },
         treasureType: [TreasureType.DungeonTreasureMagicItems],
@@ -439,6 +483,20 @@ public static class MagicWeaponsAndArmorLibrary
         imagePath: "images/equipment/UndeadBane.png",
         inventorySlot: InventorySlot.MainHand
     );
+
+    public static MagicItemData UndeadBaneBlade => new(
+    "Undead Bane Blade",
+    "This sword was forged in the time of Nagash, the Liche-king, and is a powerful weapon against his undead hordes.",
+    "While your Warrior is using this sword each Attack he makes against undead Monsters causes an extra 1D6 Wounds.",
+    treasureTableDiceResult: "66",
+    ruleUsages: [RuleUsage.None],
+    new List<HeroCode> { HeroCode.All },
+    treasureType: [TreasureType.DungeonTreasureMagicItems],
+    magicItemType: [MagicItemType.Item],
+    costSell: 200,
+    imagePath: "images/equipment/UndeadBane.png",
+    inventorySlot: InventorySlot.MainHand
+);
 
     public static MagicItemData? GetMagicWeaponsAndSwordsByName(string name)
     {

@@ -16,7 +16,7 @@ public class MagicItemData : IInventoryItem
         Slots = new HashSet<InventorySlot>();
     }
 
-    // Full constructor for manual creation (plural Slots)
+    // Full constructor
     public MagicItemData(
         string name,
         string flavor,
@@ -45,7 +45,7 @@ public class MagicItemData : IInventoryItem
         StatModifiers = statModifiers ?? new Dictionary<string, int>();
     }
 
-    // Convenience overload: single inventorySlot (matches your call-site)
+    // Convenience overload: single inventorySlot
     public MagicItemData(
         string name,
         string flavor,
@@ -59,19 +59,7 @@ public class MagicItemData : IInventoryItem
         string imagePath,
         InventorySlot inventorySlot,
         Dictionary<string, int>? statModifiers = null)
-        : this(
-            name,
-            flavor,
-            rules,
-            treasureTableDiceResult,
-            ruleUsages,
-            warriors,
-            treasureType,
-            magicItemType,
-            costSell,
-            imagePath,
-            new[] { inventorySlot },
-            statModifiers)
+        : this(name, flavor, rules, treasureTableDiceResult, ruleUsages, warriors, treasureType, magicItemType, costSell, imagePath, new[] { inventorySlot }, statModifiers)
     { }
 
     public string Name { get; set; }
@@ -85,11 +73,15 @@ public class MagicItemData : IInventoryItem
     public int CostSell { get; set; }
     public string ImagePath { get; set; }
     public Dictionary<string, int> StatModifiers { get; set; }
-    public HashSet<InventorySlot> Slots { get; set; }  // <- used by both constructors
 
-    public string Description => throw new NotImplementedException();
+    // Inventory slots that this magic item occupies
+    public HashSet<InventorySlot> Slots { get; set; }
 
-    public HashSet<InventorySlot> Slot => throw new NotImplementedException();
+    // Implementation for IInventoryItem
+    public HashSet<InventorySlot> Slot => Slots;
+
+    // Description now returns a safe string
+    public string Description => $"{Flavor} {Rules}";
 
     public override string ToString()
     {

@@ -13,6 +13,7 @@
         Fingers,
         Head,
         Back,
-        Pouch
+        Pouch,
+        None
     }
 }

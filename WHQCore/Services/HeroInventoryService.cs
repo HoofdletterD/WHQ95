@@ -1,79 +1,175 @@
-﻿using WHQCore.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using WHQCore.Heroes;
+using WHQCore.Models;
 using WHQCore.Models.Enums;
 
 namespace WHQCore.Services
 {
     public static class HeroInventoryService
     {
-        /// <summary>
-        /// Checks if the hero can equip this item based on its InventorySlots.
-        /// Returns true if all required slots are free.
-        /// </summary>
-        public static bool CanEquip(IHero hero, IInventoryItem item)
+        // Display full inventory: equipped items by slot and backpack items
+        public static void DisplayInventory(IHero heroBase)
         {
-            foreach (var slot in item.Slots)
+            var hero = heroBase.Character;
+
+            Console.WriteLine($"\n--- {hero.Name}'s Inventory ---");
+
+            var slots = Enum.GetValues<InventorySlot>().Cast<InventorySlot>();
+
+            // --- Equipped Items ---
+            Console.WriteLine("\nEquipped Items:");
+            foreach (var slot in slots)
             {
-                if (IsSlotOccupied(hero, slot))
-                    return false;
-            }
-            return true;
-        }
-
-        /// <summary>
-        /// Equips an item to the hero if the slots are free.
-        /// Returns true if equipped successfully, false otherwise.
-        /// </summary>
-        public static bool Equip(IHero hero, IInventoryItem item)
-        {
-            if (!CanEquip(hero, item))
-                return false;
-
-            switch (item)
-            {
-                case EquipmentData eq:
-                    hero.Character.Equipment.Add(eq);
-                    break;
-
-                case MagicItemData mi:
-                    hero.Character.MagicItems.Add(mi);
-                    break;
+                hero.EquippedItems.TryGetValue(slot, out var equipped);
+                Console.WriteLine($"{slot}: {(equipped != null ? equipped.Name : "(empty)")}");
             }
 
-            return true;
-        }
+            // --- Backpack Items ---
+            Console.WriteLine("\nBackpack Items:");
+            var backpack = GetBackpack(hero);
 
-        /// <summary>
-        /// Unequips an item from the hero, freeing its slots.
-        /// </summary>
-        public static void Unequip(IHero hero, IInventoryItem item)
-        {
-            switch (item)
+            if (!backpack.Any())
             {
-                case EquipmentData eq:
-                    hero.Character.Equipment.Remove(eq);
-                    break;
-
-                case MagicItemData mi:
-                    hero.Character.MagicItems.Remove(mi);
-                    break;
+                Console.WriteLine("No items in backpack.");
+            }
+            else
+            {
+                int index = 1;
+                foreach (var item in backpack)
+                    Console.WriteLine($"{index++}. {item.Name}");
             }
         }
 
-        /// <summary>
-        /// Returns true if a hero already has an item occupying this slot.
-        /// </summary>
-        private static bool IsSlotOccupied(IHero hero, InventorySlot slot)
+        // Add item to hero's inventory (pouch/backpack)
+        public static void AddToInventory(Hero hero, IInventoryItem item)
         {
-            return hero.Character.Equipment.Any(e => e.Slot.Contains(slot)) ||
-                   hero.Character.MagicItems.Any(m => m.Slots.Contains(slot));
+            hero.Inventory.Add(item);
         }
-    }
 
-    /// <summary>
-    /// Shared interface to unify EquipmentData and MagicItemData for inventory operations.
-    /// </summary>
-    public interface IInventoryItem
-    {
-        public HashSet<InventorySlot> Slots { get; }
+        // Equip an item from inventory/backpack
+        public static void TryEquipItem(Hero hero, IInventoryItem item)
+        {
+            if (item.Slot.Contains(InventorySlot.Pouch))
+            {
+                Console.Write($"Use {item.Name}? (y/n): ");
+                var key = Console.ReadKey(true).Key;
+                Console.WriteLine();
+                if (key == ConsoleKey.Y)
+                {
+                    Console.WriteLine($"{item.Name} used!");
+                    hero.Inventory.Remove(item);
+                }
+                return;
+            }
+
+            if (!ItemCanBeUsedByHero(hero, item))
+            {
+                Console.WriteLine($"{item.Name} cannot be equipped by this hero.");
+                return;
+            }
+
+            // Swap any currently equipped items in the same slots
+            foreach (var slot in item.Slot)
+            {
+                hero.EquippedItems.TryGetValue(slot, out var currentlyEquipped);
+                if (currentlyEquipped != null)
+                {
+                    Console.WriteLine($"\nEquipping {item.Name} will replace: {currentlyEquipped.Name}");
+                    Console.Write("Do you want to continue? (y/n): ");
+                    var key = Console.ReadKey(true).Key;
+                    Console.WriteLine();
+                    if (key != ConsoleKey.Y)
+                        return;
+
+                    // Move old item back to backpack
+                    hero.Inventory.Add(currentlyEquipped);
+                    RemoveFromEquipped(hero, currentlyEquipped);
+                }
+            }
+
+            // Equip new item
+            foreach (var slot in item.Slot)
+            {
+                hero.EquippedItems[slot] = item;
+            }
+
+            // Remove from backpack if it was there
+            hero.Inventory.Remove(item);
+
+            // Ensure it's also in Equipment/MagicItems
+            if (item is EquipmentData eq && !hero.Equipment.Contains(eq))
+                hero.Equipment.Add(eq);
+            else if (item is MagicItemData mi && !hero.MagicItems.Contains(mi))
+                hero.MagicItems.Add(mi);
+
+            Console.WriteLine($"{item.Name} equipped.");
+        }
+
+        // Interactive menu
+        public static void ManageInventoryMenu(IHero heroBase)
+        {
+            var hero = heroBase.Character;
+
+            while (true)
+            {
+                Console.Clear();
+                DisplayInventory(heroBase);
+
+                var backpack = GetBackpack(hero);
+                if (!backpack.Any())
+                {
+                    Console.WriteLine("\nNo items to equip or use. Press any key to return...");
+                    Console.ReadKey();
+                    return;
+                }
+
+                Console.WriteLine("\nSelect an item to equip or use (0 to exit):");
+                for (int i = 0; i < backpack.Count; i++)
+                    Console.WriteLine($"{i + 1}. {backpack[i].Name}");
+
+                Console.Write("> ");
+                var input = Console.ReadLine();
+                if (!int.TryParse(input, out int choice) || choice < 0 || choice > backpack.Count)
+                    continue;
+                if (choice == 0) return;
+
+                var selectedItem = backpack[choice - 1];
+                TryEquipItem(hero, selectedItem);
+
+                Console.WriteLine("\nPress any key to continue...");
+                Console.ReadKey();
+            }
+        }
+
+        // Get all backpack items (unequipped equipment/magic items + hero.Inventory)
+        private static List<IInventoryItem> GetBackpack(Hero hero)
+        {
+            var equipped = hero.EquippedItems.Values.Where(v => v != null);
+            var unequipped = hero.Equipment.Concat<IInventoryItem>(hero.MagicItems)
+                                .Except(equipped);
+            return unequipped.Concat(hero.Inventory).ToList();
+        }
+
+        private static void RemoveFromEquipped(Hero hero, IInventoryItem item)
+        {
+            var keysToRemove = hero.EquippedItems
+                                    .Where(kv => kv.Value == item)
+                                    .Select(kv => kv.Key)
+                                    .ToList();
+            foreach (var key in keysToRemove)
+                hero.EquippedItems[key] = null;
+        }
+
+        private static bool ItemCanBeUsedByHero(Hero hero, IInventoryItem item)
+        {
+            return item switch
+            {
+                EquipmentData eq => eq.Warriors.Contains(hero.HeroCode) || eq.Warriors.Contains(HeroCode.All),
+                MagicItemData mi => mi.Warriors.Contains(hero.HeroCode) || mi.Warriors.Contains(HeroCode.All),
+                _ => false
+            };
+        }
     }
 }
