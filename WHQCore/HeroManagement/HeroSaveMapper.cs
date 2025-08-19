@@ -52,6 +52,11 @@ public static class HeroSaveMapper
                              .Any(lib => lib.Name == mi.Name))
                 .GroupBy(mi => mi.Name).Select(g => g.First()).ToList(),
 
+            // ✅ Store equipped items
+            EquippedItems = c.EquippedItems
+                         .Where(kv => kv.Value != null)
+                         .ToDictionary(kv => kv.Key, kv => kv.Value.Name),
+
             SpecialRules = c.SpecialRules.Select(r => r.Name).ToList()
         };
     }
@@ -157,6 +162,24 @@ public static class HeroSaveMapper
                 c.SpecialRules.Add(specialRule);
         }
 
+        // ✅ Restore equipped items
+        c.EquippedItems.Clear();
+        foreach (var kv in data.EquippedItems)
+        {
+            IInventoryItem? item = null;
+
+            // Look in Equipment
+            item = c.Equipment.FirstOrDefault(e => e.Name == kv.Value);
+
+            // Look in MagicItems if not found
+            if (item == null)
+                item = c.MagicItems.FirstOrDefault(mi => mi.Name == kv.Value);
+
+            if (item != null)
+                c.EquippedItems[kv.Key] = item;
+            else
+                c.EquippedItems[kv.Key] = null;
+        }
         return hero;
     }
 }

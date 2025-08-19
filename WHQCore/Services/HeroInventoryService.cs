@@ -107,6 +107,22 @@ namespace WHQCore.Services
             Console.WriteLine($"{item.Name} equipped.");
         }
 
+        // NEW: Unequip an item and move it back to the backpack
+        public static void UnequipItem(Hero hero, IInventoryItem item)
+        {
+            if (item == null)
+                return;
+
+            // Remove from equipped slots
+            RemoveFromEquipped(hero, item);
+
+            // Put back into backpack
+            if (!hero.Inventory.Contains(item))
+                hero.Inventory.Add(item);
+
+            Console.WriteLine($"{item.Name} unequipped and moved to backpack.");
+        }
+
         // Interactive menu
         public static void ManageInventoryMenu(IHero heroBase)
         {
@@ -117,30 +133,80 @@ namespace WHQCore.Services
                 Console.Clear();
                 DisplayInventory(heroBase);
 
-                var backpack = GetBackpack(hero);
-                if (!backpack.Any())
+                Console.WriteLine("\nOptions:");
+                Console.WriteLine("1. Equip/Use item from backpack");
+                Console.WriteLine("2. Unequip item");
+                Console.WriteLine("0. Exit");
+
+                Console.Write("\n> ");
+                var choice = Console.ReadLine();
+
+                switch (choice)
                 {
-                    Console.WriteLine("\nNo items to equip or use. Press any key to return...");
-                    Console.ReadKey();
-                    return;
+                    case "1":
+                        ManageBackpackMenu(hero);
+                        break;
+                    case "2":
+                        ManageUnequipMenu(hero);
+                        break;
+                    case "0":
+                        return;
                 }
-
-                Console.WriteLine("\nSelect an item to equip or use (0 to exit):");
-                for (int i = 0; i < backpack.Count; i++)
-                    Console.WriteLine($"{i + 1}. {backpack[i].Name}");
-
-                Console.Write("> ");
-                var input = Console.ReadLine();
-                if (!int.TryParse(input, out int choice) || choice < 0 || choice > backpack.Count)
-                    continue;
-                if (choice == 0) return;
-
-                var selectedItem = backpack[choice - 1];
-                TryEquipItem(hero, selectedItem);
-
-                Console.WriteLine("\nPress any key to continue...");
-                Console.ReadKey();
             }
+        }
+
+        private static void ManageBackpackMenu(Hero hero)
+        {
+            var backpack = GetBackpack(hero);
+            if (!backpack.Any())
+            {
+                Console.WriteLine("\nNo items to equip or use. Press any key...");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine("\nSelect an item to equip or use (0 to cancel):");
+            for (int i = 0; i < backpack.Count; i++)
+                Console.WriteLine($"{i + 1}. {backpack[i].Name}");
+
+            Console.Write("> ");
+            var input = Console.ReadLine();
+            if (!int.TryParse(input, out int choice) || choice < 0 || choice > backpack.Count)
+                return;
+            if (choice == 0) return;
+
+            var selectedItem = backpack[choice - 1];
+            TryEquipItem(hero, selectedItem);
+
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+        }
+
+        private static void ManageUnequipMenu(Hero hero)
+        {
+            var equipped = hero.EquippedItems.Values.Where(i => i != null).ToList();
+            if (!equipped.Any())
+            {
+                Console.WriteLine("\nNo items equipped. Press any key...");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine("\nSelect an item to unequip (0 to cancel):");
+            for (int i = 0; i < equipped.Count; i++)
+                Console.WriteLine($"{i + 1}. {equipped[i].Name}");
+
+            Console.Write("> ");
+            var input = Console.ReadLine();
+            if (!int.TryParse(input, out int choice) || choice < 0 || choice > equipped.Count)
+                return;
+            if (choice == 0) return;
+
+            var selectedItem = equipped[choice - 1];
+            UnequipItem(hero, selectedItem);
+
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
         }
 
         // Get all backpack items (unequipped equipment/magic items + hero.Inventory)

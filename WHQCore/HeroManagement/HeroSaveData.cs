@@ -1,4 +1,5 @@
 ﻿using WHQCore.Models;
+using WHQCore.Models.Enums;
 
 namespace WHQCore.HeroManagement;
 public class HeroSaveData
@@ -28,6 +29,8 @@ public class HeroSaveData
     public List<MagicItemData> MagicWeaponsAndArmor { get; set; } = [];
     public List<MagicItemData> ObjectiveRoomTreasure { get; set; } = [];
     public List<string> SpecialRules { get; set; } = [];
+
+    public Dictionary<InventorySlot, string> EquippedItems { get; set; } = new();
 }
 
 public class SkillSaveData
