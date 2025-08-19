@@ -70,11 +70,40 @@ namespace WHQCore.Services
                 return;
             }
 
-            // Swap any currently equipped items in the same slots
+            // === Handle Two-Handed Equip ===
+            if (item.Slot.Contains(InventorySlot.TwoHanded))
+            {
+                // If something is in main/offhand, unequip them
+                if (hero.EquippedItems.TryGetValue(InventorySlot.MainHand, out var mh) && mh != null)
+                {
+                    Console.WriteLine($"\nEquipping {item.Name} will replace: {mh.Name}");
+                    hero.Inventory.Add(mh);
+                    RemoveFromEquipped(hero, mh);
+                }
+                if (hero.EquippedItems.TryGetValue(InventorySlot.OffHand, out var oh) && oh != null)
+                {
+                    Console.WriteLine($"\nEquipping {item.Name} will replace: {oh.Name}");
+                    hero.Inventory.Add(oh);
+                    RemoveFromEquipped(hero, oh);
+                }
+            }
+
+            // === Handle MainHand / OffHand Equip ===
+            if (item.Slot.Contains(InventorySlot.MainHand) || item.Slot.Contains(InventorySlot.OffHand))
+            {
+                // If a two-handed is equipped, unequip it
+                if (hero.EquippedItems.TryGetValue(InventorySlot.TwoHanded, out var twoHanded) && twoHanded != null)
+                {
+                    Console.WriteLine($"\nEquipping {item.Name} will replace: {twoHanded.Name}");
+                    hero.Inventory.Add(twoHanded);
+                    RemoveFromEquipped(hero, twoHanded);
+                }
+            }
+
+            // === Handle Slot Conflicts Normally ===
             foreach (var slot in item.Slot)
             {
-                hero.EquippedItems.TryGetValue(slot, out var currentlyEquipped);
-                if (currentlyEquipped != null)
+                if (hero.EquippedItems.TryGetValue(slot, out var currentlyEquipped) && currentlyEquipped != null)
                 {
                     Console.WriteLine($"\nEquipping {item.Name} will replace: {currentlyEquipped.Name}");
                     Console.Write("Do you want to continue? (y/n): ");
@@ -83,15 +112,10 @@ namespace WHQCore.Services
                     if (key != ConsoleKey.Y)
                         return;
 
-                    // Move old item back to backpack
                     hero.Inventory.Add(currentlyEquipped);
                     RemoveFromEquipped(hero, currentlyEquipped);
                 }
-            }
 
-            // Equip new item
-            foreach (var slot in item.Slot)
-            {
                 hero.EquippedItems[slot] = item;
             }
 
@@ -106,6 +130,7 @@ namespace WHQCore.Services
 
             Console.WriteLine($"{item.Name} equipped.");
         }
+
 
         // NEW: Unequip an item and move it back to the backpack
         public static void UnequipItem(Hero hero, IInventoryItem item)
