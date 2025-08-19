@@ -27,6 +27,7 @@ public class Hero(string name, string type)
     public int BattleLevel { get; set; } = 1;
     public int Gold { get; set; } = 0;
     public int StartingWounds { get; set; }
+    public int CurrentWounds { get; set; }
     public required DiceRoller.DiceRollResult? StartingWoundsRoll { get; set; }
     public int Movement { get; set; }
     public int WeaponSkill { get; set; }

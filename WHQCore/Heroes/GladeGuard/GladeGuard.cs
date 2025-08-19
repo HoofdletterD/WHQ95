@@ -23,6 +23,7 @@ public class GladeGuard : HeroBase
     {
         var result = DiceRoller.RollD6WithRerollIfOne(out _, out _);
         Character.StartingWounds = result.Total + 7;
+        Character.CurrentWounds = Character.StartingWounds;
         Character.GetRollDetails()["Wounds"] = result.ToString();
         Character.Gold = 1000000;
 

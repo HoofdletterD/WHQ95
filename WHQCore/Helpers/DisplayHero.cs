@@ -31,6 +31,8 @@ public static class HeroDisplayer
             Console.WriteLine($"Starting Wounds: {character.StartingWounds}");
         }
 
+        Console.WriteLine($"Current Wounds: {character.CurrentWounds}");
+
         Console.WriteLine($"Movement: {character.Movement}");
         Console.WriteLine($"Weapon Skill: {character.WeaponSkill}");
         Console.WriteLine($"Ballistic Skill: {character.BallisticSkill}");

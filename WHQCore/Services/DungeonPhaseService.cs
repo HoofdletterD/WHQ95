@@ -20,12 +20,13 @@ namespace WHQCore.Services
                 Console.Clear();
                 Console.WriteLine($"--- Dungeon Phase for {hero.Name} ---");
                 Console.WriteLine("1. Adjust Gold (simulate monster loot)");
-                Console.WriteLine("2. Roll Dungeon Treasure (Rulebook D6 table)");
-                Console.WriteLine("3. Roll on Objective Room D66 Table");
-                Console.WriteLine("4. Show Hero Stats");
-                Console.WriteLine("5. Return to Hero Options");
-                Console.WriteLine("6. Search for / Add a Treasure Card manually");
-                Console.WriteLine("7. Manage Inventory");
+                Console.WriteLine("2. Adjust Wounds (damage/healing)");
+                Console.WriteLine("3. Roll Dungeon Treasure (Rulebook D6 table)");
+                Console.WriteLine("4. Roll on Objective Room D66 Table");
+                Console.WriteLine("5. Search for / Add a Treasure Card manually");
+                Console.WriteLine("6. Manage Inventory");
+                Console.WriteLine("7. Show Hero Stats");
+                Console.WriteLine("8. Return to Hero Options");
                 Console.Write("\nEnter your choice: ");
                 var input = Console.ReadLine()?.Trim();
 
@@ -37,6 +38,10 @@ namespace WHQCore.Services
                         break;
 
                     case "2":
+                        AdjustWounds(heroBase);
+                        break;
+
+                    case "3":
                         Console.WriteLine("\nResolving Dungeon Treasure...");
                         DungeonRewardService.AwardDungeonTreasure(heroBase);
                         HeroSaveManager.SaveHero(heroBase);
@@ -44,7 +49,7 @@ namespace WHQCore.Services
                         Console.ReadKey();
                         break;
 
-                    case "3":
+                    case "4":
                         Console.WriteLine("\nRolling on the Objective Room D66 table...");
                         DungeonRewardService.AwardFromD66Table(heroBase, TreasureType.ObjectiveRoomTreasure);
                         HeroSaveManager.SaveHero(heroBase);
@@ -52,24 +57,24 @@ namespace WHQCore.Services
                         Console.ReadKey();
                         break;
 
-                    case "4":
+                    case "5":
+                        AddTreasureManually(heroBase);
+                        break;
+
+                    case "6":
+                        HeroInventoryService.ManageInventoryMenu(heroBase);
+                        HeroSaveManager.SaveHero(heroBase);
+                        break;
+
+                    case "7":
                         Console.Clear();
                         HeroDisplayer.DisplayHeroAllInformation(heroBase);
                         Console.WriteLine("Press any key to continue...");
                         Console.ReadKey();
                         break;
 
-                    case "5":
+                    case "8":
                         return;
-
-                    case "6":
-                        AddTreasureManually(heroBase);
-                        break;
-
-                    case "7":
-                        HeroInventoryService.ManageInventoryMenu(heroBase);
-                        HeroSaveManager.SaveHero(heroBase);
-                        break;
 
                     default:
                         Console.WriteLine("Invalid choice. Press any key to try again...");
@@ -77,6 +82,7 @@ namespace WHQCore.Services
                         break;
                 }
             }
+
         }
 
         private static void AdjustGold(IHero heroBase)
@@ -94,6 +100,36 @@ namespace WHQCore.Services
             {
                 Console.WriteLine("\nInvalid number entered.");
             }
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+
+        private static void AdjustWounds(IHero heroBase)
+        {
+            var hero = heroBase.Character;
+
+            Console.WriteLine($"\n{hero.Name} currently has {hero.CurrentWounds}/{hero.StartingWounds} wounds.");
+            Console.Write("Enter wound adjustment (positive to heal, negative to damage): ");
+            var input = Console.ReadLine();
+            if (int.TryParse(input, out var woundChange))
+            {
+                hero.CurrentWounds += woundChange;
+
+                // Clamp between 0 and max wounds
+                if (hero.CurrentWounds > hero.StartingWounds)
+                    hero.CurrentWounds = hero.StartingWounds;
+                if (hero.CurrentWounds < 0)
+                    hero.CurrentWounds = 0;
+
+                Console.WriteLine($"\nWounds updated. {hero.Name} now has {hero.CurrentWounds}/{hero.StartingWounds} wounds.");
+            }
+            else
+            {
+                Console.WriteLine("\nInvalid number entered.");
+            }
+
+            HeroSaveManager.SaveHero(heroBase);
+
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
