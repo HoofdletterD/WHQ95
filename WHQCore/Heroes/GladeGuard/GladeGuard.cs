@@ -1,5 +1,5 @@
 ﻿using WHQCore.Libraries.Equipment;
-using WHQCore.Libraries.MagicItems;
+using WHQCore.Libraries.MagicItems.RolePlayBookTables;
 using WHQCore.Logic;
 using WHQCore.Models;
 using WHQCore.Models.Enums;

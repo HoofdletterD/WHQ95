@@ -1,10 +1,9 @@
 ﻿using WHQCore.Helpers;
 using WHQCore.Models;
-using WHQCore.Libraries;
-using WHQCore.Libraries.MagicItems;
 using WHQCore.Libraries.Equipment;
 using WHQCore.Libraries.SpecialRules;
 using System.Linq;
+using WHQCore.Libraries.MagicItems.RolePlayBookTables;
 
 namespace WHQCore.HeroManagement;
 

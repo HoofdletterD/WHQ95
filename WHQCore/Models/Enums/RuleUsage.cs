@@ -10,5 +10,6 @@ public enum RuleUsage
     PassiveEffect = 1 << 4,
     RequiresAction = 1 << 5,
     OncePerTurn,
-    UnlimitedUses = 1 << 6
+    UnlimitedUses = 1 << 6,
+    Permanent = 1 << 7,
 }

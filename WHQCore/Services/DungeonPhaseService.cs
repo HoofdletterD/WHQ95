@@ -2,8 +2,7 @@
 using System.Linq;
 using WHQCore.Helpers;
 using WHQCore.HeroManagement;
-using WHQCore.Libraries;
-using WHQCore.Libraries.MagicItems;
+using WHQCore.Libraries.MagicItems.RolePlayBookTables;
 using WHQCore.Models;
 using WHQCore.Models.Enums;
 

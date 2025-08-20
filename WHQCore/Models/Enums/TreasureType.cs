@@ -5,5 +5,6 @@ public enum TreasureType
     DungeonTreasureMagicWeaponsAndArmor,
     DungeonTreasureMagicItems,
     ObjectiveRoomTreasure,
-    DifferentTreasure
+    DifferentTreasure,
+    WhiteDwarfDungeonRoomTrasureCard
 }

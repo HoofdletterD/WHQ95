@@ -10,5 +10,6 @@ public enum MagicItemType
     Ring,
     Amulet,
     Shield,
-    Item
+    Item,
+    Boots
 }
