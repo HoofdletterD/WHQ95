@@ -212,20 +212,230 @@ imagePath: "images/magicitems/treasurecards/FingerOfDoomScroll.png",
 inventorySlot: InventorySlot.OffHand
 );
 
-    public static MagicItemData xxx => new(
-name: "xxx",
-flavor: "",
-rules: "",
-treasureTableDiceResult: "118",
-ruleUsages: [RuleUsage.OneUseOnly],
-new List<HeroCode> { HeroCode.All },
-treasureType: [TreasureType.CoreSetTreasureCard],
-magicItemType: [MagicItemType.Item],
-costSell: 400,
-imagePath: "images/magicitems/treasurecards/xxx.png",
-inventorySlot: InventorySlot.Pouch
-);
+        public static MagicItemData Firebomb => new(
+            "Firebomb",
+            "On a dirt-encrusted shelf you find a large ball with a fuse in the top. From the rune inscribed on it, and its pungent smell, you realise it is a firebomb.",
+            "The firebomb may be thrown at any time and affects a 2 squares by 2 squares area. Any model in the area takes 1D6 wounds with no deduction for toughness or armour.",
+            treasureTableDiceResult: "135",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Weapon },
+            costSell: 0,
+            imagePath: "images/CoreSetTreasureCard/Firebomb.png",
+            inventorySlot: InventorySlot.Pouch
+        );
 
+        public static MagicItemData FlashPowder => new(
+            "Flash Powder",
+            "Hidden in a small alcove in the wall, overgrown by moss, you find a small bag of flash powder.",
+            "The flash powder may be set off at any time to confuse the Warrior's enemies. After it has exploded, any Warriors who have not yet fought this turn get +1 Attack. Use once, then discard.",
+            treasureTableDiceResult: "136",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 75,
+            imagePath: "images/CoreSetTreasureCard/FlashPowder.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData FurCloak => new(
+            "Fur Cloak",
+            "You find a thick fur cloak. Rolled up and placed over one arm it offers some protection in place of a shield.",
+            "The cloak acts as armour and provides a +1 modifier to your Warrior's Toughness. Each time it is used, roll 1D6. On a 4, 5 or 6 it remains effective and can be used again.",
+            treasureTableDiceResult: "141",
+            ruleUsages: new[] { RuleUsage.Reusable },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Armour },
+            costSell: 75,
+            imagePath: "images/CoreSetTreasureCard/FurCloak.png",
+            inventorySlot: InventorySlot.Back
+        );
+
+        public static MagicItemData HealingSalve => new(
+            "Healing Salve",
+            "Amongst the debris in the room you find a black bottle containing a thick, yellow paste. It is a salve of healing.",
+            "The healing salve can restore 2D6 Wounds to any single Warrior, or 1D6 Wounds on each of 2 different Warriors. Use once, then discard.",
+            treasureTableDiceResult: "142",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 100,
+            imagePath: "images/CoreSetTreasureCard/HealingSalve.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData HellMace => new(
+            "Hell Mace",
+            "Sparks fly from the iron-shod head of this mace as you wield it, bathing the area in light.",
+            "While using the Hell Mace your Warrior gets +2 Attacks. Use once per adventure.",
+            treasureTableDiceResult: "143",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Weapon },
+            costSell: 250,
+            imagePath: "images/CoreSetTreasureCard/HellMace.png",
+            inventorySlot: InventorySlot.MainHand
+        );
+
+        public static MagicItemData IncenseOfHealing => new(
+            "Incense of Healing",
+            "When opened, the urn discharges a fragrant cloud of vapour that acts as a healing potion.",
+            "Every Warrior on the same board section as the urn has 2D6 Wounds restored. Use once, then discard.",
+            treasureTableDiceResult: "144",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 200,
+            imagePath: "images/CoreSetTreasureCard/IncenseOfHealing.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData InvisibilityRing => new(
+            "Invisibility Ring",
+            "As you slip this ring onto your finger, you fade and vanish from sight.",
+            "While wearing the Invisibility Ring your Warrior cannot be attacked. The ring contains enough power to keep your Warrior invisible for one turn. Use once per adventure.",
+            treasureTableDiceResult: "145",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 175,
+            imagePath: "images/CoreSetTreasureCard/InvisibilityRing.png",
+            inventorySlot: InventorySlot.Fingers
+        );
+
+        public static MagicItemData LightningFireRing => new(
+            "Lightning Fire Ring",
+            "As you put it on, this ring shrinks to fit tightly around your finger, and a lightning rune starts to glow coldly on its upper surface.",
+            "The Lightning Fire Ring can fire a bolt of lightning on command. Your Warrior may target any Monster that is in his line of sight. The bolt hits automatically and inflicts 5D6 Wounds, with no modifiers for armour. Use once per adventure.",
+            treasureTableDiceResult: "146",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 500,
+            imagePath: "images/CoreSetTreasureCard/LightningFireRing.png",
+            inventorySlot: InventorySlot.Fingers
+        );
+
+        public static MagicItemData LuckyTalisman => new(
+            "Lucky Talisman",
+            "In the middle of a pile of rubbish in one corner of the room, you find a Lucky Talisman on a fine chain.",
+            "Your Warrior may use the Lucky Talisman at any time. Any attack made while using the Lucky Talisman will automatically hit. Use once per adventure.",
+            treasureTableDiceResult: "151",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 150,
+            imagePath: "images/CoreSetTreasureCard/LuckyTalisman.png",
+            inventorySlot: InventorySlot.Neck
+        );
+
+        public static MagicItemData MagicPotion => new(
+            "Magic Potion",
+            "This small glass bottle bears strange inscriptions in some long-forgotten magical language.",
+            "When your Warrior drinks the Magic Potion, roll 1D6 to determine what it is:\n1: Poison – lose 2D6 Wounds.\n2: Poison – lose 1D6 Wounds.\n3: Rainbow Potion – your Warrior's flesh becomes rainbow striped.\n4: Healing Potion – cures 1D6 of your Warrior's Wounds.\n5: Healing Potion – cures 2D6 of your Warrior's Wounds.\n6: Healing Potion – restores your Warrior to full Wounds. Use once, then discard.",
+            treasureTableDiceResult: "152",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 60,
+            imagePath: "images/CoreSetTreasureCard/MagicPotion.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData OrbOfMight => new(
+            "Orb of Might",
+            "This black orb glistens dully as you pick it up.",
+            "The Orb of Might is a source of Power for the Wizard. Roll 1D6 to determine how much Power is initially stored in it. Once the Wizard has used 1 or more points of the stored Power, place a D6 on top of this card to show the remaining points. Worth 50 Gold per unused Power Point. Use until empty, then discard.",
+            treasureTableDiceResult: "153",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.W },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 50,
+            imagePath: "images/CoreSetTreasureCard/OrbOfMight.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData QuakeScroll => new(
+            "Quake Scroll",
+            "This dusty scroll is inscribed with magic runes and sigils that contain words of power.",
+            "This scroll can be used at any time, and causes a 2 square by 2 square area of any one board section to cave in. Use the Cave-in marker to mark the area affected. Any Warrior or Monster caught in the area suffers 2D6 damage. Use once, then discard.",
+            treasureTableDiceResult: "154",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 200,
+            imagePath: "images/CoreSetTreasureCard/QuakeScroll.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData ShieldOfDeliverance => new(
+            "Shield of Deliverance",
+            "This shield is of simple yet exquisite craftsmanship. It seems to be made of a substance stronger than steel, yet weighs little more than a sheet of parchment.",
+            "The Shield of Deliverance can completely absorb the damage from any two blows. The first time the shield is hit, flip this card over; when it is hit a second time, discard this card. Use once, then discard.",
+            treasureTableDiceResult: "155",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Armour },
+            costSell: 500,
+            imagePath: "images/CoreSetTreasureCard/ShieldOfDeliverance.png",
+            inventorySlot: InventorySlot.OffHand
+        );
+
+        public static MagicItemData Spear => new(
+            "Spear",
+            "Leaning against a wall, you find a hefty-looking spear with a wickedly sharp head.",
+            "The spear may be used at any time. To make the attack, roll 1D6. On a 3, 4, 5 or 6 your Warrior has hit the target and inflicted 3D6 Wounds. On a 1 or 2 he has missed. Use once per adventure.",
+            treasureTableDiceResult: "156",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Weapon },
+            costSell: 100,
+            imagePath: "images/CoreSetTreasureCard/Spear.png",
+            inventorySlot: InventorySlot.TwoHanded
+        );
+
+        public static MagicItemData TalonOfDeath => new(
+            "Talon of Death",
+            "This magical artifact sucks all of the light from the surrounding area, creating an aura of darkness around you.",
+            "Once your Warrior has finished moving, he may use the Talon of Death to cause 1D6 Wounds against every Monster adjacent to him, with no modifiers for Toughness or armour. Roll for each Monster separately. Use once per adventure.",
+            treasureTableDiceResult: "161",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 500,
+            imagePath: "images/CoreSetTreasureCard/TalonOfDeath.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData TimeFreezingRing => new(
+            "Time Freezing Ring",
+            "As you put it on, this ring freezes like ice and bursts into a cold blue flame, yet still feels comfortable to wear.",
+            "The Time Freezing Ring allows your Warrior to immediately take an extra Phase straight away. Use once per adventure.",
+            treasureTableDiceResult: "162",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.CoreSetTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 200,
+            imagePath: "images/CoreSetTreasureCard/TimeFreezingRing.png",
+            inventorySlot: InventorySlot.Fingers
+        );
+    
     public static MagicItemData AmuletOfCharadris => new(
     "Amulet of Charadris",
     "Charadris was a Priest of Sigmar who abhorred magic in all its forms, believing that his faith in Sigmar was the greatest power of all.",
