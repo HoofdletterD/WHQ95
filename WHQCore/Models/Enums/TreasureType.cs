@@ -6,5 +6,8 @@ public enum TreasureType
     DungeonTreasureMagicItems,
     ObjectiveRoomTreasure,
     DifferentTreasure,
-    WhiteDwarfDungeonRoomTrasureCard
+    WhiteDwarfDungeonRoomTreasureCard,
+    CoreSetTreasureCard,
+    CatacombsOfTerrorTreasureCard,
+    CatacombsOfTerrorObjectiveRoomCard
 }

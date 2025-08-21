@@ -12,17 +12,26 @@ public static class ObjectiveRoomTreasureCardsLibrary
         treasureTableDiceResult: "111",
         ruleUsages: [RuleUsage.DiscardAfterUse],
         new List<HeroCode> { HeroCode.All },
-        treasureType: [TreasureType.WhiteDwarfDungeonRoomTrasureCard],
+        treasureType: [TreasureType.CatacombsOfTerrorObjectiveRoomCard],
         magicItemType: [MagicItemType.Item],
         costSell: 200,
         imagePath: "images/magicitems/treasurecards/PlacEHolder.png",
         inventorySlot: InventorySlot.Pouch
         );
 
-
-
-
-
+    public static MagicItemData SceptreOfZandri => new(
+    "Sceptre of Zandri",
+    "The Sceptre of Zandri protects its wielder from the baneful gaze of the Undead, making him harder to hit.",
+    "The Sceptre may be wielded like a normal sword, and inflicts an extra D6 wounds against Undead. In addition, Undead are at -2 to hit a Warrior using the Sceptre. Permanent.",
+    treasureTableDiceResult: "111",
+    ruleUsages: [RuleUsage.Permanent],
+    new List<HeroCode> { HeroCode.All },
+    treasureType: new[] { TreasureType.CatacombsOfTerrorObjectiveRoomCard },
+    magicItemType: new[] { MagicItemType.Weapon },
+    costSell: 1000,
+    imagePath: "images/CatacombsOfTerrorTreasureCard/SceptreOfZandri.png",
+    inventorySlot: InventorySlot.MainHand
+);
 
     public static MagicItemData? GetMagicItemByName(string name)
     {
