@@ -9,5 +9,7 @@ public enum TreasureType
     WhiteDwarfDungeonRoomTreasureCard,
     CoreSetTreasureCard,
     CatacombsOfTerrorTreasureCard,
-    CatacombsOfTerrorObjectiveRoomCard
+    CatacombsOfTerrorObjectiveRoomCard,
+    LairOfTheOrcLordTreasureCard,
+    TreasurePackOneDungeonRoomCard
 }

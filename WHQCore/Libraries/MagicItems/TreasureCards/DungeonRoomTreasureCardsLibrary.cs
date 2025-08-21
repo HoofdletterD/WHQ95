@@ -435,7 +435,126 @@ inventorySlot: InventorySlot.OffHand
             imagePath: "images/CoreSetTreasureCard/TimeFreezingRing.png",
             inventorySlot: InventorySlot.Fingers
         );
-    
+
+        public static MagicItemData BorgratsCrown => new(
+            "Borgrat's Crown",
+            "The Warriors find a grubby looking circlet of rusted iron. Faded runes are inscribed on its pitted surface.",
+            "This magical crown adds +1 to the wearer's Toughness. It can be worn at the same time as a helmet.",
+            treasureTableDiceResult: "163",
+            ruleUsages: new[] { RuleUsage.Permanent },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Armour },
+            costSell: 500,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/BorgratsCrown.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData FungusBrew => new(
+            "Fungus Brew",
+            "The Warriors find a flask of the potion that turns Night Goblins into gibbering Fanatics.",
+            "There is enough liquid in the flask for four doses. A Warrior can take a drink at any time during combat. Roll on the table below to see what happens:\n\n1–2: The brew makes the Warrior hallucinate! He immediately makes an attack against every model adjacent to him.\n3–4: The brew cures 1D6 Wounds.\n5–6: The brew cures 1D6 Wounds and allows the Warrior to completely ignore the next hit he takes.\n\nThe brew is worth 200 gold if none of it has been drunk, or 100 gold if some of it (but not all of it) has been consumed. Discard when all drunk.",
+            treasureTableDiceResult: "164",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 0,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/FungusBrew.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData MagicArrers => new(
+            "Magic Arrers",
+            "You find 6 arrows carved with strange Goblin runes.",
+            "The arrows are enchanted, but are somewhat unpredictable. When you use an arrow, roll on the table below instead of rolling to hit:\n\n1: The arrow automatically hits one of the Warriors, for D6+3 Wounds (determine who randomly).\n2–5: The arrow automatically hits the Monster and does 1D6+3 Wounds.\n6: The arrow automatically hits the Monster and does 2D6+3 Wounds.\n\nEach arrow can only be used once, and used arrows are worthless. Barbarian, Elf & Wizard only. Discard when all used. Worth 40g each.",
+            treasureTableDiceResult: "165",
+            ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+            new List<HeroCode> { HeroCode.B, HeroCode.E, HeroCode.W },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Weapon },
+            costSell: 40,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/MagicArrers.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData PlergitsStabba => new(
+            "Plergit's Stabba",
+            "The Warriors find a wickedly sharp and very thin bladed dagger designed for slipping between armour joints.",
+            "The dagger can be used to make an extra attack on a Monster. Roll a D6:\n1–3: The attack hits causing 2D6+Strength Wounds modified for Toughness but not armour.\n4–6: The attack hits causing 3D6+Strength Wounds not modified for armour or Toughness.\n\nBarbarian, Elf & Dwarf only. Use once per adventure.",
+            treasureTableDiceResult: "166",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.B, HeroCode.E, HeroCode.D },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Weapon },
+            costSell: 400,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/PlergitsStabba.png",
+            inventorySlot: InventorySlot.MainHand
+        );
+
+        public static MagicItemData PrittyStonez => new(
+            "Pritty Stonez",
+            "The Warriors find a small drawstring bag containing some ordinary-looking stones.",
+            "When your Warrior looks through the 'stones' roll on the table below:\n\n1–3: Mixed with normal stones are 1D6 gold nuggets worth 25 gold each.\n4–6: Mixed with the normal stones are 1D6 gemstones worth 100 gold each.\n\nRecord, then discard.",
+            treasureTableDiceResult: "211",
+            ruleUsages: new[] { RuleUsage.OneUseOnly },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 0,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/PrittyStonez.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData RingOfLife => new(
+            "Ring of Life",
+            "The Warriors find a silver, jewel-encrusted ring. Within the central gemstone, a tiny flame burns brightly.",
+            "The ring has the power to heal grievous wounds. It may only be used on a Warrior on zero Wounds. To use the ring, roll a dice. On a roll of 1 the flame flickers and dies, and has no effect. On any other score, the Warrior is healed back up to full Wounds. One use per adventure.",
+            treasureTableDiceResult: "212",
+            ruleUsages: new[] { RuleUsage.OncePerDungeon },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 350,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/RingOfLife.png",
+            inventorySlot: InventorySlot.Fingers
+        );
+
+        public static MagicItemData ScrollOfTheChimera => new(
+            "Scroll of the Chimera",
+            "The Warriors find a dusty old scroll lying in a dark corner.",
+            "The spell on this scroll gives a Warrior the appearance of a ferocious monster. The scroll may be read at any time, causing any Monsters to be so terrified of the affected Warrior that they will suffer a -2 penalty on their to hit rolls against him. The spell lasts until a 1 or 2 is rolled in the Power Phase. Dwarf, Wizard & Elf only. One use, then discard.",
+            treasureTableDiceResult: "213",
+            ruleUsages: new[] { RuleUsage.OneUseOnly },
+            new List<HeroCode> { HeroCode.D, HeroCode.W, HeroCode.E },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 300,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/ScrollOfTheChimera.png",
+            inventorySlot: InventorySlot.Pouch
+        );
+
+        public static MagicItemData HammerOfHargon => new(
+            "The Hammer of Hargon",
+            "You find a sturdy Dwarf warhammer with an ornate icon carved on its head. Any Dwarf in the party recognizes this as the lost Hammer of Hargon.",
+            "When using this hammer, you may roll as many dice for damage as you like. Add up the total, then add your Strength to the final score. However, if any of the dice come up with a 1 or 2, the hammer causes no damage at all. Dwarf, Wizard & Barbarian only.",
+            treasureTableDiceResult: "214",
+            ruleUsages: new[] { RuleUsage.Permanent },
+            new List<HeroCode> { HeroCode.D, HeroCode.W, HeroCode.B },
+            treasureType: new[] { TreasureType.LairOfTheOrcLordTreasureCard },
+            magicItemType: new[] { MagicItemType.Weapon },
+            costSell: 500,
+            imagePath: "images/LairOfTheOrcLordTreasureCard/HammerOfHargon.png",
+            inventorySlot: InventorySlot.MainHand
+        );
+    }
+
+
+
+
+
+
+
     public static MagicItemData AmuletOfCharadris => new(
     "Amulet of Charadris",
     "Charadris was a Priest of Sigmar who abhorred magic in all its forms, believing that his faith in Sigmar was the greatest power of all.",
