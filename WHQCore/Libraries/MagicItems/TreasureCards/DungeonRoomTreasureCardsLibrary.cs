@@ -547,7 +547,162 @@ inventorySlot: InventorySlot.OffHand
             imagePath: "images/LairOfTheOrcLordTreasureCard/HammerOfHargon.png",
             inventorySlot: InventorySlot.MainHand
         );
-    }
+
+    public static MagicItemData AncientVaseOfLustria => new(
+"Ancient Vase of Lustria",
+"Lustria is a land of the unknown, the undiscovered continent, a realm of Giants and Daemons and powers beyond all telling. This vase is of strange design, unsuitable for use by Humans, Elves or Dwarfs. Its purpose can only be guessed at, as can its age; but its beauty and value is beyond question.",
+"This vase is worth 175 gold. Record then discard.",
+treasureTableDiceResult: "215",
+ruleUsages: new[] { RuleUsage.Permanent },
+new List<HeroCode> { HeroCode.All },
+treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+magicItemType: new[] { MagicItemType.Item },
+costSell: 175,
+imagePath: "images/TreasurePackOneDungeonRoomCard/AncientVaseOfLustria",
+inventorySlot: InventorySlot.Pouch
+);
+
+    public static MagicItemData ArmourOfFortune => new(
+        "Armour of Fortune",
+        "This armour gleams in a rainbow array of never ending carnage and war.",
+        "This armour can absorb Wounds inflicted on the Warrior. Initially it is discharged, with no Wounds stored. Once put on, the armour cannot be removed for the rest of the adventure. It absorbs 30 Wounds, then explodes, taking the wearer to zero Wounds (and death if no healing is possible). Lasts until it explodes!",
+        treasureTableDiceResult: "216",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Armour },
+        costSell: 500,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/ArmourOfFortune",
+        inventorySlot: InventorySlot.Torso
+    ); 
+
+    public static MagicItemData ArrowOfSlaying => new(
+        "Arrow of Slaying",
+        "A thick black light drips from the end of this arrow, chilling the air. The magical venom of this arrow can fell even the toughest Monster.",
+        "If your Warrior hits a Monster with this arrow, roll 1D6. On a score of 1, 2, or 3 the arrow does normal damage. On a score of 4, 5 or 6 the Monster is immediately slain. Use once then discard.",
+        treasureTableDiceResult: "221",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 500,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/ArrowOfSlaying",
+        inventorySlot: InventorySlot.Pouch
+    );
+
+    public static MagicItemData AxeOfSlaughter => new(
+        "Axe of Slaughter",
+        "This axe was forged by the Dwarf Runesmith Garven Surehammer, who honed its blade to an impossible sharpness.",
+        "This axe causes 1D6 extra Wounds every time it hits.",
+        treasureTableDiceResult: "222",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.D },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 200,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/AxeOfSlaughter",
+        inventorySlot: InventorySlot.MainHand
+    ); 
+
+    public static MagicItemData BandOfMagic => new(
+        "Band of Magic",
+        "This slander gold band glitters with a clear light.",
+        "When your Warrior finds this ring, randomly select two Attack Spells (RPG: randomly select Attack spells appropriate to the Warrior's battle-level). These two spells are stored in the magic band. Each spell may be cast once automatically, whenever the wearer wishes. When both spells have been cast, the magic of the band has been used up and it is useless and worthless. Discard after use.",
+        treasureTableDiceResult: "223",
+        ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Ring },
+        costSell: 500,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/BandOfMagic",
+        inventorySlot: InventorySlot.Fingers
+    );
+
+    public static MagicItemData BaneScrollOfTheUndead => new(
+        "Bane Scroll of the Undead",
+        "The Warriors find a dusty old scroll underneath a pile of rubbish.",
+        "Reading aloud the words on this scroll will kill any single Undead creature worth up to 400 gold on a dice roll of 4, 5 or 6.",
+        treasureTableDiceResult: "224",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.W, HeroCode.D, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 150,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/BaneScrollOfTheUndead",
+        inventorySlot: InventorySlot.Pouch
+    );
+
+    public static MagicItemData BladeOfSeaGold => new(
+        "Blade of Sea Gold",
+        "Forged from gold taken from the depths of the sea when the world was young, this blade is covered in runes so ancient and worn that they can no longer be read.",
+        "While your Warrior is using this sword each attack he makes ignores the first point of his opponent's armour.",
+        treasureTableDiceResult: "225",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 150,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/BladeOfSeaGold",
+        inventorySlot: InventorySlot.MainHand
+    );
+
+    public static MagicItemData BladeOfSlicing => new(
+        "Blade of Slicing",
+        "This sword moans softly as it is drawn from its scabbard, in eager anticipation of the blood it is about to spill.",
+        "While your Warrior is using the sword he causes +2 Wounds on each successful attack.",
+        treasureTableDiceResult: "226",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 300,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/BladeOfSlicing",
+        inventorySlot: InventorySlot.MainHand
+    );
+
+    public static MagicItemData BootsOfTzchak => new(
+        "Boots of Tzchak",
+        "The long dead sorcerer Baalga the all-seeing created these boots to enable his long suffering henchman Tzchak to walk long distances carrying immensely heavy loads.",
+        "These boots allow the Warrior to ignore any armour-based movement penalties. Furthermore, the Warrior gains +1 to his Movement.",
+        treasureTableDiceResult: "231",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Boots },
+        costSell: 100,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/BootsOfTzchak",
+        inventorySlot: InventorySlot.Legs
+    );
+
+    public static MagicItemData BowOfTorAlessi => new(
+        "Bow of Tor Alessi",
+        "This white bow was captured by the Dwarfs at the fall of the Elf city Tor Alessi. Its accuracy is beyond compare, and it was considered a prize worthy of the bloodshed and slaughter that won it.",
+        "With this bow, a Warrior may fire BEFORE or during moving. This uses up his Attacks as usual.",
+        treasureTableDiceResult: "232",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 250,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/BowOfTorAlessi",
+        inventorySlot: InventorySlot.TwoHanded
+    ); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
