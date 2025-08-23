@@ -548,19 +548,19 @@ inventorySlot: InventorySlot.OffHand
             inventorySlot: InventorySlot.MainHand
         );
 
-    public static MagicItemData AncientVaseOfLustria => new(
-"Ancient Vase of Lustria",
-"Lustria is a land of the unknown, the undiscovered continent, a realm of Giants and Daemons and powers beyond all telling. This vase is of strange design, unsuitable for use by Humans, Elves or Dwarfs. Its purpose can only be guessed at, as can its age; but its beauty and value is beyond question.",
-"This vase is worth 175 gold. Record then discard.",
-treasureTableDiceResult: "215",
-ruleUsages: new[] { RuleUsage.Permanent },
-new List<HeroCode> { HeroCode.All },
-treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
-magicItemType: new[] { MagicItemType.Item },
-costSell: 175,
-imagePath: "images/TreasurePackOneDungeonRoomCard/AncientVaseOfLustria",
-inventorySlot: InventorySlot.Pouch
-);
+                public static MagicItemData AncientVaseOfLustria => new(
+            "Ancient Vase of Lustria",
+            "Lustria is a land of the unknown, the undiscovered continent, a realm of Giants and Daemons and powers beyond all telling. This vase is of strange design, unsuitable for use by Humans, Elves or Dwarfs. Its purpose can only be guessed at, as can its age; but its beauty and value is beyond question.",
+            "This vase is worth 175 gold. Record then discard.",
+            treasureTableDiceResult: "215",
+            ruleUsages: new[] { RuleUsage.Permanent },
+            new List<HeroCode> { HeroCode.All },
+            treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+            magicItemType: new[] { MagicItemType.Item },
+            costSell: 175,
+            imagePath: "images/TreasurePackOneDungeonRoomCard/AncientVaseOfLustria",
+            inventorySlot: InventorySlot.Pouch
+            );
 
     public static MagicItemData ArmourOfFortune => new(
         "Armour of Fortune",
@@ -649,7 +649,7 @@ inventorySlot: InventorySlot.Pouch
     public static MagicItemData BladeOfSlicing => new(
         "Blade of Slicing",
         "This sword moans softly as it is drawn from its scabbard, in eager anticipation of the blood it is about to spill.",
-        "While your Warrior is using the sword he causes +2 Wounds on each successful attack.",
+        rules: "While your Warrior is using the sword he causes +2 Wounds on each successful attack.",
         treasureTableDiceResult: "226",
         ruleUsages: new[] { RuleUsage.Permanent },
         new List<HeroCode> { HeroCode.All },
@@ -686,25 +686,371 @@ inventorySlot: InventorySlot.Pouch
         costSell: 250,
         imagePath: "images/TreasurePackOneDungeonRoomCard/BowOfTorAlessi",
         inventorySlot: InventorySlot.TwoHanded
-    ); 
+    );
 
+    public static MagicItemData CloakOfLoren => new(
+    name: "Cloak of Loren",
+    flavor: "This cloak is made of a fine silk-like material that, although extremely light, is very, very strong.",
+    rules: "Every time your warrior is hit while wearing the cloak, he can ignore the first wound caused by the blow. However, each time the cloak absorbs damage like this, roll a D6. On the score of a 1, the cloak rips and it is useless.",
+    treasureTableDiceResult: "233",
+    ruleUsages: new[] { RuleUsage.DiscardAfterUse },
+    new List<HeroCode> { HeroCode.B, HeroCode.E, HeroCode.W },
+    treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+    magicItemType: new[] { MagicItemType.Armour },
+    costSell: 75,
+    imagePath: "images/TreasurePackOneDungeonRoomCard/CloakOfLoren.png",
+    inventorySlot: InventorySlot.Back);
 
+    public static MagicItemData CloakOfDeception => new(
+        name: "Cloak of Deception",
+        flavor: "This cloak swirls around the Warrior as he moves, deceiving the eye as to his precise location.",
+        rules: "While worn, all attacks against the Warrior are at -1 to hit. If an attacker rolls a 6 to hit, the cloak’s power is exhausted until the next adventure.",
+        treasureTableDiceResult: "234",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Armour },
+        costSell: 350,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/CloakOfDeception.png",
+        inventorySlot: InventorySlot.Back);
 
+    public static MagicItemData CloakOfStealth => new(
+        name: "Cloak of Stealth",
+        flavor: "This cloak is made of an odd material that is slippery to the touch.",
+        rules: "While wearing, the Warrior may automatically break from pinning once per adventure.",
+        treasureTableDiceResult: "235",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Armour },
+        costSell: 100,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/CloakOfStealth.png",
+        inventorySlot: InventorySlot.Back);
 
+    public static MagicItemData CoughingSpellJewel => new(
+        name: "Coughing Spell Jewel",
+        flavor: "This jewel contains the power for the Coughing spell.",
+        rules: "Pick any Monster on the same board section. On a roll of 6, the target collapses in a coughing spasm and is at -1 to hit for the rest of the turn.",
+        treasureTableDiceResult: "236",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.D, HeroCode.W, HeroCode.B },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Amulet },
+        costSell: 50,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/CoughingSpellJewel.png",
+        inventorySlot: InventorySlot.Neck);
 
+    public static MagicItemData DispelMagicScroll => new(
+        name: "Dispel Magic Scroll",
+        flavor: "The Warrior raises his hand and shouts words of warding, diffusing his opponent’s magic.",
+        rules: "Cast against an incoming spell. On 4–6 the target spell is prevented.",
+        treasureTableDiceResult: "241",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.D, HeroCode.W, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 100,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/DispelMagicScroll.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData DomeOfPower => new(
+        name: "Dome of Power",
+        flavor: "White power streams from the Warrior’s eyes, forming a protective dome.",
+        rules: "Protects up to 4 linked squares. Models inside cannot act but are immune to all forms of attack.",
+        treasureTableDiceResult: "242",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.D, HeroCode.W, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 250,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/DomeOfPower.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData FangedDeathHelm => new(
+        name: "Fanged Death Helm",
+        flavor: "This helm is fashioned into the likeness of the gaping maw of a ravenous beast.",
+        rules: "Once per turn, the warrior wearing the Fanged Death Helm may exchange one of his attakcs for a bite attack. This attack hits automatically for 1D6 Wounds that cannot be reduced.",
+        treasureTableDiceResult: "243",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.D },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Helmet },
+        costSell: 250,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/FangedDeathHelm.png",
+        inventorySlot: InventorySlot.Head);
 
+    public static MagicItemData Firebombs => new(
+        name: "Firebombs (1D6)",
+        flavor: "The Warriors discover a box of firebombs marked with a skull.",
+        rules: "Each firebomb affects a 2x2 square area, dealing 1D6 Wounds to all models inside, ignoring armour and Toughness. Each bomb can be used once.",
+        treasureTableDiceResult: "244",
+        ruleUsages: new[] { RuleUsage.Reusable },
+        new List<HeroCode> { HeroCode.W, HeroCode.D, HeroCode.B },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 75,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/Firebombs.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData GlorySpellScroll => new(
+        name: "Glory! Spell Scroll",
+        flavor: "The Warrior bearing the scroll sends out tendrils of force that fill allies with courage.",
+        rules: "All Warriors gain +1 Attack this turn.",
+        treasureTableDiceResult: "245",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 400,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/GlorySpellScroll.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData Glowstone => new(
+        name: "Glowstone",
+        flavor: "This small crystal orb holds the light of dawn, glowing like a lantern.",
+        rules: "The carrier can explore like the leader with the lantern. If a 1 is rolled in the Power Phase, roll again: on 1–3, the glow dies.",
+        treasureTableDiceResult: "246",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 400,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/Glowstone.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData Gold1D6x50 => new(
+    name: "Gold (1D6x50)",
+    flavor: "After a thorough search, one of the Warriors finds a leather bag hidden behind a stone.",
+    rules: "The bag contains 1D6x50 gold.",
+    treasureTableDiceResult: "246",
+    ruleUsages: new[] { RuleUsage.None },
+    new List<HeroCode> { HeroCode.All },
+    treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+    magicItemType: new[] { MagicItemType.Item },
+    costSell: 50,
+    imagePath: "images/TreasurePackOneDungeonRoomCard/Gold1D6x50.png",
+    inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData HiddenAlcove => new(
+        name: "Hidden Alcove",
+        flavor: "After a thorough search, one of the Warriors finds a secret panel opening to reveal a hidden alcove.",
+        rules: "Roll as many dice as you like. If any show a 1, you find nothing and must take an Event card immediately. On 2–5, gain gold ×10. Each 6 gives you a Treasure card.",
+        treasureTableDiceResult: "251",
+        ruleUsages: new[] { RuleUsage.None },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/HiddenAlcove.png",
+        inventorySlot: InventorySlot.None);
 
+    public static MagicItemData HolyArtefact => new(
+        name: "Holy Artefact",
+        flavor: "You find a dusty religious artefact recognized as belonging to one of the temples of the Empire.",
+        rules: "At the end of the adventure, roll a D6 to see if you find a temple. On a score of 4+, you find a temple and can sell the artefact for 1D6x100 gold. Roleplay: You may find a temple in any Settlement. If you return this artefact, the temple priests will reward you with. 1D6x100 gold. If you roll a 1 when seeing how much gold you receive, then k./you actually get nothing - it is not an artefact they recognize. You will have to try again in the next Set",
+        treasureTableDiceResult: "252",
+        ruleUsages: new[] { RuleUsage.None },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/HolyArtefact.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData LifebringerSpellScroll => new(
+        name: "Lifebringer Spell Scroll",
+        flavor: "Blazing fire leaps from the Warrior’s eyes, bathing allies in energy that heals their wounds.",
+        rules: "Pick any number of Warriors. Roll 1D6 for each; each heals that many Wounds. If two or more dice are the same, the spell fails completely.",
+        treasureTableDiceResult: "253",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.D, HeroCode.E, HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 150,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/LifebringerSpellScroll.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData LifestealerTalisman => new(
+        name: "Lifestealer Talisman",
+        flavor: "The Warrior with this talisman can steal Wounds from a nearby Monster to heal himself.",
+        rules: "The warrior with the talisman can steal wounds from a nearby monster to heal himself. One adjacent Monster suffers 1D6 Wounds with no modifiers. The Warrior gains the same number of Wounds up to his starting maximum.",
+        treasureTableDiceResult: "254",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Amulet },
+        costSell: 450,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/LifestealerTalisman.png",
+        inventorySlot: InventorySlot.Neck);
 
+    public static MagicItemData PearlNecklace => new(
+        name: "Pearl Necklace",
+        flavor: "The Warriors find a long pearl necklace hidden behind a stone in the wall.",
+        rules: "Worth 1D6x10 gold. If selling in a Settlement, roll D6×10. On a roll of 1, the necklace is fake and cannot be sold here.",
+        treasureTableDiceResult: "255",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/PearlNecklace.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData PitOfDespairScroll => new(
+        name: "Pit of Despair Scroll",
+        flavor: "White light pours from the Warrior’s mouth, creating a bottomless pit in the stone floor.",
+        rules: "Place a pit marker in a 2x2 square. Roll a D6 for every model on the marker. On a 1 or 2, the model falls in the pit and is killed. On a 3-6 it scrambles out of the way - put\r\nit in any empty square on this ;\r\nor any adjacent board section.\r\nIf there are no empty squares E\r\navailable the model falls into\r\nthe pit anyway. Once the pit is\r\nNn place, no model may enter\r\nthe squares it covers.\r\n ",
+        treasureTableDiceResult: "256",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.D, HeroCode.E, HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 300,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/PitOfDespairScroll.png",
+        inventorySlot: InventorySlot.Pouch);
 
+    public static MagicItemData PotionOfAlchemy => new(
+        name: "Potion of Alchemy",
+        flavor: "After a careful search, a small glass bottle of fizzing pink liquid is found.",
+        rules: "This potion may be sold at an Alchemist’s Laboratory (Special Location). It is worth 1D6x40 gold.",
+        treasureTableDiceResult: "261",
+        ruleUsages: new[] { RuleUsage.None },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/PotionOfAlchemy.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData PotionOfFlight => new(
+        name: "Potion of Flight",
+        flavor: "The bubbling liquid burns the Warrior’s throat as he drinks it.",
+        rules: "After drinking this potion, your warrior levitates a few inches above the ground while moving. The Warrior may pass over chasms and pits unhindered. Enemies attacking him are at -1 to hit. Lasts for one turn.",
+        treasureTableDiceResult: "262",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 250,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/PotionOfFlight.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData PotionOfInstability => new(
+        name: "Potion of Instability",
+        flavor: "This potion shifts the dimensional position of your Warrior, making him ethereal and insubstantial.",
+        rules: "When drunk, this postion shifts the dimensional position of your warrior, making him ethereal and insubstantial. The Warrior cannot be pinned, attack, cast magic, or be attacked for one turn.",
+        treasureTableDiceResult: "263",
+        ruleUsages: new[] { RuleUsage.OneUseOnly },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 200,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/PotionOfInstability.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData PotionOfWeaponMastery => new(
+    name: "Potion of Weapon Mastery",
+    flavor: "In a pile of broken crates you find a glass phial containing a warm amber liquid.",
+    rules: "When drunk, the potion gives your warrior +2 to hit, and causes an extra 2D6 Wounds on attacks. Lasts for one turn.",
+    treasureTableDiceResult: "264",
+    ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+    new List<HeroCode> { HeroCode.All },
+    treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+    magicItemType: new[] { MagicItemType.Item },
+    costSell: 150,
+    imagePath: "images/TreasurePackOneDungeonRoomCard/PotionOfWeaponMastery.png",
+    inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData RelicBlade => new(
+        name: "Relic Blade",
+        flavor: "This holy blade is an artefact of great religious significance within the Empire and was reputed to have been used by the realm's mightiest heroes in numerous battles.",
+        rules: "While your warrior is using this sword he gets +1 on his to hit roll.",
+        treasureTableDiceResult: "265",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 400,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/RelicBlade.png",
+        inventorySlot: InventorySlot.MainHand);
+
+    public static MagicItemData RingOfSureSeeing => new(
+        name: "Ring of Sure Seeing",
+        flavor: "This ring bears a large gem that glows faintly when danger approaches.",
+        rules: "If you take an Event card that you don't like you may swap it for another. Shuffle all Event cards together (including used ones) to form a new deck. Draw the top card and continue as normal.",
+        treasureTableDiceResult: "266",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Ring },
+        costSell: 200,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/RingOfSureSeeing.png",
+        inventorySlot: InventorySlot.Fingers);
+
+    public static MagicItemData RunestoneOfSlaying => new(
+        name: "Runestone of Slaying",
+        flavor: "The warriors find an ancient item of Dwarf construction inscribed with a glowing rune.",
+        rules: "This rune can be burned onto a single blade by touching the stone to the metal. For one attack, the weapon inflicts double damage (before adding Strength). Once per adventure.",
+        treasureTableDiceResult: "311",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 300,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/RunestoneOfSlaying.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData SpellRing => new(
+        name: "Spell Ring",
+        flavor: "Any Wizard recognizes this as a potent magical ring capable of storing spells.",
+        rules: "As soon as your warrior finds the ring, take one spell card at random. This is the spell that is stored in the ring. The bearer of the ring may cast the stored spell automatically at any time. After use, the ring is drained for the rest of the dungeon. RPG: Next adventure, draw a new card for the ring.",
+        treasureTableDiceResult: "312",
+        ruleUsages: new[] { RuleUsage.Reusable, RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Ring },
+        costSell: 0,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/SpellRing.png",
+        inventorySlot: InventorySlot.Fingers);
+
+    public static MagicItemData Tankard => new(
+        name: "Tankard",
+        flavor: "A sturdy Dwarf tankard, specially designed for drinking Bugman’s beer.",
+        rules: "Highly valued by Dwarfs. If a Dwarf finds this tankard, he will never sell it.",
+        treasureTableDiceResult: "313",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.D },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 20,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/Tankard.png",
+        inventorySlot: InventorySlot.None);
+
+    public static MagicItemData UndeadBane => new(
+        name: "Undead Bane",
+        flavor: "A pot of thick, foul-smelling unguent that can be smeared on a weapon.",
+        rules: "When applied, the weapon inflicts +1 Wound per battle level against all Undead. Effect lasts one turn. Enough for one weapon only.",
+        treasureTableDiceResult: "314",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 50,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/UndeadBane.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData WallOfSteel => new(
+        name: "Wall of Steel",
+        flavor: "This cool blue steel blade flickers as if alive, creating a deadly shimmering blur.",
+        rules: "When used in a corridor or doorway, no Monster may pass the Warrior unless they kill him first, regardless of flying or unpinnable traits.",
+        treasureTableDiceResult: "315",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackOneDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 200,
+        imagePath: "images/TreasurePackOneDungeonRoomCard/WallOfSteel.png",
+        inventorySlot: InventorySlot.MainHand);
 
 
 
