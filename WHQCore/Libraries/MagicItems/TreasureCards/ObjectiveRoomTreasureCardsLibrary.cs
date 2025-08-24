@@ -228,6 +228,205 @@ public static class ObjectiveRoomTreasureCardsLibrary
         imagePath: "images/TreasurePackOneObjectiveRoomCard/TheHammerOfSigmar.png",
         inventorySlot: InventorySlot.MainHand);
 
+    public static MagicItemData ArmourOfMeteoricIron => new(
+    name: "Armour of Meteoric Iron",
+    flavor: "This armour looks pitted and dull, but glows with a dim radiance betraying its true nature.",
+    rules: "The wearer gains +3 Toughness with no movement penalties. Once worn it fuses to the flesh and cannot be removed. It must be donned immediately or left behind.",
+    treasureTableDiceResult: "135",
+    ruleUsages: new[] { RuleUsage.Permanent },
+    new List<HeroCode> { HeroCode.All },
+    treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+    magicItemType: new[] { MagicItemType.Armour },
+    costSell: 1000,
+    imagePath: "images/TreasurePackTwoObjectiveRoomCard/ArmourOfMeteoricIron.png",
+    inventorySlot: InventorySlot.Torso);
+
+    public static MagicItemData AxeOfSlaying => new(
+        name: "Axe of Slaying",
+        flavor: "This axe was once wielded by the Dwarf Giant Slayer Umgrul Grunnson at the final battle of Karaz Azgal.",
+        rules: "Automatically hits. In addition, Instead of normal damage, roll 1D6: on 1 cause 1D6+Strength Wounds, on 2 cause 2D6+Strength, and so on. Use for one turn per adventure.",
+        treasureTableDiceResult: "136",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.D },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Axe },
+        costSell: 500,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/AxeOfSlaying.png",
+        inventorySlot: InventorySlot.MainHand);
+
+    public static MagicItemData BladeOfLeapingGold => new(
+        name: "Blade of Leaping Gold",
+        flavor: "A superbly balanced blade that arcs in swift golden strikes.",
+        rules: "While wielded, the Warrior gains +3 Attacks.",
+        treasureTableDiceResult: "141",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 1000,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/BladeOfLeapingGold.png",
+        inventorySlot: InventorySlot.MainHand);
+
+    public static MagicItemData CrownOfThoughts => new(
+        name: "Crown of Thoughts",
+        flavor: "This battered crown is a powerful magical artefact.",
+        rules: "When Monsters ambush, roll 1D6. On 1–3 ambushed as normal, 4–5 wearer avoids ambush, 6 wearer also gains an extra Attack before Monsters strike. Other Warriors are ambushed as usual.",
+        treasureTableDiceResult: "142",
+        ruleUsages: new[] { RuleUsage.Permanent, RuleUsage.PassiveEffect },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Helmet },
+        costSell: 800,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/CrownOfThoughts.png",
+        inventorySlot: InventorySlot.Head);
+
+    public static MagicItemData DragonStoneOfLeMarquis => new(
+        name: "Dragon Stone of Le Marquis",
+        flavor: "One of the dark artefacts of Michel d'un Doigt, Bretonnian wizard. He laboured long to create a series of enchanged artifacts to be used by the chivalric knights of that realm. Unfortunately, the essential ingredient in the creation of each artifact was the powdered bone from a human finger. Michel created nine in al...",
+        rules: "For one turn, the Warrior adds +1D6 to Toughness.",
+        treasureTableDiceResult: "143",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 500,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/DragonStoneOfLeMarquis.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData ElfShield => new(
+        name: "Elf Shield",
+        flavor: "A finely crafted shield glittering with unearthly sheen.",
+        rules: "Each turn ignore the first blow unless the hit roll was a natural 6, in which case the shield has no effect.",
+        treasureTableDiceResult: "144",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Shield },
+        costSell: 500,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/ElfShield.png",
+        inventorySlot: InventorySlot.OffHand);
+
+    public static MagicItemData FirestormIcon => new(
+        name: "Firestorm Icon",
+        flavor: "A red shard crystal blazing with fire at its core, which flares up to a blazing wall of fire at the wielder's command.",
+        rules: "Target a 2×2 area visible to the Warrior. All Monsters there suffer 6D6 Wounds with no modifiers (roll once for all the monsters). Use once per adventure.",
+        treasureTableDiceResult: "145",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 2000,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/FirestormIcon.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData GauntletsOfSoulRending => new(
+        name: "Gauntlets of Soul Rending",
+        flavor: "These cold steel gauntles have been steeped in powerful magic, and are able to tear the life essence from their victim.",
+        rules: "Wearer gains an extra attack each turn (at -1 to hit, normal damage). RPG: First Monster killed each adventure may add +1 to Starting Wounds on 4–6.",
+        treasureTableDiceResult: "146",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.D },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 800,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/GauntletsOfSoulRending.png",
+        inventorySlot: InventorySlot.Hands);
+
+    public static MagicItemData HornOfDefiance => new(
+        name: "Horn of Defiance",
+        flavor: "The warriors find a bronze horn in a dark corner...",
+        rules: "When blown, all Warriors may roll 1D6 to parry incoming blows. On 6, the blow is negated. Lasts until combat ends or Wizard rolls a 1 in Power Phase.",
+        treasureTableDiceResult: "151",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon },
+        new List<HeroCode> { HeroCode.B, HeroCode.D, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 750,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/HornOfDefiance.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData LifestoneOfAshraaz => new(
+        name: "Lifestone of Ashraaz",
+        flavor: "A mystical stone from the insane sorcerer Ashraaz of Araby.",
+        rules: "The bearer may regain 1D3 Wounds each turn, as long as he has 1 or more Wounds remaining.",
+        treasureTableDiceResult: "152",
+        ruleUsages: new[] { RuleUsage.OncePerTurn, RuleUsage.Reusable },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 1500,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/LifestoneOfAshraaz.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData LifeStoneOfLeMarquis => new(
+        name: "Life Stone of Le Marquis",
+        flavor: "Another of Michel d’un Doigt’s grim relics, infused with sorcery and bone.",
+        rules: "A powerful enchanted stone. When your warrior is reduced to 0 wounds, this magical stone deflects the killing blow and it causes no damage. Use once per adventure.",
+        treasureTableDiceResult: "153",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 500,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/LifeStoneOfLeMarquis.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData RingOfRegeneration => new(
+        name: "Ring of Regeneration",
+        flavor: "A stone band that heals even grievous wounds.",
+        rules: "At the end of any turn in which the wearer was hit by one or more foes, roll a dice if the warrior still has wounds remaining. On a 6 regain 2D6 Wounds. If your warrior has no wounds remaining, then on a 6 1D6 wounds are restored instead.",
+        treasureTableDiceResult: "154",
+        ruleUsages: new[] { RuleUsage.OncePerTurn },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Ring },
+        costSell: 650,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/RingOfRegeneration.png",
+        inventorySlot: InventorySlot.Fingers);
+
+    public static MagicItemData RingOfTheWarp => new(
+        name: "Ring of the Warp",
+        flavor: "A black ring shimmering with unholy light, slipping from finger to finger.",
+        rules: "Each turn, instead of moving, the wearer may teleport. Roll a dice to determine distance. Must move to an empty square. If none, the wearer loses the turn.",
+        treasureTableDiceResult: "155",
+        ruleUsages: new[] { RuleUsage.OncePerTurn, RuleUsage.RequiresAction },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Ring },
+        costSell: 1000,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/RingOfTheWarp.png",
+        inventorySlot: InventorySlot.Fingers);
+
+    public static MagicItemData SurefireBow => new(
+        name: "Surefire Bow",
+        flavor: "An elegant bow engraved with a rune of Surefire. Ancient stories tell of a bow that never misses.",
+        rules: "The bow has strength 4 and adds +2 to the wielder's to hit roll.",
+        treasureTableDiceResult: "156",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Bow },
+        costSell: 900,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/SurefireBow.png",
+        inventorySlot: InventorySlot.TwoHanded);
+
+    public static MagicItemData SwordOfHoeth => new(
+        name: "Sword of Hoeth",
+        flavor: "A High Elf sword, lightning fast, forged in Hoeth itself. Once mastered, the wielder is all but unstoppable in battle.",
+        rules: "Just before using the sword roll a dice: on 5–6 gain double Attacks; on 2–4 attack as normal; on 1 the Warrior falls prone and may do nothing further that turn.",
+        treasureTableDiceResult: "161",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.B, HeroCode.W, HeroCode.E },
+        treasureType: new[] { TreasureType.TreasurePackTwoObectiveRoomCard },
+        magicItemType: new[] { MagicItemType.Weapon },
+        costSell: 750,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/SwordOfHoeth.png",
+        inventorySlot: InventorySlot.MainHand);
+
+
+
+
+
     public static MagicItemData? GetMagicItemByName(string name)
     {
         var type = typeof(ObjectiveRoomTreasureCardsLibrary);

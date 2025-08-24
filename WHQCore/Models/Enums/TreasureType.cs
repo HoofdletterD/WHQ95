@@ -12,5 +12,9 @@ public enum TreasureType
     CatacombsOfTerrorObjectiveRoomCard,
     LairOfTheOrcLordTreasureCard,
     TreasurePackOneDungeonRoomCard,
-    TreasurePackOneObjectiveRoomCard
+    TreasurePackOneObjectiveRoomCard,
+    TreasurePackTwoDungeonRoomCard,
+    TreasurePackTwoObectiveRoomCard,
+    TreasurePackThreeDungeonRoomCard,
+    TreasurePackThreeObectiveRoomCard
 }
