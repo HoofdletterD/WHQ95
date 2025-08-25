@@ -1056,6 +1056,218 @@ inventorySlot: InventorySlot.OffHand
 
 
 
+
+
+    public static MagicItemData ArrowsOfPiercing => new(
+    name: "Arrows of Piercing",
+    flavor: "These arrows are barbed and black, fletched with raven feathers.",
+    rules: "When used, these arrows ignore the target’s Toughness. Each arrow may only be used once.",
+    treasureTableDiceResult: "316",
+    ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+    new List<HeroCode> { HeroCode.All },
+    treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+    magicItemType: new[] { MagicItemType.Bow },
+    costSell: 0,
+    imagePath: "images/TreasurePackTwoObjectiveRoomCard/ArrowsOfPiercing.png",
+    inventorySlot: InventorySlot.TwoHanded);
+
+    public static MagicItemData ArrowsOfSureFlight => new(
+        name: "Arrows of Sure Flight",
+        flavor: "These arrows are light and perfectly balanced, fletched with hawk feathers.",
+        rules: "These arrows always hit their target and may be used instead of a normal bow attack. Each arrow may only be used once.",
+        treasureTableDiceResult: "321",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Bow },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/ArrowsOfSureFlight.png",
+        inventorySlot: InventorySlot.TwoHanded);
+
+    public static MagicItemData Backpack => new(
+        name: "Backpack",
+        flavor: "A sturdy leather backpack with straps and buckles, used to carry more items into the dungeon.",
+        rules: "A Warrior with a backpack may carry 6 extra items in addition to the normal limit.",
+        treasureTableDiceResult: "322",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/Backpack.png",
+        inventorySlot: InventorySlot.Back);
+
+    public static MagicItemData BaubleOfAnurandel => new(
+        name: "Bauble of Anurandel",
+        flavor: "This small trinket shines with an inner light, reputedly a gift from the Elven prince Anurandel.",
+        rules: "The Bauble of Anurandel allows the Warrior to re-roll any one dice roll per adventure.",
+        treasureTableDiceResult: "323",
+        ruleUsages: new[] { RuleUsage.OncePerDungeon, RuleUsage.Reusable },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Amulet },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/BaubleOfAnurandel.png",
+        inventorySlot: InventorySlot.Neck);
+
+    public static MagicItemData BootsOfBattle => new(
+        name: "Boots of Battle",
+        flavor: "These steel-capped boots are said to echo with the war cries of ancient heroes.",
+        rules: "The wearer may add +1 to all hit rolls they make.",
+        treasureTableDiceResult: "324",
+        ruleUsages: new[] { RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Boots },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/BootsOfBattle.png",
+        inventorySlot: InventorySlot.Legs);
+
+    public static MagicItemData BootsOfLeaping => new(
+        name: "Boots of Leaping",
+        flavor: "These enchanted boots are light as air, enabling great leaps.",
+        rules: "The wearer may leap up to 3 squares instead of moving normally, even over pits and chasms.",
+        treasureTableDiceResult: "325",
+        ruleUsages: new[] { RuleUsage.Reusable, RuleUsage.RequiresAction },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Boots },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/BootsOfLeaping.png",
+        inventorySlot: InventorySlot.Legs);
+
+    public static MagicItemData BugmansXXXXXX => new(
+        name: "Bugman’s XXXXXX",
+        flavor: "This potent Dwarf ale is famed across the Old World.",
+        rules: "When drunk, restore 1D6 Wounds immediately. The bottle contains only one draught.",
+        treasureTableDiceResult: "326",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.D },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/BugmansXXXXXX.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData ChaosBane => new(
+        name: "Chaos Bane",
+        flavor: "This charm reeks of purity and order, radiating light against foul corruption.",
+        rules: "While carried, all Chaos creatures within 2 squares suffer -1 to hit.",
+        treasureTableDiceResult: "331",
+        ruleUsages: new[] { RuleUsage.PassiveEffect, RuleUsage.Permanent },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Amulet },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/ChaosBane.png",
+        inventorySlot: InventorySlot.Neck);
+
+    public static MagicItemData ConfuseSpellScroll => new(
+        name: "Confuse Spell Scroll",
+        flavor: "This fragile scroll is written in glowing ink of shifting colors.",
+        rules: "This scroll may be read once. The target Monster is confused and may not act until the end of the next turn.",
+        treasureTableDiceResult: "332",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/ConfuseSpellScroll.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData CrownOfMadness => new(
+        name: "Crown of Madness",
+        flavor: "A crown of jagged iron spikes, whispering insanity into the wearer’s mind.",
+        rules: "The wearer may attempt to take control of one Monster each turn. Roll 1D6: on 5–6 the Monster obeys the wearer’s commands until the end of the turn.",
+        treasureTableDiceResult: "333",
+        ruleUsages: new[] { RuleUsage.OncePerTurn, RuleUsage.RequiresAction },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Helmet },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/CrownOfMadness.png",
+        inventorySlot: InventorySlot.Head);
+
+    public static MagicItemData CureSmallWoundsSpell => new(
+        name: "Cure Small Wounds Spell",
+        flavor: "A spell scroll written in silver ink on vellum, radiating gentle warmth.",
+        rules: "The scroll may be read once. The target regains 1D6 Wounds immediately.",
+        treasureTableDiceResult: "334",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/CureSmallWoundsSpell.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData ExoticFoodsOfTilea => new(
+        name: "Exotic Foods of Tilea",
+        flavor: "This hamper contains strange delicacies from distant Tilea.",
+        rules: "The Warrior may eat these foods at any time to restore 1D6 Wounds. There is only enough for one meal.",
+        treasureTableDiceResult: "335",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/ExoticFoodsOfTilea.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData FineClothes => new(
+        name: "Fine Clothes",
+        flavor: "An elegant set of nobleman’s attire, woven from silk and velvet.",
+        rules: "Fine Clothes have no effect in the dungeon, but may be sold in a settlement for gold.",
+        treasureTableDiceResult: "336",
+        ruleUsages: new[] { RuleUsage.None },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 200,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/FineClothes.png",
+        inventorySlot: InventorySlot.Torso);
+
+    public static MagicItemData FineElfWine => new(
+        name: "Fine Elf Wine",
+        flavor: "A crystal bottle filled with sparkling Elven wine of rare vintage.",
+        rules: "When drunk, restore 1D6 Wounds immediately. The bottle contains one draught.",
+        treasureTableDiceResult: "341",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.All },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 300,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/FineElfWine.png",
+        inventorySlot: InventorySlot.Pouch);
+
+    public static MagicItemData FleetOfFootScroll => new(
+        name: "Fleet of Foot Scroll",
+        flavor: "This spell scroll is inked with runes of speed that shimmer when read.",
+        rules: "The scroll may be read once. For the rest of the turn, the Warrior may move double their normal distance.",
+        treasureTableDiceResult: "342",
+        ruleUsages: new[] { RuleUsage.OneUseOnly, RuleUsage.DiscardAfterUse },
+        new List<HeroCode> { HeroCode.W },
+        treasureType: new[] { TreasureType.TreasurePackTwoDungeonRoomCard },
+        magicItemType: new[] { MagicItemType.Item },
+        costSell: 0,
+        imagePath: "images/TreasurePackTwoObjectiveRoomCard/FleetOfFootScroll.png",
+        inventorySlot: InventorySlot.Pouch);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static MagicItemData AmuletOfCharadris => new(
     "Amulet of Charadris",
     "Charadris was a Priest of Sigmar who abhorred magic in all its forms, believing that his faith in Sigmar was the greatest power of all.",
@@ -1196,19 +1408,6 @@ inventorySlot: InventorySlot.OffHand
             inventorySlot: InventorySlot.Neck
         );
 
-        public static MagicItemData Dummy => new(
-            name: "xxx",
-            flavor: "",
-            rules: "",
-            treasureTableDiceResult: "118",
-            ruleUsages: [RuleUsage.OneUseOnly],
-            new List<HeroCode> { HeroCode.All },
-            treasureType: [TreasureType.CoreSetTreasureCard],
-            magicItemType: [MagicItemType.Item],
-            costSell: 400,
-            imagePath: "images/magicitems/treasurecards/xxx.png",
-            inventorySlot: InventorySlot.Pouch
-        );
 
     public static MagicItemData? GetMagicItemByName(string name)
     {
