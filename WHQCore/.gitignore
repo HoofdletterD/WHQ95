@@ -1,6 +1,0 @@
-# Ignore Visual Studio temporary files
-.vs/
-
-# Ignore build output folders
-bin/
-obj/
