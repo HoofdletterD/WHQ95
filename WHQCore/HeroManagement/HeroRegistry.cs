@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using WHQCore.Heroes;
 using WHQCore.Heroes.Barbarian;
-using WHQCore.Heroes.DwarfSoldier;
-using WHQCore.Heroes.GladeGuard;
+using WHQCore.Heroes.DwarfWarrior;
+using WHQCore.Heroes.ElfWarrior;
 using WHQCore.Heroes.Wizard;
 using WHQCore.Models;
 
@@ -22,18 +22,18 @@ public static class HeroRegistry
             name => new Barbarian(name)
         ),
         new(
-            "Dwarf Soldier",
+            "Dwarf Warrior",
             "Dwarf",
             "Tough and resilient melee fighter, defensive and dependable.",
-            name => new DwarfSoldier(name).Character,
-            name => new DwarfSoldier(name)
+            name => new DwarfWarrior(name).Character,
+            name => new DwarfWarrior(name)
         ),
         new(
-            "Glade Guard",
+            "Elf Warrior",
             "Elf",
             "Agile ranged fighter, precise and evasive.",
-            name => new GladeGuard(name).Character,
-            name => new GladeGuard(name)
+            name => new ElfWarrior(name).Character,
+            name => new ElfWarrior(name)
         ),
         new(
             "Wizard",

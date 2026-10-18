@@ -20,7 +20,7 @@ public static class EquipmentLibrary
 
     public static EquipmentData DwarfGreatAxe => new(
         "Dwarf Great Axe",
-        "Roll an additional dice to wound and choose the highest result. If two 1's are rolled for damage, the dwarf trips over his own beard. Monsters will hit the dwarf soldier with a +2 modifier until the next turn.",
+        "Roll an additional dice to wound and choose the highest result. If two 1's are rolled for damage, the dwarf trips over his own beard. Monsters will hit the dwarf Warrior with a +2 modifier until the next turn.",
         new List<HeroCode> { HeroCode.D },
         ruleUsages: [RuleUsage.PassiveEffect],
         trader: new List<Trader> { Trader.NoTraderAvailable },
@@ -50,7 +50,7 @@ public static class EquipmentLibrary
 
     public static EquipmentData ElfBow => new(
         "Elf Bow",
-        "Roll an additional dice to wound and choose the highest result. If two 1's are rolled for damage, the dwarf trips over his own beard. Monsters will hit the dwarf soldier with a +2 modifier until the next turn.",
+        "Roll an additional dice to wound and choose the highest result. If two 1's are rolled for damage, the dwarf trips over his own beard. Monsters will hit the dwarf Warrior with a +2 modifier until the next turn.",
         new List<HeroCode> { HeroCode.E },
         ruleUsages: [RuleUsage.PassiveEffect],
         trader: new List<Trader> { Trader.NoTraderAvailable },
