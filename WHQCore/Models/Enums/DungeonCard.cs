@@ -1,4 +1,4 @@
-namespace WarhammerQuest1995.Models;
+﻿namespace WHQCore.Models.Enums;
 
 /// <summary>
 /// Represents a single Dungeon Card from Warhammer Quest.
