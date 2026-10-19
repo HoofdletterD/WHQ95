@@ -1,6 +1,6 @@
-﻿using WHQCore.Models;
+﻿using WHQCore.Models.Enums;
 
-namespace WHQCore.Library.DungeonCards;
+namespace WHQCore.Libraries.DungeonCards;
 
 public static class DungeonCards
 {
@@ -9,7 +9,7 @@ public static class DungeonCards
         new()
         {
             Name = "Circle of Power",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.DungeonRoom,
             Quantity = 1,
             Size = "4x4",
@@ -22,7 +22,7 @@ public static class DungeonCards
         new()
         {
             Name = "Corner",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.Corridor,
             Quantity = 1,
             Size = "6x2",
@@ -35,7 +35,7 @@ public static class DungeonCards
         new()
         {
             Name = "Dungeon Cell",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.DungeonRoom,
             Quantity = 1,
             Size = "4x4",
@@ -48,7 +48,7 @@ public static class DungeonCards
         new()
         {
             Name = "Fighting Pit",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.ObjectiveRoom,
             Quantity = 1,
             Size = "8x4",
@@ -61,7 +61,7 @@ public static class DungeonCards
         new()
         {
             Name = "Firechasm",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.ObjectiveRoom,
             Quantity = 1,
             Size = "8x4",
@@ -74,7 +74,7 @@ public static class DungeonCards
         new()
         {
             Name = "Fountain of Light",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.ObjectiveRoom,
             Quantity = 1,
             Size = "8x4",
@@ -87,7 +87,7 @@ public static class DungeonCards
         new()
         {
             Name = "Guard Room",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.DungeonRoom,
             Quantity = 1,
             Size = "4x4",
@@ -100,7 +100,7 @@ public static class DungeonCards
         new()
         {
             Name = "Idol Chamber",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.ObjectiveRoom,
             Quantity = 1,
             Size = "8x4",
@@ -113,7 +113,7 @@ public static class DungeonCards
         new()
         {
             Name = "Monsters' Lair",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.DungeonRoom,
             Quantity = 1,
             Size = "4x4",
@@ -126,7 +126,7 @@ public static class DungeonCards
         new()
         {
             Name = "Passageway",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.Corridor,
             Quantity = 7,
             Size = "6x2",
@@ -139,7 +139,7 @@ public static class DungeonCards
         new()
         {
             Name = "Stairway",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.Corridor,
             Quantity = 1,
             Size = "6x2",
@@ -152,7 +152,7 @@ public static class DungeonCards
         new()
         {
             Name = "T-Junction",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.Corridor,
             Quantity = 3,
             Size = "6x4",
@@ -165,7 +165,7 @@ public static class DungeonCards
         new()
         {
             Name = "Tomb Chamber",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.ObjectiveRoom,
             Quantity = 1,
             Size = "8x4",
@@ -178,7 +178,7 @@ public static class DungeonCards
         new()
         {
             Name = "Torture Chamber",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.DungeonRoom,
             Quantity = 1,
             Size = "4x4",
@@ -191,7 +191,7 @@ public static class DungeonCards
         new()
         {
             Name = "Well of Doom",
-            Set = ExpansionSet.Core,
+            Set = ExpansionSet.CoreGame,
             CardType = DungeonCardType.DungeonRoom,
             Quantity = 1,
             Size = "4x4",
