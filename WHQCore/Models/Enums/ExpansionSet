@@ -1,3 +1,5 @@
+﻿namespace WHQCore.Models.Enums;
+
 public enum ExpansionSet
 {
     Core,
