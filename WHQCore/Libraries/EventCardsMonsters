@@ -1,0 +1,149 @@
+public class EventCard
+{
+    public string EventType { get; init; } = string.Empty;
+    public string CardName { get; init; } = string.Empty;
+    public string Set { get; init; } = string.Empty;
+    public string Quantity { get; init; } = string.Empty;
+    public string ApplicableRace { get; init; } = string.Empty;
+    public string? SpecialRules { get; init; }
+    public bool DrawAnotherEventCard { get; init; }
+    public bool TreasureCard { get; init; }
+}
+
+public static class CoreCards
+{
+    public static readonly List<EventCard> Cards =
+    [
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Minotaur",
+            Set = "Core",
+            Quantity = "1",
+            ApplicableRace = "Beastmen",
+            SpecialRules = "When a minotaur hits a warrior...",
+            DrawAnotherEventCard = true,
+            TreasureCard = true
+        },
+
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Minotaur",
+            Set = "Core",
+            Quantity = "D3",
+            ApplicableRace = "Beastmen",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Giant Bats",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Vampire Counts",
+            SpecialRules = "Giant Bats make an immediate attack as soon as they are placed.",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Giant Rats",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Skaven",
+            SpecialRules = "Death Leap - When a Giant Rat hits your warrior...",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Giant Spider",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Orcs & Goblins",
+            SpecialRules = "Web Attack - If a spider attacks a warrior...",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Goblin Archer",
+            Set = "Core",
+            Quantity = "1D6",
+            ApplicableRace = "Orcs & Goblins",
+            SpecialRules = "Goblin archer's bow is Strength 1 and hits on 4+.",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Goblins",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Orcs & Goblins",
+            SpecialRules = "Place 1D6 goblin spearmen and 1D6 goblin archers.",
+            DrawAnotherEventCard = true,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Goblin Spearmen",
+            Set = "Core",
+            Quantity = "6",
+            ApplicableRace = "Orcs & Goblins",
+            SpecialRules = "Goblins armed with spears may attack from 2 ranks.",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Orcs",
+            Set = "Core",
+            Quantity = "6",
+            ApplicableRace = "Orcs & Goblins",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Orcs",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Orcs & Goblins",
+            SpecialRules = "Place 1D6 Orc warriors and 1D6 Orc archers.",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Skaven Warriors",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Skaven",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        },
+        new()
+        {
+            EventType = "Monster",
+            CardName = "Snotlings",
+            Set = "Core",
+            Quantity = "2D6",
+            ApplicableRace = "Orcs & Goblins",
+            SpecialRules = "Snotlings make an immediate attack as soon as they are placed.",
+            DrawAnotherEventCard = false,
+            TreasureCard = true
+        }
+    ];
+}
