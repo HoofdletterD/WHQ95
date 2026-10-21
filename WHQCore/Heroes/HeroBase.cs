@@ -16,9 +16,9 @@ public abstract class HeroBase(string name, string type) : IHero
 
     protected abstract IHeroProgression ProgressionService { get; }
 
-    public virtual void LevelUp()
+    public virtual LevelUpResult LevelUp()
     {
-        ProgressionService.LevelUp(Character);
+        return ProgressionService.LevelUp(Character);
     }
 
     public abstract void ApplyStartingSkills();

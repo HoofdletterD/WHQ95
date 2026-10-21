@@ -3,5 +3,5 @@
 public interface IHeroProgression
 {
     void ApplyProgression(Hero character);
-    void LevelUp(Hero character);
+    LevelUpResult LevelUp(Hero character);
 }

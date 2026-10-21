@@ -1,6 +1,6 @@
-﻿using WHQCore.Helpers;
+﻿using WHQCore.Cards.Equipment;
+using WHQCore.Helpers;
 using WHQCore.HeroManagement;
-using WHQCore.Libraries.Equipment;
 using WHQCore.Logic;
 using WHQCore.Models;
 using WHQCore.Models.Enums;

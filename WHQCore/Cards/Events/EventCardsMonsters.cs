@@ -8,6 +8,7 @@ public class EventCard
     public string? SpecialRules { get; init; }
     public bool DrawAnotherEventCard { get; init; }
     public bool TreasureCard { get; init; }
+    public string? MonsterProfileId { get; init; }
 }
 
 public static class CoreCards
@@ -21,7 +22,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "1",
             ApplicableRace = "Beastmen",
-            SpecialRules = "When a minotaur hits a warrior...",
             DrawAnotherEventCard = true,
             TreasureCard = true
         },
@@ -44,7 +44,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "2D6",
             ApplicableRace = "Vampire Counts",
-            SpecialRules = "Giant Bats make an immediate attack as soon as they are placed.",
             DrawAnotherEventCard = false,
             TreasureCard = true
         },
@@ -55,7 +54,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "2D6",
             ApplicableRace = "Skaven",
-            SpecialRules = "Death Leap - When a Giant Rat hits your warrior...",
             DrawAnotherEventCard = false,
             TreasureCard = true
         },
@@ -66,7 +64,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "2D6",
             ApplicableRace = "Orcs & Goblins",
-            SpecialRules = "Web Attack - If a spider attacks a warrior...",
             DrawAnotherEventCard = false,
             TreasureCard = true
         },
@@ -77,7 +74,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "1D6",
             ApplicableRace = "Orcs & Goblins",
-            SpecialRules = "Goblin archer's bow is Strength 1 and hits on 4+.",
             DrawAnotherEventCard = false,
             TreasureCard = true
         },
@@ -99,7 +95,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "6",
             ApplicableRace = "Orcs & Goblins",
-            SpecialRules = "Goblins armed with spears may attack from 2 ranks.",
             DrawAnotherEventCard = false,
             TreasureCard = true
         },
@@ -141,7 +136,6 @@ public static class CoreCards
             Set = "Core",
             Quantity = "2D6",
             ApplicableRace = "Orcs & Goblins",
-            SpecialRules = "Snotlings make an immediate attack as soon as they are placed.",
             DrawAnotherEventCard = false,
             TreasureCard = true
         },

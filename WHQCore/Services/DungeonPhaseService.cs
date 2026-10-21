@@ -1,7 +1,7 @@
-﻿using WHQCore.Helpers;
+﻿using WHQCore.Cards.MagicItems.RolePlayBookTables;
+using WHQCore.Cards.MagicItems.TreasureCards;
+using WHQCore.Helpers;
 using WHQCore.HeroManagement;
-using WHQCore.Libraries.MagicItems.RolePlayBookTables;
-using WHQCore.Libraries.MagicItems.TreasureCards;
 using WHQCore.Models;
 using WHQCore.Models.Enums;
 

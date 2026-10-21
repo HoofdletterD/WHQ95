@@ -1,4 +1,4 @@
-﻿using WHQCore.Libraries.Equipment;
+﻿using WHQCore.Cards.Equipment;
 using WHQCore.Logic;
 using WHQCore.Models;
 using WHQCore.Models.Enums;

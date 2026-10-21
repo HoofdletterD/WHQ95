@@ -5,33 +5,59 @@ namespace WHQCore.Helpers;
 
 public abstract class BaseHeroProgressionService : IHeroProgression
 {
-    public virtual void LevelUp(Hero character)
+
+    public virtual LevelUpResult LevelUp(Hero character)
     {
         if (character.BattleLevel >= 10)
         {
-            Console.WriteLine("Maximum level reached.");
-            return;
+            return new LevelUpResult(
+                false,
+                "Maximum level reached.",
+                character.BattleLevel
+            );
         }
 
         var nextLevel = character.BattleLevel + 1;
 
         if (!Hero.GoldCostPerLevel.TryGetValue(nextLevel, out var cost))
         {
-            Console.WriteLine("No gold cost found for next level.");
-            return;
+            return new LevelUpResult(
+                false,
+                "No gold cost found for next level.",
+                character.BattleLevel
+            );
         }
 
         if (character.Gold < cost)
         {
-            Console.WriteLine($"Not enough gold to level up (need {cost}).");
-            return;
+            return new LevelUpResult(
+                false,
+                $"Not enough gold to level up (need {cost}).",
+                character.BattleLevel
+            );
+        }
+
+        if (!TryGetProgression(nextLevel, out _))
+        {
+            return new LevelUpResult(
+                false,
+                $"No progression defined for Battle Level {nextLevel}.",
+                character.BattleLevel
+            );
         }
 
         character.Gold -= cost;
         character.BattleLevel++;
 
         ApplyProgression(character);
+
+        return new LevelUpResult(
+            true,
+            $"Levelled up to Battle Level {character.BattleLevel}.",
+            character.BattleLevel
+        );
     }
+
 
     protected abstract Skill GetSkillByRoll(string roll);
     protected abstract Spell GetSpellByRoll(string roll);

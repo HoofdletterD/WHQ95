@@ -1,7 +1,7 @@
 ﻿using System.Linq;
+using WHQCore.Cards.Equipment;
+using WHQCore.Cards.MagicItems.RolePlayBookTables;
 using WHQCore.Helpers;
-using WHQCore.Libraries.Equipment;
-using WHQCore.Libraries.MagicItems.RolePlayBookTables;
 using WHQCore.Libraries.SpecialRules;
 using WHQCore.Models;
 using WHQCore.Models.Enums;

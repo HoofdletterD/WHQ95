@@ -71,7 +71,7 @@ public record DungeonCard
 public enum DungeonCardType
 {
     Corridor,
-    Room,
+    DungeonRoom,
     ObjectiveRoom,
     Event,
     Special,
@@ -87,5 +87,10 @@ public enum ExpansionSet
     LairOfTheOrcLord,
     WhiteDwarf,
     FanMade,
-    Custom
+    Custom,
+    WD192,
+    WD185,
+    WD186,
+    WD195,
+    WD204
 }

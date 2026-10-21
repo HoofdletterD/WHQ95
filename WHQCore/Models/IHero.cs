@@ -3,7 +3,7 @@
 public interface IHero
 {
     Hero Character { get; }
-    void LevelUp();
+    LevelUpResult LevelUp();
     void ApplyStartingSkills();
     void ApplyStartingEquipment();
     void ApplyStartingSpells();

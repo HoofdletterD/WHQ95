@@ -1,6 +1,6 @@
 ﻿using WHQCore.Models.Enums;
 
-namespace WHQCore.Libraries.DungeonCards;
+namespace WHQCore.Cards.DungeonCards;
 
 public static class DungeonCards
 {

@@ -4,6 +4,17 @@ namespace WHQCore.Libraries.SpecialRules;
 
 public static class SpecialRuleLibrary
 {
+    public static SpecialRule Ambush(string value)
+    {
+        return new SpecialRule(
+            "Ambush",
+            $"Placed monsters will attack out of sequence.",
+            "Some Monsters are able to Ambush the Warriors, springing from the darkness and attacking them before they have the chance to react. Each type of Monster with the Ambush ability has an Ambush Rating (n) that shows the score they need on 106 to successfully spring their Ambush. Daemonettes of Slaanesh, for instance, have Ambush 5+, and therefore need a score of 5 or 6 on 1D6 to successfully Ambush the Warriors. An Ambush Rating of 'A' indicates that the Monster automatically succeeds in making its Ambush and doesn't need to roll. Monsters that successfully carry out an Ambush may ignore the rule about waiting until the next Monsters' Phase before they attack. If the Monsters appear in the Power Phase, for instance, they are placed and make one set of attacks in that phase and attack in the Monsters' Phase. Once such Monsters have sprung their ambush they fight only in the Monsters' Phase from then on, as normal. Note that as any sort of attach may be an Ambush, special abilities that are also Ambushes are indicated with the suffix 'Ambush' in the Monster Tables. A Hydra, for instance, has the Breathe Fire 4 (Ambush A) Special Ability, indicating that it makes an automatically successful Ambush with its 4D6 damage Breathe Fire attack when it is first placed on the board",
+            categories: ["Monster", "Placement"],
+            imagePath: "images/Ambush_Icon.png"
+        );
+    }
+    
     public static SpecialRule Fear(int rating)
     {
         return new SpecialRule(
@@ -26,6 +37,12 @@ public static class SpecialRuleLibrary
             imagePath: "images/berserk_icon.png"
         );
     }
+
+
+
+
+
+
 
     public static SpecialRule? GetSpecialRuleByName(string name)
     {
