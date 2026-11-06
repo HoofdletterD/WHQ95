@@ -24,7 +24,7 @@ public class DwarfWarrior : HeroBase
         Character.StartingWounds = result.Total + 8;
         Character.CurrentWounds = Character.StartingWounds;
         Character.GetRollDetails()["Wounds"] = result.ToString();
-        Character.Gold = 1000000;
+        Character.Gold = 0;
 
         Character.BattleLevel = 1;
         Character.Title = "Novice";
