@@ -24,6 +24,4 @@ public class LevelUpHeroRequest
     public string EscapePinning { get; set; } = "";
 
     public List<Skill> Skills { get; set; } = [];
-
-    public List<Spell> Spells { get; set; } = [];
 }
