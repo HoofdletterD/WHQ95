@@ -1,4 +1,4 @@
-﻿using WHQCore.Models;
+﻿namespace WHQCore.Models.Requests;
 
 public class LevelUpHeroRequest
 {
