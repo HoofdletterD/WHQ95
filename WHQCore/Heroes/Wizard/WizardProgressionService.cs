@@ -37,6 +37,90 @@ public class WizardProgressionService : BaseHeroProgressionService
             HandleSpellSelectionOnLevelUp(character);
     }
 
+
+    public List<Spell> GetAvailableSpellsForLevel(
+        Hero character,
+        List<int> rolledDice)
+    {
+        var possibleCastingNumbers = DiceRoller
+            .GetPossibleCastingNumbers(rolledDice)
+            .OrderBy(n => n)
+            .ToList();
+
+        var availableSpells = new List<Spell>();
+
+        foreach (var cn in possibleCastingNumbers)
+        {
+            availableSpells.AddRange(
+                SpellLibrary.GetSpellsByCastingNumber(
+                        cn.ToString())
+                    .Where(s =>
+                        !character.Spells.Any(
+                            cs => cs.SpellName == s.SpellName))
+            );
+        }
+
+        return availableSpells
+            .DistinctBy(s => s.SpellName)
+            .ToList();
+    }
+
+    public List<int> RollSpellDice(
+        Hero character)
+    {
+        var dice = new List<int>();
+
+        for (var i = 0; i < character.BattleLevel; i++)
+        {
+            dice.Add(DiceRoller.RollD6());
+        }
+
+        return dice;
+    }
+
+    public void LearnSpell(
+        Hero character,
+        Spell spell)
+    {
+        if (character.Spells.Any(
+                s => s.SpellName == spell.SpellName))
+        {
+            return;
+        }
+
+        character.Spells.Add(spell);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private void HandleSpellSelectionOnLevelUp(Hero character)
     {
         var newLevel = character.BattleLevel;

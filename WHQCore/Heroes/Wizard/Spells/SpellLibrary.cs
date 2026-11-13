@@ -1096,6 +1096,14 @@ public static class SpellLibrary
         return AllSpells().FirstOrDefault(s => s.CastingNumber == value);
     }
 
+    public static Spell? GetSpellByName(
+        string spellName)
+    {
+        return AllSpells()
+            .FirstOrDefault(
+                s => s.SpellName == spellName);
+    }
+
     public static readonly List<Spell> StartingSpells =
     [
         Fireball,
