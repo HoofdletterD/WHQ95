@@ -4,8 +4,8 @@ using WHQCore.Models.Enums;
 namespace WHQCore.Models;
 
 public class Hero(string name, string type)
-{
-    public static readonly Dictionary<int, int> GoldCostPerLevel = new()
+{ public static readonly Dictionary<int, int> GoldCostPerLevel = new()
+
     {
         { 2, 2000 },
         { 3, 4000 },
@@ -54,6 +54,7 @@ public class Hero(string name, string type)
     public string? Bio { get; set; }
     public List<HeroTrait> Traits { get; set; } = [];
 
+    public bool PendingSpellSelection { get; set; }
 
     public Dictionary<string, string> GetRollDetails()
     {
