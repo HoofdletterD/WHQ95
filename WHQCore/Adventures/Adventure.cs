@@ -1,6 +1,4 @@
-﻿using WHQCore.Models.Enums;
-
-namespace WHQCore.Adventures;
+﻿namespace WHQCore.Adventures;
 
 public class Adventure
 {

@@ -824,4 +824,15 @@ public static class AdventureLibrary
             .OrderBy(a => a.Roll)
             .ToList();
     }
+
+    public static Adventure GetRandomAdventure(
+        ObjectiveRoomType objectiveRoom,
+        Random random)
+    {
+        var roll = random.Next(1, 7);
+
+        return GetAdventure(
+            objectiveRoom,
+            roll);
+    }
 }

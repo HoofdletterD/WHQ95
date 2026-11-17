@@ -1,4 +1,5 @@
-﻿using WHQCore.Cards.DungeonCards;
+﻿using WHQCore.Adventures;
+using WHQCore.Cards.DungeonCards;
 using WHQCore.Models.Enums;
 
 namespace WHQCore.Dungeon;
@@ -6,6 +7,21 @@ namespace WHQCore.Dungeon;
 public class DungeonDeckGenerator
 {
     private readonly Random _random = new();
+
+    private static ObjectiveRoomType MapObjectiveRoomType(string roomName)
+    {
+        return roomName switch
+        {
+            "Fountain of Light" => ObjectiveRoomType.FountainOfLight,
+            "Firechasm" => ObjectiveRoomType.FireChasm,
+            "Idol Chamber" => ObjectiveRoomType.IdolChamber,
+            "Tomb Chamber" => ObjectiveRoomType.TombChamber,
+            "Fighting Put" => ObjectiveRoomType.FightingPit,
+
+            _ => throw new InvalidOperationException(
+                $"Unknown objective room: {roomName}")
+        };
+    }
 
     public DungeonDeck GenerateCoreGameDungeon()
     {
@@ -27,6 +43,14 @@ public class DungeonDeckGenerator
             objectiveRooms
                 .OrderBy(_ => _random.Next())
                 .First();
+
+        var objectiveRoomType =
+            MapObjectiveRoomType(chosenObjective.Name);
+
+        var adventure =
+            AdventureLibrary.GetRandomAdventure(
+                objectiveRoomType,
+                _random);
 
         var dungeonPool =
             coreCards
@@ -63,10 +87,12 @@ public class DungeonDeckGenerator
 
         finalDeck.AddRange(objectiveSection);
 
+
         return new DungeonDeck
         {
             Entrance = entrance,
             ObjectiveRoom = chosenObjective,
+            Adventure = adventure,
             Cards = finalDeck
         };
     }
