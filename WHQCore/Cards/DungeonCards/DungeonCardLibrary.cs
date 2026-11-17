@@ -16,7 +16,7 @@ public static class DungeonCards
             TileCount = 16,
             AdditionalDoors = 1,
             Lore = "Shards of flickering, unnatural green light pierce the darkness from within this room.",
-            Rules = "The Circle of Power will always trigger an Event Card, unless the Adventur Book states otherwise."
+            Rules = "The Circle of Power will always trigger an Event Card, unless the Adventure Book states otherwise."
         },
 
         new()
@@ -42,7 +42,7 @@ public static class DungeonCards
             TileCount = 16,
             AdditionalDoors = 1,
             Lore = "What little light penetrates this room seems to be absorbed by its deep blue floor.",
-            Rules = "The Dungeon Cell will always trigger an Event Card, unless the Adventur Book states otherwise."
+            Rules = "The Dungeon Cell will always trigger an Event Card, unless the Adventure Book states otherwise."
         },
 
         new()

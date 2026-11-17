@@ -12,4 +12,8 @@ public class DungeonDeck
     public Adventure Adventure { get; init; } = null!;
 
     public List<DungeonCard> Cards { get; init; } = [];
+
+    public int CurrentCardIndex { get; set; }
+
+    public List<DungeonCard> RevealedCards { get; set; } = [];
 }
