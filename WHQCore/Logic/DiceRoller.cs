@@ -153,5 +153,22 @@ public static class DiceRoller
         var ones = RollD6();
         return $"{hundreds}{tens}{ones}";
     }
+
+    public static int? RollExpression(string expression)
+    {
+        return expression switch
+        {
+            "n/a" => null,
+            "Special" => null,
+            "1" => 1,
+            "1D3" => RollDie(3),
+            "1D6" => RollD6(),
+            "2D6" => Roll2D6(),
+            "1D6+2" => RollD6() + 2,
+            "1D6+3" => RollD6() + 3,
+            "1D6+6" => RollD6() + 6,
+            _ => throw new ArgumentException($"Unsupported dice expression: {expression}. Add Expression to DiceRoller class.")
+        };
+    }
 }
 
