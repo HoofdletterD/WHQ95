@@ -40,6 +40,13 @@ public class Adventure
     /// </summary>
     public string Notes { get; init; } = string.Empty;
 
+
+    /// <summary>
+    /// Checks the different options for an adventure: Cards or tables.
+    /// </summary>
+    public AdventureOptions Options { get; init; } = new();
+
+
     public override string ToString()
     {
         return $"{ObjectiveRoom} - {Roll}: {Title}";
