@@ -1,16 +1,21 @@
+using WHQCore.Models.Enums;
+using WHQCore.Monsters;
+
 namespace WHQCore.Cards.Events;
 
 public class EventCardMonster
 {
     public string CardName { get; init; } = string.Empty;
-    public string Set { get; init; } = string.Empty;
+    public ExpansionSet Set { get; init; }
     public string Quantity { get; init; } = string.Empty;
-    public string ApplicableRace { get; init; } = string.Empty;
+    public MonsterAllegiance MonsterAllegiance { get; init; }
     public string? SpecialRules { get; init; }
-    public bool DrawAnotherEventCardMonster { get; init; }
+    public bool DrawAnotherEventCard { get; init; }
     public bool TreasureCard { get; init; }
+    public required string MonsterProfileId { get; init; }
 }
 
+// TODO: Support multiple monster profiles per card.
 public static class CoreMonsterCards
 {
     public static readonly List<EventCardMonster> Cards =
@@ -18,114 +23,126 @@ public static class CoreMonsterCards
         new()
         {
             CardName = "Minotaur",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "1",
-            ApplicableRace = "Beastmen",
-            DrawAnotherEventCardMonster = true,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Beastmen,
+            DrawAnotherEventCard = true,
+            TreasureCard = true,
+            MonsterProfileId = "core.minotaur"
         },
 
         new()
         {
             CardName = "Minotaur",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "D3",
-            ApplicableRace = "Beastmen",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Beastmen,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.minotaur"
         },
 
         new()
         {           
             CardName = "Giant Bats",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Vampire Counts",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.VampireCounts,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.giant_bats"
         },
         new()
         {
             CardName = "Giant Rats",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Skaven",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Skaven,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.giant_rats"
         },
         new()
         {
-            CardName = "Giant Spider",
-            Set = "Core",
+            CardName = "Giant Spiders",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Orcs & Goblins",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Neutral,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.giant_spiders"
         },
         new()
         {
-            CardName = "Goblin Archer",
-            Set = "Core",
+            CardName = "Goblin Archers",
+            Set = ExpansionSet.CoreGame,
             Quantity = "1D6",
-            ApplicableRace = "Orcs & Goblins",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Greenskins,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.goblin_archer"
         },
         new()
         {
             CardName = "Goblins",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Orcs & Goblins",
+            MonsterAllegiance = MonsterAllegiance.Greenskins,
             SpecialRules = "Place 1D6 goblin spearmen and 1D6 goblin archers.",
-            DrawAnotherEventCardMonster = true,
-            TreasureCard = true
+            DrawAnotherEventCard = true,
+            TreasureCard = true,
+            MonsterProfileId = "core.goblin_warrior"
         },
         new()
         {
             CardName = "Goblin Spearmen",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "6",
-            ApplicableRace = "Orcs & Goblins",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Greenskins,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.goblin_warrior"
         },
         new()
         {
             CardName = "Orcs",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "6",
-            ApplicableRace = "Orcs & Goblins",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Greenskins,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.orc_warrior"
         },
         new()
         {
             CardName = "Orcs",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Orcs & Goblins",
+            MonsterAllegiance = MonsterAllegiance.Greenskins,
             SpecialRules = "Place 1D6 Orc warriors and 1D6 Orc archers.",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.orc_warrior"
         },
         new()
         {
             CardName = "Skaven Warriors",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Skaven",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Skaven,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.skaven_warrior"
         },
         new()
         {
             CardName = "Snotlings",
-            Set = "Core",
+            Set = ExpansionSet.CoreGame,
             Quantity = "2D6",
-            ApplicableRace = "Orcs & Goblins",
-            DrawAnotherEventCardMonster = false,
-            TreasureCard = true
+            MonsterAllegiance = MonsterAllegiance.Greenskins,
+            DrawAnotherEventCard = false,
+            TreasureCard = true,
+            MonsterProfileId = "core.snotling"
         }
     ];
 }

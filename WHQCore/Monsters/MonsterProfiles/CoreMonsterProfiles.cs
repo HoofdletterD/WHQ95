@@ -1,6 +1,4 @@
-﻿using WHQCore.Monsters;
-
-namespace WHQCore.Data;
+﻿namespace WHQCore.Monsters.MonsterProfiles;
 
 public static class CoreMonsterProfiles
 {

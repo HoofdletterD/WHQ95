@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Monsters\EncounterTables\**" />
+    <EmbeddedResource Remove="Monsters\EncounterTables\**" />
+    <None Remove="Monsters\EncounterTables\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Libraries\EventCardsMonsters.cs" />
     <Compile Remove="Models\Enums\ExpansionSet.cs" />
   </ItemGroup>
@@ -15,9 +21,5 @@
   <ItemGroup>
     <None Include="Cards\Events\EventCardsMonsters.cs" />
     <None Include="Models\Enums\ExpansionSet.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Monsters\EncounterTables\" />
   </ItemGroup>
 </Project>
