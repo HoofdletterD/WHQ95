@@ -329,6 +329,386 @@
                 "Fight in Ranks",
                 "Hate Elves"
             ]
-        }
+        },
+        new()
+        {
+            Id = "bestiary.chaos_warrior",
+            Name = "Chaos Warrior",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 6,
+            BallisticSkill = "1+",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 12,
+            Wounds = 6,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 240,
+            Armour = 2,
+            SpecialRules = []
+        },
+        new()
+        {
+            Id = "bestiary.rat_ogre",
+            Name = "Rat Ogre",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 6,
+            WeaponSkill = 4,
+            BallisticSkill = "-",
+            Strength = 5,
+            Toughness = 5,
+            Initiative = 20,
+            Wounds = 5,
+            Attacks = 2,
+            Damage = "2",
+            GoldPerModel = 500,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Fear 5"
+            ]
+        },new()
+        {
+            Id = "bestiary.pink_horror",
+            Name = "Pink Horror",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 8,
+            Wounds = 6,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 200,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Daemonic -1",
+                "Fear 6",
+                "Magic Resistance 6+",
+                "Die → Blue Horrors"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.blue_horror",
+            Name = "Blue Horror",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 4,
+            Wounds = 7,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 100,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Daemonic -1",
+                "Fear 4",
+                "Magic Resistance 6+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.fiend_of_slaanesh",
+            Name = "Fiend of Slaanesh",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 6,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 8,
+            Wounds = 3,
+            Attacks = 3,
+            Damage = "1",
+            GoldPerModel = 250,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Aura of Slaanesh",
+                "Daemonic -1",
+                "Fear 6"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.bloodletter",
+            Name = "Bloodletter",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 7,
+            Wounds = 6,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 200,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Armed with Hellblade",
+                "Daemonic -1",
+                "Fear 5"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.plaguebearer",
+            Name = "Plaguebearer",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 9,
+            Wounds = 6,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 200,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Daemonic -1",
+                "Fear 5",
+                "Plague"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.chaos_hound",
+            Name = "Chaos Hound",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 6,
+            WeaponSkill = 4,
+            BallisticSkill = "-",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 8,
+            Wounds = 4,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 160,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Ambush 5+",
+                "Gang Up"
+            ]
+        },
+
+        new()
+        {
+            Id = "bestiary.black_orc",
+            Name = "Black Orc",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 7,
+            Wounds = 2,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 90,
+            Armour = 1,
+            SpecialRules = []
+        },
+        new()
+        {
+            Id = "bestiary.gutter_runner",
+            Name = "Skaven Gutter Runner",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 6,
+            WeaponSkill = 4,
+            BallisticSkill = "3+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 5,
+            Wounds = 5,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 120,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush 4+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.plague_censer_bearer",
+            Name = "Skaven Plague Censer Bearer",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 4,
+            BallisticSkill = "-",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 4,
+            Wounds = 4,
+            Attacks = 1,
+            Damage = "5",
+            GoldPerModel = 150,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Armed with Plague Censers"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.poison_globadier",
+            Name = "Skaven Poison Globadier",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 4,
+            Wounds = 4,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 200,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Armed with Poison Globes"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.goblin_boss",
+            Name = "Goblin Boss",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "3+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 6,
+            Wounds = 3,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 150,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Magic Weapon"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.savage_orc_shaman",
+            Name = "Savage Orc Shaman",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 5,
+            Initiative = 16,
+            Wounds = 3,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 590,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Orc Magic 1",
+                "Magic Resistance 6+",
+                "Magic Weapon",
+                "*Tattoos 5+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.chaos_dwarf",
+            Name = "Chaos Dwarf",
+            Allegiance = MonsterAllegiance.ChaosDwarfs,
+            Move = 3,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 4,
+            Initiative = 8,
+            Wounds = 2,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 140,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Magic Resistance 6+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.chaos_dwarf_blunderbuss",
+            Name = "Chaos Dwarf Blunderbuss",
+            Allegiance = MonsterAllegiance.ChaosDwarfs,
+            Move = 3,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 4,
+            Initiative = 8,
+            Wounds = 2,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 140,
+            Armour = 1,
+            SpecialRules =
+            [
+                "Armed with Blunderbuss",
+                "Magic Resistance 6+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.bull_centaur",
+            Name = "Bull Centaur",
+            Allegiance = MonsterAllegiance.ChaosDwarfs,
+            Move = 8,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 12,
+            Wounds = 3,
+            Attacks = 2,
+            Damage = "2",
+            GoldPerModel = 410,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Fear 5",
+                "Magic Resistance 6+"
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+
+
         ];
     }

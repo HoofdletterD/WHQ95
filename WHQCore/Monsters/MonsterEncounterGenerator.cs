@@ -15,13 +15,15 @@ public static class MonsterEncounterGenerator
 
         return new Encounter
         {
-            MonsterGroups = entries
-                .Select(x => new MonsterGroup
-                {
-                    MonsterProfileId = x.MonsterProfileId,
-                    QuantityExpression = x.Quantity
-                })
-                .ToList()
+            MonsterGroups =
+            [
+                .. entries
+                    .Select(x => new MonsterGroup
+                    {
+                        MonsterProfileId = x.MonsterProfileId,
+                        QuantityExpression = x.Quantity
+                    })
+            ]
         };
     }
 
@@ -31,13 +33,16 @@ public static class MonsterEncounterGenerator
 
         return new GeneratedEncounter
         {
-            MonsterGroups = encounter.MonsterGroups
-                .Select(x => new GeneratedMonsterGroup
-                {
-                    MonsterProfileId = x.MonsterProfileId,
-                    Quantity = DiceRoller.RollExpression(x.QuantityExpression)
-                })
-                .ToList()
+            MonsterGroups =
+            [
+                .. encounter.MonsterGroups
+                    .Select(x => new GeneratedMonsterGroup
+                    {
+                        MonsterProfileId = x.MonsterProfileId,
+                        Quantity = DiceRoller.RollExpression(x.QuantityExpression)
+                    })
+            ]
         };
     }
+
 }

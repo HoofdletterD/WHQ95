@@ -164,8 +164,11 @@ public static class DiceRoller
             "1D3" => RollDie(3),
             "1D6" => RollD6(),
             "2D6" => Roll2D6(),
+            "1D6+1" => RollD6() + 1,
             "1D6+2" => RollD6() + 2,
             "1D6+3" => RollD6() + 3,
+            "1D6+4" => RollD6() + 4,
+            "1D6+5" => RollD6() + 5,
             "1D6+6" => RollD6() + 6,
             _ => throw new ArgumentException($"Unsupported dice expression: {expression}. Add Expression to DiceRoller class.")
         };
