@@ -10,6 +10,10 @@ public static class BattleLevelMonsterTableResolver
         {
             1 => MonsterTableLevel1.Entries,
             2 => MonsterTableLevel2.Entries,
+            3 => MonsterTableLevel2.Entries,
+            4 => MonsterTableLevel2.Entries,
+            5 => MonsterTableLevel2.Entries,
+            6 => MonsterTableLevel2.Entries,
             _ => []
         };
 

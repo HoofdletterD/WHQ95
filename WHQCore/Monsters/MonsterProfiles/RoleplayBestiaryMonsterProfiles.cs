@@ -956,7 +956,7 @@
         },
         new()
         {
-            Id = "core.black_orc_champion",
+            Id = "bestiary.black_orc_champion",
             Name = "Black Orc Champion",
             Allegiance = MonsterAllegiance.Greenskins,
             Move = 4,
@@ -973,7 +973,7 @@
         },
         new()
         {
-            Id = "core.black_orc_boss",
+            Id = "bestiary.black_orc_boss",
             Name = "Black Orc Boss",
             Allegiance = MonsterAllegiance.Greenskins,
             Move = 4,
@@ -990,7 +990,31 @@
         },
         new()
         {
-            Id = "core.dark_elf_beastmaster",
+            Id = "bestiary.black_orc_big_boss",
+            Name = "Black Orc Big Boss",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 6,
+            BallisticSkill = "2+",
+            Strength = 5,
+            Toughness = 5,
+            Initiative = 4,
+            Wounds = 23,
+            Attacks = 3,
+            Damage = "2",
+            GoldPerModel = 910,
+            Armour = 3,
+            SpecialRules =
+            [
+                "Ignore Pain 6+",
+                "Magic Armour",
+                "Magic Weapon"
+            ]
+        },
+
+        new()
+        {
+            Id = "bestiary.dark_elf_beastmaster",
             Name = "Dark Elf Beastmaster",
             Allegiance = MonsterAllegiance.DarkElves,
             Move = 5,
@@ -1007,7 +1031,7 @@
         },
         new()
         {
-            Id = "core.gigantic_spider",
+            Id = "bestiary.gigantic_spider",
             Name = "Gigantic Spider",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 5,
@@ -1024,7 +1048,7 @@
         },
         new()
         {
-            Id = "core.chaos_dwarf_sorcerer",
+            Id = "bestiary.chaos_dwarf_sorcerer",
             Name = "Chaos Dwarf Sorcerer",
             Allegiance = MonsterAllegiance.Chaos,
             Move = 3,
@@ -1041,40 +1065,7 @@
         },
         new()
         {
-            Id = "core.bull_centaur",
-            Name = "Bull Centaur",
-            Allegiance = MonsterAllegiance.Chaos,
-            Move = 8,
-            WeaponSkill = 4,
-            BallisticSkill = "4+",
-            Strength = 4,
-            Toughness = 4,
-            Wounds = 12,
-            Initiative = 3,
-            Attacks = 2,
-            GoldPerModel =410,
-            Armour = 2,
-            Damage = "1/2(5+)"
-        },
-        new()
-        {
-            Id = "core.chaos_dwarf_blunderbuss",
-            Name = "Chaos Dwarf Blunderbuss",
-            Allegiance = MonsterAllegiance.Chaos,
-            Move = 3,
-            WeaponSkill = 4,
-            BallisticSkill = "4+",
-            Strength = 3,
-            Toughness = 4,
-            Wounds = 8,
-            Initiative = 2,
-            Attacks = 1,
-            GoldPerModel =140,
-            Armour = 1,
-            Damage = "1"
-        },new()
-        {
-            Id = "core.beast_of_nurgle",
+            Id = "bestiary.beast_of_nurgle",
             Name = "Beast of Nurgle",
             Allegiance = MonsterAllegiance.Chaos,
             Move = 3,
@@ -1091,7 +1082,7 @@
         },
         new()
         {
-            Id = "core.dragon_ogre",
+            Id = "bestiary.dragon_ogre",
             Name = "Dragon Ogre",
             Allegiance = MonsterAllegiance.Chaos,
             Move = 6,
@@ -1107,7 +1098,7 @@
             Damage = "2"
         },new()
         {
-            Id = "core.skaven_jezzail",
+            Id = "bestiary.skaven_jezzail",
             Name = "Skaven Jezzail",
             Allegiance = MonsterAllegiance.Skaven,
             Move = 5,
@@ -1124,7 +1115,7 @@
         },
         new()
         {
-            Id = "core.mummy",
+            Id = "bestiary.mummy",
             Name = "Mummy",
             Allegiance = MonsterAllegiance.Undead,
             Move = 3,
@@ -1141,7 +1132,7 @@
         },
         new()
         {
-            Id = "core.chaos_champion",
+            Id = "bestiary.chaos_champion",
             Name = "Chaos Champion",
             Allegiance = MonsterAllegiance.Chaos,
             Move = 4,
@@ -1156,6 +1147,394 @@
             Armour = 2,
             Damage = "1"
         },
-
+        new()
+        {
+            Id = "bestiary.witch_elf",
+            Name = "Witch Elf",
+            Allegiance = MonsterAllegiance.DarkElves,
+            Move = 5,
+            WeaponSkill = 4,
+            BallisticSkill = "3+",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 6,
+            Wounds = 11,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 140,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Frenzy 4+",
+                "Hate Elves"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.dark_elf_assassin",
+            Name = "Dark Elf Assassin",
+            Allegiance = MonsterAllegiance.DarkElves,
+            Move = 5,
+            WeaponSkill = 9,
+            BallisticSkill = "A",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 10,
+            Wounds = 12,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 410,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush",
+                "Magic 5+",
+                "Assassinate 6+",
+                "Dodge 5+",
+                "Weeping Blades"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.dark_elf_hero",
+            Name = "Dark Elf Hero",
+            Allegiance = MonsterAllegiance.DarkElves,
+            Move = 5,
+            WeaponSkill = 6,
+            BallisticSkill = "1+",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 8,
+            Wounds = 25,
+            Attacks = 3,
+            Damage = "1",
+            GoldPerModel = 1040,
+            Armour = 4,
+            SpecialRules =
+            [
+                "Dodge 4+",
+                "Hate Elves",
+                "Magic Resistance 5+",
+                "Magic Armour",
+                "Magic Weapon"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.skaven_warpfire_thrower_team",
+            Name = "Skaven Warpfire Thrower Team",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "5+",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 4,
+            Wounds = 3,
+            Attacks = 1,
+            Damage = "Special",
+            GoldPerModel = 700,
+            Armour = 1,
+            SpecialRules =
+            [
+                "Armed with Warpfire Throwers"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.skaven_warlord",
+            Name = "Skaven Warlord",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 6,
+            BallisticSkill = "1+",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 7,
+            Wounds = 30,
+            Attacks = 4,
+            Damage = "2",
+            GoldPerModel = 900,
+            Armour = 3,
+            SpecialRules =
+            [
+                "Dodge 5+",
+                "Magic Resistance 5+",
+                "Magic Armour",
+                "Magic Item",
+                "Magic Weapon"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.orc_shaman",
+            Name = "Orc Shaman",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 5,
+            Initiative = 3,
+            Wounds = 16,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 590,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Orc Magic 1",
+                "Magic Resistance 6+",
+                "Magic Weapon"
+            ]
+        },new()
+        {
+            Id = "bestiary.orc_big_boss",
+            Name = "Orc Big Boss",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 5,
+            Initiative = 4,
+            Wounds = 25,
+            Attacks = 3,
+            Damage = "2",
+            GoldPerModel = 720,
+            Armour = 3,
+            SpecialRules =
+            [
+                "Ignore Pain 6+",
+                "Magic Armour",
+                "Magic Weapon"
+            ]
+        },new()
+        {
+            Id = "bestiary.wight_lord",
+            Name = "Wight Lord",
+            Allegiance = MonsterAllegiance.VampireCounts,
+            Move = 4,
+            WeaponSkill = 4,
+            BallisticSkill = "-",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 4,
+            Wounds = 35,
+            Attacks = 2,
+            Damage = "2",
+            GoldPerModel = 650,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Fear 8",
+                "Magic Armour",
+                "Magic Weapon"
+            ]
+        },new()
+        {
+            Id = "bestiary.bull_centaur_champion",
+            Name = "Bull Centaur Champion",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 8,
+            WeaponSkill = 5,
+            BallisticSkill = "3+",
+            Strength = 5,
+            Toughness = 4,
+            Initiative = 4,
+            Wounds = 23,
+            Attacks = 3,
+            Damage = "2",
+            GoldPerModel = 1060,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Fear 7",
+                "Magic Resistance 5+",
+                "Magic Armour",
+                "Magic Item",
+                "Magic Weapon"
+            ]
+        },new()
+        {
+            Id = "bestiary.gorgon",
+            Name = "Gorgon",
+            Allegiance = MonsterAllegiance.Neutral,
+            Move = 4,
+            WeaponSkill = 2,
+            BallisticSkill = "4+",
+            Strength = 13,
+            Toughness = 3,
+            Initiative = 5,
+            Wounds = 35,
+            Attacks = 1,
+            Damage = "2",
+            GoldPerModel = 1100,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Fear 9",
+                "Petrify"
+            ]
+        },new()
+        {
+            Id = "bestiary.tomb_guardian",
+            Name = "Tomb Guardian",
+            Allegiance = MonsterAllegiance.VampireCounts,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "6+",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 2,
+            Wounds = 15,
+            Attacks = 1,
+            Damage = "2",
+            GoldPerModel = 110,
+            Armour = 1,
+            SpecialRules =
+            [
+                "Fear 5",
+                "Regenerate 1"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.mummy_tomb_king",
+            Name = "Mummy Tomb King",
+            Allegiance = MonsterAllegiance.VampireCounts,
+            Move = 3,
+            WeaponSkill = 4,
+            BallisticSkill = "-",
+            Strength = 5,
+            Toughness = 5,
+            Initiative = 4,
+            Wounds = 45,
+            Attacks = 3,
+            Damage = "3",
+            GoldPerModel = 1000,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Fear 7",
+                "Magic Armour",
+                "Magic Item",
+                "Magic Weapon",
+                "Tomb Rot (1D6)"
+            ]
+        },new()
+        {
+            Id = "bestiary.cockatrice",
+            Name = "Cockatrice",
+            Allegiance = MonsterAllegiance.Neutral,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 4,
+            Wounds = 26,
+            Attacks = 3,
+            Damage = "3/4(5+)",
+            GoldPerModel = 1500,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Fear 10",
+                "Fly",
+                "Petrify"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.skaven_plague_monk",
+            Name = "Skaven Plague Monk",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 4,
+            Initiative = 4,
+            Wounds = 5,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 60,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Frenzy 5+",
+                "Weeping Blades"
+            ]
+        },new()
+        {
+            Id = "bestiary.skaven_plague_priest",
+            Name = "Skaven Plague Priest",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 5,
+            Initiative = 6,
+            Wounds = 23,
+            Attacks = 3,
+            Damage = "1",
+            GoldPerModel = 730,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush",
+                "Magic A",
+                "Frenzy 4+",
+                "Magic Weapon",
+                "Weeping Blade"
+            ]
+        },new()
+        {
+            Id = "bestiary.beastman_shaman",
+            Name = "Beastman Shaman",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 4,
+            BallisticSkill = "5+",
+            Strength = 3,
+            Toughness = 5,
+            Initiative = 4,
+            Wounds = 26,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 680,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Beastman Magic 1",
+                "Magic Weapon"
+            ]
+        },new()
+        {
+            Id = "bestiary.chaos_sorcerer",
+            Name = "Chaos Sorcerer",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 6,
+            BallisticSkill = "1+",
+            Strength = 4,
+            Toughness = 5,
+            Initiative = 6,
+            Wounds = 15,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 840,
+            Armour = 1,
+            SpecialRules =
+            [
+                "Chaos Magic 1",
+                "Magic Resistance 4+",
+                "Magic Armour",
+                "Magic Item",
+                "Magic Weapon"
+            ]
+        },
         ];
     }
