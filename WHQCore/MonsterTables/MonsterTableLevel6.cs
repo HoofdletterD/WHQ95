@@ -141,4 +141,6 @@ public static class MonsterTableLevel6
             BattleLevel = 6,
             D66Roll = 66,
             Notes = "Roll on Level 7 Monster Table"
-        },
+        }
+    ];
+}

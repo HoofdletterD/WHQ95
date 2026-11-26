@@ -123,3 +123,4 @@ public static class MonsterTableLevel4
             Notes = "Roll on Level 5 Monster Table"
         },
     ];
+}
