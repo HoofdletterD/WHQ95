@@ -12,8 +12,8 @@ public static class MonsterTableLevel1
         new() { BattleLevel = 1, D66Roll = 15, Quantity = "1D6+6", MonsterProfileId = "core.snotling" },
         new() { BattleLevel = 1, D66Roll = 16, Quantity = "1D6+6", MonsterProfileId = "core.giant_bats" },
 
-        new() { BattleLevel = 1, D66Roll = 21, Quantity = "2D6", MonsterProfileId = "core.giant_spiders" },
-        new() { BattleLevel = 1, D66Roll = 22, Quantity = "2D6", MonsterProfileId = "core.giant_rats" },
+        new() { BattleLevel = 1, D66Roll = 21, Quantity = "2D6", MonsterProfileId = "core.giant_spider" },
+        new() { BattleLevel = 1, D66Roll = 22, Quantity = "2D6", MonsterProfileId = "core.giant_rat" },
         new() { BattleLevel = 1, D66Roll = 23, Quantity = "2D6", MonsterProfileId = "core.orc_warrior" },
         new() { BattleLevel = 1, D66Roll = 24, Quantity = "2D6", MonsterProfileId = "core.skaven_warrior" },
         new() { BattleLevel = 1, D66Roll = 25, Quantity = "1D6", MonsterProfileId = "bestiary.savage_orc" },
@@ -23,14 +23,14 @@ public static class MonsterTableLevel1
         new() { BattleLevel = 1, D66Roll = 32, Quantity = "1D6", MonsterProfileId = "bestiary.zombie" },
         new() { BattleLevel = 1, D66Roll = 33, Quantity = "2D6", MonsterProfileId = "bestiary.ghoul" },
         new() { BattleLevel = 1, D66Roll = 34, Quantity = "1D6+3", MonsterProfileId = "bestiary.dark_elf_warrior" },
-        new() { BattleLevel = 1, D66Roll = 35, Quantity = "2D6", MonsterProfileId = "core.giant_spiders" },
+        new() { BattleLevel = 1, D66Roll = 35, Quantity = "2D6", MonsterProfileId = "core.giant_spider" },
 
         new() { BattleLevel = 1, D66Roll = 36, Quantity = "1D3", MonsterProfileId = "bestiary.cave_squig" },
         new() { BattleLevel = 1, D66Roll = 36, Quantity = "1D3", MonsterProfileId = "bestiary.cave_squig" },
         new() { BattleLevel = 1, D66Roll = 36, Quantity = "Special", MonsterProfileId = "bestiary.goblin_squig_hunter" },
 
         new() { BattleLevel = 1, D66Roll = 41, Quantity = "1D6+6", MonsterProfileId = "core.snotling" },
-        new() { BattleLevel = 1, D66Roll = 42, Quantity = "1D6+6", MonsterProfileId = "core.giant_bats" },
+        new() { BattleLevel = 1, D66Roll = 42, Quantity = "1D6+6", MonsterProfileId = "core.giant_bat" },
         new() { BattleLevel = 1, D66Roll = 43, Quantity = "1D6+3", MonsterProfileId = "bestiary.hobgoblin" },
 
         new() { BattleLevel = 1, D66Roll = 44, Quantity = "1D6+6", MonsterProfileId = "core.goblin_warrior" },
@@ -40,9 +40,9 @@ public static class MonsterTableLevel1
         new() { BattleLevel = 1, D66Roll = 46, Quantity = "2D6", MonsterProfileId = "core.orc_warrior" },
 
         new() { BattleLevel = 1, D66Roll = 51, Quantity = "1D6+6", MonsterProfileId = "core.snotling" },
-        new() { BattleLevel = 1, D66Roll = 52, Quantity = "1D6+6", MonsterProfileId = "core.giant_bats" },
-        new() { BattleLevel = 1, D66Roll = 53, Quantity = "2D6", MonsterProfileId = "core.giant_spiders" },
-        new() { BattleLevel = 1, D66Roll = 54, Quantity = "2D6", MonsterProfileId = "core.giant_rats" },
+        new() { BattleLevel = 1, D66Roll = 52, Quantity = "1D6+6", MonsterProfileId = "core.giant_bat" },
+        new() { BattleLevel = 1, D66Roll = 53, Quantity = "2D6", MonsterProfileId = "core.giant_spider" },
+        new() { BattleLevel = 1, D66Roll = 54, Quantity = "2D6", MonsterProfileId = "core.giant_rat" },
         new() { BattleLevel = 1, D66Roll = 55, Quantity = "2D6", MonsterProfileId = "core.skaven_warrior" },
         new() { BattleLevel = 1, D66Roll = 56, Quantity = "2D6", MonsterProfileId = "bestiary.skeleton" },
 

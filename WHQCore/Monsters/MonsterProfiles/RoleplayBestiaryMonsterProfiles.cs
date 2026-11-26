@@ -274,8 +274,8 @@
             BallisticSkill = "-",
             Strength = 5,
             Toughness = 3,
-            Initiative = 5,
-            Wounds = 3,
+            Initiative = 3,
+            Wounds = 5,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 200,
@@ -317,8 +317,8 @@
             BallisticSkill = "3+",
             Strength = 4,
             Toughness = 4,
-            Initiative = 6,
-            Wounds = 7,
+            Initiative = 7,
+            Wounds = 6,
             Attacks = 1,
             Damage = "1",
             GoldPerModel = 150,
@@ -340,8 +340,8 @@
             BallisticSkill = "1+",
             Strength = 4,
             Toughness = 4,
-            Initiative = 12,
-            Wounds = 6,
+            Initiative = 6,
+            Wounds = 12,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 240,
@@ -358,8 +358,8 @@
             BallisticSkill = "-",
             Strength = 5,
             Toughness = 5,
-            Initiative = 20,
-            Wounds = 5,
+            Initiative = 5,
+            Wounds = 20,
             Attacks = 2,
             Damage = "2",
             GoldPerModel = 500,
@@ -378,8 +378,8 @@
             BallisticSkill = "2+",
             Strength = 4,
             Toughness = 3,
-            Initiative = 8,
-            Wounds = 6,
+            Initiative = 6,
+            Wounds = 8,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 200,
@@ -402,8 +402,8 @@
             BallisticSkill = "4+",
             Strength = 3,
             Toughness = 3,
-            Initiative = 4,
-            Wounds = 7,
+            Initiative = 7,
+            Wounds = 4,
             Attacks = 1,
             Damage = "1",
             GoldPerModel = 100,
@@ -425,8 +425,8 @@
             BallisticSkill = "-",
             Strength = 3,
             Toughness = 3,
-            Initiative = 8,
-            Wounds = 3,
+            Initiative = 3,
+            Wounds = 8,
             Attacks = 3,
             Damage = "1",
             GoldPerModel = 250,
@@ -448,8 +448,8 @@
             BallisticSkill = "2+",
             Strength = 4,
             Toughness = 3,
-            Initiative = 7,
-            Wounds = 6,
+            Initiative = 6,
+            Wounds = 7,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 200,
@@ -471,8 +471,8 @@
             BallisticSkill = "2+",
             Strength = 4,
             Toughness = 3,
-            Initiative = 9,
-            Wounds = 6,
+            Initiative = 6,
+            Wounds = 9,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 200,
@@ -494,8 +494,8 @@
             BallisticSkill = "-",
             Strength = 4,
             Toughness = 4,
-            Initiative = 8,
-            Wounds = 4,
+            Initiative = 4,
+            Wounds = 8,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 160,
@@ -517,8 +517,8 @@
             BallisticSkill = "4+",
             Strength = 4,
             Toughness = 4,
-            Initiative = 7,
-            Wounds = 2,
+            Initiative = 2,
+            Wounds = 7,
             Attacks = 1,
             Damage = "1",
             GoldPerModel = 90,
@@ -598,8 +598,8 @@
             BallisticSkill = "3+",
             Strength = 4,
             Toughness = 3,
-            Initiative = 6,
-            Wounds = 3,
+            Initiative = 3,
+            Wounds = 6,
             Attacks = 2,
             Damage = "1",
             GoldPerModel = 150,
@@ -619,8 +619,8 @@
             BallisticSkill = "4+",
             Strength = 3,
             Toughness = 5,
-            Initiative = 16,
-            Wounds = 3,
+            Initiative = 3,
+            Wounds = 16,
             Attacks = 1,
             Damage = "1",
             GoldPerModel = 590,
@@ -643,8 +643,8 @@
             BallisticSkill = "4+",
             Strength = 3,
             Toughness = 4,
-            Initiative = 8,
-            Wounds = 2,
+            Initiative = 2,
+            Wounds = 8,
             Attacks = 1,
             Damage = "1",
             GoldPerModel = 140,
@@ -664,8 +664,8 @@
             BallisticSkill = "4+",
             Strength = 3,
             Toughness = 4,
-            Initiative = 8,
-            Wounds = 2,
+            Initiative = 2,
+            Wounds = 8,
             Attacks = 1,
             Damage = "1",
             GoldPerModel = 140,
@@ -686,8 +686,8 @@
             BallisticSkill = "4+",
             Strength = 4,
             Toughness = 4,
-            Initiative = 12,
-            Wounds = 3,
+            Initiative = 3,
+            Wounds = 12,
             Attacks = 2,
             Damage = "2",
             GoldPerModel = 410,
@@ -698,17 +698,464 @@
                 "Magic Resistance 6+"
             ]
         },
-
-
-
-
-
-
-
-
-
-
-
+        new()
+        {
+            Id = "bestiary.daemonette_of_slaanesh",
+            Name = "Daemonette of Slaanesh",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 6,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 6,
+            Wounds = 15,
+            Attacks = 3,
+            Damage = "1",
+            GoldPerModel = 300,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush 5+",
+                "Daemonic -1",
+                "Fear 6",
+                "Magic Resistance 6+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.nurgling",
+            Name = "Nurgling",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 3,
+            Initiative = 2,
+            Wounds = 3,
+            Attacks = 2,
+            Damage = "S",
+            GoldPerModel = 50,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush A",
+                "Daemonic -1",
+                "Fear 4",
+                "Gang Up",
+                "Plague"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.flamer_of_tzeentch",
+            Name = "Flamer of Tzeentch",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 9,
+            WeaponSkill = 3,
+            BallisticSkill = "2+",
+            Strength = 5,
+            Toughness = 4,
+            Initiative = 4,
+            Wounds = 17,
+            Attacks = 0,
+            Damage = "S",
+            GoldPerModel = 300,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush",
+                "Magic 5+",
+                "Daemonic -1",
+                "Fear 7",
+                "Flamer of Tzeentch Attack",
+                "Magic Resistance 6+"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.skaven_champion",
+            Name = "Skaven Champion",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 4,
+            BallisticSkill = "3+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 5,
+            Wounds = 11,
+            Attacks = 2,
+            Damage = "2",
+            GoldPerModel = 270,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Magic Weapon",
+                "Never Pinned"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.skaven_assassin",
+            Name = "Skaven Assassin",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 6,
+            WeaponSkill = 5,
+            BallisticSkill = "3+",
+            Strength = 4,
+            Toughness = 3,
+            Initiative = 5,
+            Wounds = 7,
+            Attacks = 2,
+            Damage = "1",
+            GoldPerModel = 300,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Ambush A",
+                "Assassinate 6+",
+                "Dodge 5+",
+                "Weeping Blades"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.ghost",
+            Name = "Ghost",
+            Allegiance = MonsterAllegiance.VampireCounts,
+            Move = 4,
+            WeaponSkill = 2,
+            BallisticSkill = "-",
+            Strength = 0,
+            Toughness = 3,
+            Initiative = 3,
+            Wounds = 16,
+            Attacks = 1,
+            Damage = "S",
+            GoldPerModel = 0,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Chill 1",
+                "Ethereal -1",
+                "Fear 6"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.wight",
+            Name = "Wight",
+            Allegiance = MonsterAllegiance.VampireCounts,
+            Move = 4,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 3,
+            Toughness = 4,
+            Initiative = 3,
+            Wounds = 14,
+            Attacks = 1,
+            Damage = "2",
+            GoldPerModel = 370,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Fear 7"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.giant_scorpion",
+            Name = "Giant Scorpion",
+            Allegiance = MonsterAllegiance.Neutral,
+            Move = 5,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 5,
+            Toughness = 6,
+            Initiative = 1,
+            Wounds = 20,
+            Attacks = 2,
+            Damage = "2",
+            GoldPerModel = 450,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Sting (2D6)"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.troll",
+            Name = "Troll",
+            Allegiance = MonsterAllegiance.Neutral,
+            Move = 6,
+            WeaponSkill = 3,
+            BallisticSkill = "6+",
+            Strength = 5,
+            Toughness = 4,
+            Initiative = 1,
+            Wounds = 30,
+            Attacks = 3,
+            Damage = "2",
+            GoldPerModel = 650,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Fear 6",
+                "Regenerate 2",
+                "Vomit"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.stone_troll",
+            Name = "Stone Troll",
+            Allegiance = MonsterAllegiance.Neutral,
+            Move = 6,
+            WeaponSkill = 3,
+            BallisticSkill = "6+",
+            Strength = 5,
+            Toughness = 4,
+            Initiative = 1,
+            Wounds = 25,
+            Attacks = 3,
+            Damage = "2",
+            GoldPerModel = 650,
+            Armour = 0,
+            SpecialRules =
+            [
+                "Fear 6",
+                "Magic Drain 6",
+                "Regenerate 2"
+            ]
+        },
+        new()
+        {
+            Id = "bestiary.chaos_dwarf_sorcerer",
+            Name = "Chaos Dwarf Sorcerer",
+            Allegiance = MonsterAllegiance.ChaosDwarfs,
+            Move = 3,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 5,
+            Initiative = 3,
+            Wounds = 8,
+            Attacks = 1,
+            Damage = "1",
+            GoldPerModel = 590,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Chaos Dwarf Magic 1",
+                "Magic Dispel 4+",
+                "Magic Resistance 4+",
+                "Protection Ring (+1T)"
+            ]
+        },
+        new()
+        {
+            Id = "core.black_orc_champion",
+            Name = "Black Orc Champion",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 5,
+            BallisticSkill = "3+",
+            Strength = 5,
+            Toughness = 4,
+            Wounds = 20,
+            Initiative = 3,
+            Attacks = 2,
+            GoldPerModel = 420,
+            Armour = 2,
+            Damage = "2"
+        },
+        new()
+        {
+            Id = "core.black_orc_boss",
+            Name = "Black Orc Boss",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 5,
+            Toughness = 4,
+            Wounds = 15,
+            Initiative = 7,
+            Attacks = 2,
+            GoldPerModel =150,
+            Armour = 2,
+            Damage = "1"
+        },
+        new()
+        {
+            Id = "core.dark_elf_beastmaster",
+            Name = "Dark Elf Beastmaster",
+            Allegiance = MonsterAllegiance.DarkElves,
+            Move = 5,
+            WeaponSkill = 5,
+            BallisticSkill = "2+",
+            Strength = 4,
+            Toughness = 4,
+            Wounds = 15,
+            Initiative = 7,
+            Attacks = 2,
+            GoldPerModel =150,
+            Armour = 2,
+            Damage = "1"
+        },
+        new()
+        {
+            Id = "core.gigantic_spider",
+            Name = "Gigantic Spider",
+            Allegiance = MonsterAllegiance.Neutral,
+            Move = 5,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 5,
+            Toughness = 4,
+            Wounds = 20,
+            Initiative = 1,
+            Attacks = 2,
+            GoldPerModel =450,
+            Armour = 0,
+            Damage = "2"
+        },
+        new()
+        {
+            Id = "core.chaos_dwarf_sorcerer",
+            Name = "Chaos Dwarf Sorcerer",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 3,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 5,
+            Wounds = 8,
+            Initiative = 3,
+            Attacks = 1,
+            GoldPerModel =590,
+            Armour = 2,
+            Damage = "1/2(6+)"
+        },
+        new()
+        {
+            Id = "core.bull_centaur",
+            Name = "Bull Centaur",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 8,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 4,
+            Toughness = 4,
+            Wounds = 12,
+            Initiative = 3,
+            Attacks = 2,
+            GoldPerModel =410,
+            Armour = 2,
+            Damage = "1/2(5+)"
+        },
+        new()
+        {
+            Id = "core.chaos_dwarf_blunderbuss",
+            Name = "Chaos Dwarf Blunderbuss",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 3,
+            WeaponSkill = 4,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 4,
+            Wounds = 8,
+            Initiative = 2,
+            Attacks = 1,
+            GoldPerModel =140,
+            Armour = 1,
+            Damage = "1"
+        },new()
+        {
+            Id = "core.beast_of_nurgle",
+            Name = "Beast of Nurgle",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 3,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 3,
+            Toughness = 5,
+            Wounds = 25,
+            Initiative = 3,
+            Attacks = 1,
+            GoldPerModel =750,
+            Armour = 0,
+            Damage = "2"
+        },
+        new()
+        {
+            Id = "core.dragon_ogre",
+            Name = "Dragon Ogre",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 6,
+            WeaponSkill = 4,
+            BallisticSkill = "5+",
+            Strength = 5,
+            Toughness = 5,
+            Wounds = 40,
+            Initiative = 2,
+            Attacks = 3,
+            GoldPerModel =870,
+            Armour = 2,
+            Damage = "2"
+        },new()
+        {
+            Id = "core.skaven_jezzail",
+            Name = "Skaven Jezzail",
+            Allegiance = MonsterAllegiance.Skaven,
+            Move = 5,
+            WeaponSkill = 3,
+            BallisticSkill = "4+",
+            Strength = 3,
+            Toughness = 3,
+            Wounds = 6,
+            Initiative = 4,
+            Attacks = 1,
+            GoldPerModel = 300,
+            Armour = 1,
+            Damage = "1"
+        },
+        new()
+        {
+            Id = "core.mummy",
+            Name = "Mummy",
+            Allegiance = MonsterAllegiance.Undead,
+            Move = 3,
+            WeaponSkill = 3,
+            BallisticSkill = "-",
+            Strength = 4,
+            Toughness = 5,
+            Wounds = 40,
+            Initiative = 3,
+            Attacks = 2,
+            GoldPerModel = 450,
+            Armour = 0,
+            Damage = "2"
+        },
+        new()
+        {
+            Id = "core.chaos_champion",
+            Name = "Chaos Champion",
+            Allegiance = MonsterAllegiance.Chaos,
+            Move = 4,
+            WeaponSkill = 7,
+            BallisticSkill = "A",
+            Strength = 5,
+            Toughness = 4,
+            Wounds = 15,
+            Initiative = 7,
+            Attacks = 3,
+            GoldPerModel = 910,
+            Armour = 2,
+            Damage = "1"
+        },
 
         ];
     }

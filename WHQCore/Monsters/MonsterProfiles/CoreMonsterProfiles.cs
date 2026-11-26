@@ -135,7 +135,7 @@ public static class CoreMonsterProfiles
         },
         new()
         {
-            Id = "core.giant_spiders",
+            Id = "core.giant_spider",
             Name = "Giant Spiders",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 6,
@@ -155,7 +155,7 @@ public static class CoreMonsterProfiles
         },
         new()
         {
-            Id = "core.giant_rats",
+            Id = "core.giant_rat",
             Name = "Giant Rats",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 6,
@@ -175,7 +175,7 @@ public static class CoreMonsterProfiles
         },
         new()
         {
-            Id = "core.giant_bats",
+            Id = "core.giant_bat",
             Name = "Giant Bats",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 8,
@@ -190,5 +190,10 @@ public static class CoreMonsterProfiles
             Armour = 0,
             SpecialRules =["Ambush"]
         }
+
+
+
+
+
     ];
 }

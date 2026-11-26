@@ -12,8 +12,8 @@ public static class MonsterTableLevel2
         new() { BattleLevel = 2, D66Roll = 15, Quantity = "3", MonsterProfileId = "core.minotaur" },
         new() { BattleLevel = 2, D66Roll = 16, Quantity = "12", MonsterProfileId = "core.snotling" },
 
-        new() { BattleLevel = 2, D66Roll = 21, Quantity = "12", MonsterProfileId = "core.giant_bats" },
-        new() { BattleLevel = 2, D66Roll = 22, Quantity = "12", MonsterProfileId = "core.giant_spiders" },
+        new() { BattleLevel = 2, D66Roll = 21, Quantity = "12", MonsterProfileId = "core.giant_bat" },
+        new() { BattleLevel = 2, D66Roll = 22, Quantity = "12", MonsterProfileId = "core.giant_spider" },
         new() { BattleLevel = 2, D66Roll = 23, Quantity = "12", MonsterProfileId = "core.giant_rats" },
         new() { BattleLevel = 2, D66Roll = 24, Quantity = "12", MonsterProfileId = "bestiary.hobgoblin" },
         new() { BattleLevel = 2, D66Roll = 25, Quantity = "1D3", MonsterProfileId = "bestiary.rat_ogre" },
