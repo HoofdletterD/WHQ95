@@ -8,12 +8,9 @@ public enum MonsterAllegiance
     DarkElves,
     Greenskins,
     Skaven,
-    Undead,
     VampireCounts,
-    WarriorsOfChaos,
     Neutral,
     DaemonsOfChaos,
-    Lizardmen,
     TombKings
 }
 

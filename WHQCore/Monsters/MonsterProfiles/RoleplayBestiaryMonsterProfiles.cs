@@ -1654,7 +1654,7 @@ public static class RoleplayBestiaryMonsterProfiles
         {
             Id = "bestiary.necromancer_champion",
             Name = "Necromancer Champion",
-            Allegiance = MonsterAllegiance.Undead,
+            Allegiance = MonsterAllegiance.VampireCounts,
             Move = 4,
             WeaponSkill = 5,
             BallisticSkill = "2+",
@@ -2542,7 +2542,7 @@ public static class RoleplayBestiaryMonsterProfiles
         {
             Id = "bestiary.necromancer_lord",
             Name = "Necromancer Lord",
-            Allegiance = MonsterAllegiance.Undead,
+            Allegiance = MonsterAllegiance.VampireCounts,
             Move = 4,
             WeaponSkill = 7,
             BallisticSkill = "A",
@@ -2571,7 +2571,7 @@ public static class RoleplayBestiaryMonsterProfiles
         {
             Id = "bestiary.master_necromancer",
             Name = "Master Necromancer",
-            Allegiance = MonsterAllegiance.Undead,
+            Allegiance = MonsterAllegiance.VampireCounts,
             Move = 4,
             WeaponSkill = 6,
             BallisticSkill = "1+",
@@ -3258,7 +3258,7 @@ public static class RoleplayBestiaryMonsterProfiles
         {
             Id = "bestiary.necromancer",
             Name = "Necromancer",
-            Allegiance = MonsterAllegiance.Undead,
+            Allegiance = MonsterAllegiance.VampireCounts,
             Move = 4,
             WeaponSkill = 4,
             BallisticSkill = "3+",
@@ -3337,7 +3337,7 @@ public static class RoleplayBestiaryMonsterProfiles
         {
             Id = "bestiary.wraith",
             Name = "Wraith",
-            Allegiance = MonsterAllegiance.Undead,
+            Allegiance = MonsterAllegiance.VampireCounts,
             Move = 4,
             WeaponSkill = 3,
             BallisticSkill = "-",
@@ -3361,7 +3361,7 @@ public static class RoleplayBestiaryMonsterProfiles
         {
             Id = "bestiary.wight_champion",
             Name = "Wight Champion",
-            Allegiance = MonsterAllegiance.Undead,
+            Allegiance = MonsterAllegiance.VampireCounts,
             Move = 4,
             WeaponSkill = 4,
             BallisticSkill = "-",
