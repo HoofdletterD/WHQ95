@@ -10,7 +10,7 @@ public static class MonsterTableLevel1
         new() { BattleLevel = 1, D66Roll = 13, Quantity = "1D6+2", MonsterProfileId = "bestiary.gor" },
         new() { BattleLevel = 1, D66Roll = 14, Quantity = "1D6+3", MonsterProfileId = "bestiary.stormvermin" },
         new() { BattleLevel = 1, D66Roll = 15, Quantity = "1D6+6", MonsterProfileId = "core.snotling" },
-        new() { BattleLevel = 1, D66Roll = 16, Quantity = "1D6+6", MonsterProfileId = "core.giant_bats" },
+        new() { BattleLevel = 1, D66Roll = 16, Quantity = "1D6+6", MonsterProfileId = "core.giant_bat" },
 
         new() { BattleLevel = 1, D66Roll = 21, Quantity = "2D6", MonsterProfileId = "core.giant_spider" },
         new() { BattleLevel = 1, D66Roll = 22, Quantity = "2D6", MonsterProfileId = "core.giant_rat" },
