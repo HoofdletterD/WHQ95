@@ -44,7 +44,7 @@ public static class MonsterTableLevel9
         },
         new() { BattleLevel = 9, D66Roll = 26, Quantity = "6", MonsterProfileId = "bestiary.chaos_dwarf_champion" },
         new() { BattleLevel = 9, D66Roll = 26, Quantity = "1", MonsterProfileId = "bestiary.chaos_dwarf_lord" },
-        new() { BattleLevel = 9, D66Roll = 31, Quantity = "1", MonsterProfileId = "bstiary.necromancer_lord" },
+        new() { BattleLevel = 9, D66Roll = 31, Quantity = "1", MonsterProfileId = "bestiary.necromancer_lord" },
         new() { BattleLevel = 9, D66Roll = 31, Quantity = "1", MonsterProfileId = "bestiary.master_necromancer" },
 
         new() { BattleLevel = 9, D66Roll = 32, Quantity = "1", MonsterProfileId = "bestiary.skaven_grey_seer" },

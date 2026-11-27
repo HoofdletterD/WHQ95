@@ -25,7 +25,7 @@ public static class MonsterTableLevel4
         new() { BattleLevel = 4, D66Roll = 15, Quantity = "1D6", MonsterProfileId = "bestiary.skaven_assassin" },
         new()
         {
-            BattleLevel = 4, D66Roll = 15, Quantity = "1D6+3", MonsterProfileId = "bestiary.skaven_stormvermin_champion"
+            BattleLevel = 4, D66Roll = 15, Quantity = "1D6+3", MonsterProfileId = "bestiary.stormvermin_champion"
         },
         new() { BattleLevel = 4, D66Roll = 15, Quantity = "1", MonsterProfileId = "bestiary.skaven_chieftain" },
 
@@ -60,7 +60,7 @@ public static class MonsterTableLevel4
         new() { BattleLevel = 4, D66Roll = 32, Quantity = "1D6", MonsterProfileId = "bestiary.warhound" },
 
         new() { BattleLevel = 4, D66Roll = 33, Quantity = "1D3", MonsterProfileId = "bestiary.rat_ogre" },
-        new() { BattleLevel = 4, D66Roll = 33, Quantity = "12", MonsterProfileId = "bestiary.skaven_stormvermin" },
+        new() { BattleLevel = 4, D66Roll = 33, Quantity = "12", MonsterProfileId = "bestiary.stormvermin" },
 
         new() { BattleLevel = 4, D66Roll = 34, Quantity = "1D6+2", MonsterProfileId = "bestiary.ghost" },
 
@@ -100,7 +100,7 @@ public static class MonsterTableLevel4
         new() { BattleLevel = 4, D66Roll = 56, Quantity = "1D3", MonsterProfileId = "bestiary.chaos_champion" },
 
         new() { BattleLevel = 4, D66Roll = 61, Quantity = "1D3", MonsterProfileId = "bestiary.rat_ogre" },
-        new() { BattleLevel = 4, D66Roll = 61, Quantity = "12", MonsterProfileId = "bestiary.skaven_stormvermin" },
+        new() { BattleLevel = 4, D66Roll = 61, Quantity = "12", MonsterProfileId = "bestiary.stormvermin" },
 
         new() { BattleLevel = 4, D66Roll = 62, Quantity = "1D3", MonsterProfileId = "bestiary.dragon_ogre" },
 
@@ -108,7 +108,7 @@ public static class MonsterTableLevel4
         new() { BattleLevel = 4, D66Roll = 63, Quantity = "1D6", MonsterProfileId = "bestiary.skaven_assassin" },
         new()
         {
-            BattleLevel = 4, D66Roll = 63, Quantity = "1D6+3", MonsterProfileId = "bestiary.skaven_stormvermin_champion"
+            BattleLevel = 4, D66Roll = 63, Quantity = "1D6+3", MonsterProfileId = "bestiary.stormvermin_champion"
         },
         new() { BattleLevel = 4, D66Roll = 63, Quantity = "1", MonsterProfileId = "bestiary.skaven_chieftain" },
 

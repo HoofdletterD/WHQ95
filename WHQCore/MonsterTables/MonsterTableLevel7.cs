@@ -89,7 +89,7 @@ public static class MonsterTableLevel7
         new() { BattleLevel = 7, D66Roll = 45, Quantity = "1", MonsterProfileId = "bestiary.mummy_tomb_king" },
 
         new() { BattleLevel = 7, D66Roll = 46, Quantity = "1", MonsterProfileId = "bestiary.chimera" },
-        new() { BattleLevel = 7, D66Roll = 51, Quantity = "1", MonsterProfileId = "bstiary.beastman_hero" },
+        new() { BattleLevel = 7, D66Roll = 51, Quantity = "1", MonsterProfileId = "bestiary.beastman_hero" },
 
         new() { BattleLevel = 7, D66Roll = 52, Quantity = "1", MonsterProfileId = "bestiary.great_taurus" },
         new() { BattleLevel = 7, D66Roll = 52, Quantity = "8", MonsterProfileId = "bestiary.chaos_dwarf_blunderbuss" },
