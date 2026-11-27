@@ -50,7 +50,7 @@ public static class CoreMonsterCards
             MonsterAllegiance = MonsterAllegiance.VampireCounts,
             DrawAnotherEventCard = false,
             TreasureCard = true,
-            MonsterProfileId = "core.giant_bats"
+            MonsterProfileId = "core.giant_bat"
         },
         new()
         {
@@ -60,7 +60,7 @@ public static class CoreMonsterCards
             MonsterAllegiance = MonsterAllegiance.Skaven,
             DrawAnotherEventCard = false,
             TreasureCard = true,
-            MonsterProfileId = "core.giant_rats"
+            MonsterProfileId = "core.giant_rat"
         },
         new()
         {
@@ -70,7 +70,7 @@ public static class CoreMonsterCards
             MonsterAllegiance = MonsterAllegiance.Neutral,
             DrawAnotherEventCard = false,
             TreasureCard = true,
-            MonsterProfileId = "core.giant_spiders"
+            MonsterProfileId = "core.giant_spider"
         },
         new()
         {

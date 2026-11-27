@@ -4,7 +4,12 @@ public static class MonsterTableLevel3
 {
     public static readonly List<MonsterTableEntry> Entries =
     [
-        new() { BattleLevel = 3, D66Roll = 11, Quantity = "n/a", MonsterProfileId = "monsterTable.level4" },
+        new()
+        {
+            BattleLevel = 3,
+            D66Roll = 11,
+            Notes = "Roll on Level 4 Monster Table"
+        },
 
         new() { BattleLevel = 3, D66Roll = 12, Quantity = "1D3", MonsterProfileId = "bestiary.troll" },
 
@@ -32,7 +37,7 @@ public static class MonsterTableLevel3
         new() { BattleLevel = 3, D66Roll = 25, Quantity = "1D6+2", MonsterProfileId = "bestiary.skaven_assassin" },
 
         new() { BattleLevel = 3, D66Roll = 26, Quantity = "2D6", MonsterProfileId = "core.orc_warrior" },
-        new() { BattleLevel = 3, D66Roll = 26, Quantity = "1", MonsterProfileId = "monsterTable.tbd.orc_boss" },
+        new() { BattleLevel = 3, D66Roll = 26, Quantity = "1", MonsterProfileId = "bestiary.orc_boss" },
 
         new() { BattleLevel = 3, D66Roll = 31, Quantity = "1D6+2", MonsterProfileId = "bestiary.ghost" },
 
@@ -55,7 +60,10 @@ public static class MonsterTableLevel3
         new() { BattleLevel = 3, D66Roll = 43, Quantity = "1D6+4", MonsterProfileId = "bestiary.plaguebearer" },
 
         new() { BattleLevel = 3, D66Roll = 44, Quantity = "1D6+2", MonsterProfileId = "bestiary.chaos_dwarf" },
-        new() { BattleLevel = 3, D66Roll = 44, Quantity = "1D6+2", MonsterProfileId = "bestiary.chaos_dwarf_blunderbuss" },
+        new()
+        {
+            BattleLevel = 3, D66Roll = 44, Quantity = "1D6+2", MonsterProfileId = "bestiary.chaos_dwarf_blunderbuss"
+        },
 
         new() { BattleLevel = 3, D66Roll = 45, Quantity = "1", MonsterProfileId = "bestiary.chaos_dwarf_sorcerer" },
         new() { BattleLevel = 3, D66Roll = 45, Quantity = "3", MonsterProfileId = "bestiary.bull_centaur" },
@@ -89,6 +97,11 @@ public static class MonsterTableLevel3
 
         new() { BattleLevel = 3, D66Roll = 65, Quantity = "1D6+1", MonsterProfileId = "bestiary.flamer_of_tzeentch" },
 
-        new() { BattleLevel = 3, D66Roll = 66, Quantity = "n/a", MonsterProfileId = "monsterTable.level4" }
+        new()
+        {
+            BattleLevel = 3,
+            D66Roll = 66,
+            Notes = "Roll on Level 4 Monster Table"
+        },
     ];
 }

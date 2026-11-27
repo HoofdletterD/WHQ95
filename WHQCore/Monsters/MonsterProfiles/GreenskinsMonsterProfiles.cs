@@ -415,5 +415,26 @@ public static class GreenskinsMonsterProfiles
                 "Never Pinned"
             ]
         },
+        new()
+        {
+            Id = "bestiary.orc_boss",
+            Name = "Orc Boss",
+            Allegiance = MonsterAllegiance.Greenskins,
+            Move = 4,
+            WeaponSkill = 4,
+            BallisticSkill = "3+",
+            Strength = 4,
+            Toughness = 4,
+            Initiative = 3,
+            Wounds = 18,
+            Attacks = 2,
+            Damage = "2",
+            GoldPerModel = 330,
+            Armour = 2,
+            SpecialRules =
+            [
+                "Magic Weapon"
+            ]
+        },
     ];
 }

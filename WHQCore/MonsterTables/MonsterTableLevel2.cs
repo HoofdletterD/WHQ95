@@ -4,7 +4,12 @@ public static class MonsterTableLevel2
 {
     public static readonly List<MonsterTableEntry> Entries =
     [
-        new() { BattleLevel = 2, D66Roll = 11, Quantity = "n/a", MonsterProfileId = "monsterTable.level1" },
+        new()
+        {
+            BattleLevel = 2,
+            D66Roll = 11,
+            Notes = "Roll on Level 3 Monster Table"
+        },
 
         new() { BattleLevel = 2, D66Roll = 12, Quantity = "1D6+1", MonsterProfileId = "bestiary.chaos_warrior" },
         new() { BattleLevel = 2, D66Roll = 13, Quantity = "1D3", MonsterProfileId = "bestiary.centigor" },
@@ -55,7 +60,10 @@ public static class MonsterTableLevel2
         new() { BattleLevel = 2, D66Roll = 56, Quantity = "1", MonsterProfileId = "bestiary.savage_orc_shaman" },
 
         new() { BattleLevel = 2, D66Roll = 61, Quantity = "1D6+2", MonsterProfileId = "bestiary.chaos_dwarf" },
-        new() { BattleLevel = 2, D66Roll = 62, Quantity = "1D6+2", MonsterProfileId = "bestiary.chaos_dwarf_blunderbuss" },
+        new()
+        {
+            BattleLevel = 2, D66Roll = 62, Quantity = "1D6+2", MonsterProfileId = "bestiary.chaos_dwarf_blunderbuss"
+        },
 
         new() { BattleLevel = 2, D66Roll = 63, Quantity = "3", MonsterProfileId = "bestiary.bull_centaur" },
 
@@ -64,6 +72,11 @@ public static class MonsterTableLevel2
         new() { BattleLevel = 2, D66Roll = 65, Quantity = "1D3", MonsterProfileId = "core.minotaur" },
         new() { BattleLevel = 2, D66Roll = 65, Quantity = "1D3", MonsterProfileId = "bestiary.ogre" },
 
-        new() { BattleLevel = 2, D66Roll = 66, Quantity = "n/a", MonsterProfileId = "monsterTable.level3" }
+        new()
+        {
+            BattleLevel = 2,
+            D66Roll = 66,
+            Notes = "Roll on Level 3 Monster Table"
+        },
     ];
 }

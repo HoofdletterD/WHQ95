@@ -136,7 +136,7 @@ public static class CoreMonsterProfiles
         new()
         {
             Id = "core.giant_spider",
-            Name = "Giant Spiders",
+            Name = "Giant Spider",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 6,
             WeaponSkill = 2,
@@ -156,7 +156,7 @@ public static class CoreMonsterProfiles
         new()
         {
             Id = "core.giant_rat",
-            Name = "Giant Rats",
+            Name = "Giant Rat",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 6,
             WeaponSkill = 2,
@@ -176,7 +176,7 @@ public static class CoreMonsterProfiles
         new()
         {
             Id = "core.giant_bat",
-            Name = "Giant Bats",
+            Name = "Giant Bat",
             Allegiance = MonsterAllegiance.Neutral,
             Move = 8,
             WeaponSkill = 2,
@@ -190,10 +190,5 @@ public static class CoreMonsterProfiles
             Armour = 0,
             SpecialRules =["Ambush"]
         }
-
-
-
-
-
     ];
 }
