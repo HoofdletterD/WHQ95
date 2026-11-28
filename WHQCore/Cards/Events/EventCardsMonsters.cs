@@ -15,7 +15,6 @@ public class EventCardMonster
     public required string MonsterProfileId { get; init; }
 }
 
-// TODO: Support multiple monster profiles per card.
 public static class CoreMonsterCards
 {
     public static readonly List<EventCardMonster> Cards =
